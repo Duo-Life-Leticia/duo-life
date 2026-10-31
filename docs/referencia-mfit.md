@@ -34,5 +34,4 @@ dizendo se há risco ou não para o treino.
 
 - **E-mail no cadastro:** o escopo prevê entrada com e-mail e senha, mas a lista da Letícia (nome, nascimento, telefone, CPF)
   não tem e-mail. Ou o cadastro pede e-mail, ou a entrada é pelo telefone (com código pelo WhatsApp ou SMS).
-- **Gênero:** o MFit pede; a Letícia não colocou na lista. Fica de fora?
 - **Professor cadastrar aluno:** querem essa opção, ou só o aluno se cadastra?

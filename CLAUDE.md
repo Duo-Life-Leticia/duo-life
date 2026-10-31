@@ -8,6 +8,8 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - O Duo Life não se mistura com a PS Log nem com outros clientes: nem no Claude, nem no GitHub, nem no Drive, nem no painel.
 - Nada é programado sem a aprovação do Alessandro. A programação só começa depois que a Letícia e o Diogo aprovarem o escopo.
 - O painel da PS Log nunca é alterado a partir deste projeto.
+- Cadastro do aluno: nome completo, data de nascimento, telefone (WhatsApp), CPF, RG, sexo e endereço (decisão do Alessandro, 31/10).
+- Pagamento dentro do app, por Pix, crédito ou débito, direto na conta da Duo Life (decisão do Alessandro, 31/10).
 - Tudo o que for feito usa as cores da logo (fundo azul-marinho `#021A4B`, botões e títulos dourados `#E8B04A`) até a aprovação da Letícia e do Diogo. Detalhes em `marca/identidade-visual.md`.
 
 ## Onde está cada coisa
@@ -16,6 +18,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Resumo das conversas anteriores: `docs/historico-inicio.md`
 - Informações da Letícia para o app (planos, horário, cadastro, pagamento, PAR-Q): `docs/informacoes-leticia-2026-10-31.md`
 - Ideias tiradas dos prints do MFit (só contexto, sem imagens): `docs/referencia-mfit.md`
+- Pagamento (decisão e comparação de serviços): `docs/pagamento.md`
 - Logo e cores: `marca/` (`logo-duo-life.jpg`, `logo-duo-life-horizontal.jpg`, `identidade-visual.md`)
 - Documento do projeto (escopo): https://docs.google.com/document/d/1-GWToSORRFPkXWvnjf5Vs_UazFg01SBf_rFNpR77270/edit
 - Painel de controle: https://claude.ai/artifact/VohgRMLrRaPzMrKJGgNP2X (código em `painel/painel-duo-life.html`, com a logo publicada junto como `logo-duo-life-horizontal.jpg`; tarefas, status, resumo "Onde estamos" e histórico ficam no banco de dados do painel, coleções `tarefas`, `estado` e `historico`)
