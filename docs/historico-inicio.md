@@ -49,3 +49,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - Entrada no app: login com o e-mail do aluno e senha criada por ele mesmo no primeiro acesso (era o que o Diogo quis dizer). O e-mail entra no cadastro.
 - O campo "gênero" do MFit fica de fora (o cadastro tem só "sexo"). O Diogo pode cadastrar o aluno pela tela do professor quando o aluno não conseguir pelo app.
 - Documento do Projeto atualizado no Google Docs (versão 2) com tudo o que foi decidido nesta conversa.
+- O Alessandro moveu o vídeo da reunião para a pasta Reunioes.

@@ -33,6 +33,6 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 ## Pendências em 31/10/2026
 
 - O Alessandro manda o escopo para a Letícia e o Diogo até domingo, 01/11/2026.
-- Confirmar com o Alessandro antes de mover o vídeo da reunião (`2026-10-30 19-20-36.mp4`, na raiz da pasta Duo Life) para a pasta Reunioes.
+- O vídeo da reunião (`2026-10-30 19-20-36.mp4`) já está na pasta Reunioes (movido pelo Alessandro em 31/10).
 - Logo recebida em 31/10/2026 (está em `marca/`). Prints do MFit recebidos: usar só como contexto, sem guardar as imagens.
 - Aguardando da Letícia e do Diogo: prints da Velocity, valores e validade dos planos, slogan.
