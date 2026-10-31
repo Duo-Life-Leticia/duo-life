@@ -55,3 +55,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - Aluno sumido: mensagem automática pelo app para quem fechou o plano e não marca aulas ou falta muito. Entrou no escopo e na pauta (definir quando mandar e a marcação de presença).
 - Vagas: limite por aula, agenda única em tempo real para todos, sem superlotação nem marcação repetida, contagem regressiva por mensagem e aviso de aula cheia. Entrou no escopo e na pauta.
 - Avisos de vagas definidos pelo Alessandro: com 3 vagas, com 1 vaga e quando lotar.
+- Cada aluno pode ter no máximo 4 aulas marcadas ao mesmo tempo, dentro da janela de um mês.
