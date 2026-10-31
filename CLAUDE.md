@@ -11,6 +11,9 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Não citar nomes de outros clientes ou projetos em nada do Duo Life (documentos, painel, GitHub, Drive).
 - Cadastro do aluno: nome completo, e-mail, data de nascimento, telefone (WhatsApp), CPF, RG, sexo e endereço (decisão do Alessandro, 31/10).
 - O Diogo (professor) também cadastra aluno pela tela do professor, para quem não conseguir pelo app. Sem campo "gênero" (só "sexo").
+- Acessos: a Letícia e o Diogo são administradores, com acesso total. O aluno vê só o que é dele (plano, saldo, validade, aulas, contrato), marca e cancela a própria aula, compra e renova.
+- O aluno sempre vê quantas aulas faltam. Pós-venda automático: quando faltarem 2 aulas e quando faltar 1, o app manda mensagem (e-mail, SMS ou WhatsApp) com o novo contrato e o pagamento pelo app.
+- Anamnese (PAR-Q) obrigatória no primeiro acesso, pedido do Diogo na reunião (transcrição, 26:14 a 29:35); fica na ficha com a data.
 - Entrada no app: login é o e-mail do aluno; a senha é o próprio aluno que cria, no primeiro acesso (decisão do Alessandro, 31/10).
 - Pagamento dentro do app, por Pix, crédito ou débito, direto na conta da Duo Life (decisão do Alessandro, 31/10).
 - Tudo o que for feito usa as cores da logo (fundo azul-marinho `#021A4B`, botões e títulos dourados `#E8B04A`) até a aprovação da Letícia e do Diogo. Detalhes em `marca/identidade-visual.md`.
