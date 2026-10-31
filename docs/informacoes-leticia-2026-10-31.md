@@ -53,6 +53,9 @@ Obrigatório: o aluno responde o PAR-Q (termo de responsabilidade de saúde).
 
 ## O que muda no Documento do Projeto
 
+Feito em 31/10/2026: o Documento do Projeto está na versão 2, com estas mudanças, os prints do MFit e as decisões de login, cadastro pelo professor e pagamento.
+
+
 1. Seção 4, Cadastro: "nome completo, e-mail, data de nascimento, telefone (WhatsApp), CPF, RG, sexo e endereço".
    Entrada: login com o e-mail; o aluno cria a senha no primeiro acesso; opção "Esqueci minha senha".
 2. Seção 4, Comprar: pagamento dentro do app, por Pix, crédito ou débito, direto na conta da Duo Life (ver `docs/pagamento.md`).
