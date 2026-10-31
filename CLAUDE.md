@@ -9,6 +9,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Nada é programado sem a aprovação do Alessandro. A programação só começa depois que a Letícia e o Diogo aprovarem o escopo.
 - O painel da PS Log nunca é alterado a partir deste projeto.
 - Cadastro do aluno: nome completo, e-mail, data de nascimento, telefone (WhatsApp), CPF, RG, sexo e endereço (decisão do Alessandro, 31/10).
+- O Diogo (professor) também cadastra aluno pela tela do professor, para quem não conseguir pelo app. Sem campo "gênero" (só "sexo").
 - Entrada no app: login é o e-mail do aluno; a senha é o próprio aluno que cria, no primeiro acesso (decisão do Alessandro, 31/10).
 - Pagamento dentro do app, por Pix, crédito ou débito, direto na conta da Duo Life (decisão do Alessandro, 31/10).
 - Tudo o que for feito usa as cores da logo (fundo azul-marinho `#021A4B`, botões e títulos dourados `#E8B04A`) até a aprovação da Letícia e do Diogo. Detalhes em `marca/identidade-visual.md`.

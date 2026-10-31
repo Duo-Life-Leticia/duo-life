@@ -18,7 +18,7 @@ dizendo se há risco ou não para o treino.
 
 ## Ideias para a Duo Life
 
-1. **Professor também cadastra aluno.** Além do aluno se cadastrar sozinho, o Diogo ou a Letícia podem cadastrar alguém
+1. **Professor também cadastra aluno** (aprovado). Além do aluno se cadastrar sozinho, o Diogo ou a Letícia podem cadastrar alguém
    (por exemplo, um aluno mais velho na praia) e o app manda o acesso; o aluno cria a senha no primeiro acesso.
 2. **WhatsApp com +55 já preenchido**, para o aluno digitar só o DDD e o número.
 3. **PAR-Q com data**, na ficha do aluno: "PAR-Q respondido em dd/mm/aaaa". Se o aluno não respondeu, aparece um aviso
@@ -30,6 +30,8 @@ dizendo se há risco ou não para o treino.
 7. **Destaque no PAR-Q com risco** (ideia para depois): se o aluno marcar "sim" em alguma pergunta, a ficha mostra um aviso
    para o professor, sem precisar de IA.
 
-## Pontos para confirmar com a Letícia e o Diogo
+## Decidido pelo Alessandro (31/10/2026)
 
-- **Professor cadastrar aluno:** querem essa opção, ou só o aluno se cadastra?
+- **Campo "Gênero" do MFit:** fica de fora. O cadastro da Duo Life tem só o campo "sexo".
+- **Professor cadastra aluno:** sim. Se o aluno não conseguir se cadastrar pelo app, ele liga para o Diogo,
+  e o Diogo faz o cadastro por ele na tela do professor. O aluno cria a senha no primeiro acesso.

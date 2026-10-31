@@ -47,3 +47,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - Chegaram os prints do MFit (cadastro de aluno, ficha, PAR-Q). O Alessandro pediu para usar só o contexto, sem as imagens: as ideias estão em `docs/referencia-mfit.md`.
 - Decisões do Alessandro: o cadastro mantém RG, sexo e endereço; o pagamento é feito dentro do app (Pix, crédito e débito), direto na conta da Duo Life, para o cliente não desistir na hora da compra. Comparação de serviços em `docs/pagamento.md` (recomendação: Asaas).
 - Entrada no app: login com o e-mail do aluno e senha criada por ele mesmo no primeiro acesso (era o que o Diogo quis dizer). O e-mail entra no cadastro.
+- O campo "gênero" do MFit fica de fora (o cadastro tem só "sexo"). O Diogo pode cadastrar o aluno pela tela do professor quando o aluno não conseguir pelo app.
