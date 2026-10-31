@@ -7,18 +7,18 @@ Resumo da primeira conversa com o Claude (31/10/2026). A cópia completa está n
 ## Pedido do Alessandro
 
 Projeto Duo Life (cliente novo, separado de tudo). Transcrever a reunião com a Letícia e o Diogo,
-montar o documento do projeto e criar um painel de controle com todo o escopo, como foi feito para a PS Log.
+montar o documento do projeto e criar um painel de controle com todo o escopo, no mesmo formato usado em outros projetos do Alessandro.
 
 ## Regra principal
 
-O Duo Life não se mistura com a PS Log: nem no Claude, nem no GitHub, nem no painel.
+O Duo Life não se mistura com nenhum outro cliente ou projeto: nem no Claude, nem no GitHub, nem no painel.
 
 ## Onde fica cada coisa
 
 - Transcrição da reunião de 30/10/2026: `docs/transcricao-reuniao-2026-10-30.txt` (Whisper, 54 min; pode ter erros de nomes)
 - Google Drive: Plataforma - Clientes → Duo Life (00 - Painel de Controle, 01 - Documentos do Projeto, 02 - Arquivos da Empresa, Reunioes)
 - Vídeo: `2026-10-30 19-20-36.mp4`, na raiz da pasta Duo Life no Drive
-- Modelo a seguir: "Painel PS Log Plataforma" (painel do Claude) e "Documento do Projeto - Plataforma PS Log" (Drive)
+- Modelo a seguir: o painel de controle e o documento do projeto usados em outros projetos do Alessandro
 
 ## Prazo combinado na reunião
 
@@ -26,7 +26,7 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 
 ## O que falta
 
-1. Documento do Projeto - Plataforma Duo Life (Drive, pasta 01), no formato do da PS Log.
+1. Documento do Projeto - Plataforma Duo Life (Drive, pasta 01), no formato padrão do Alessandro.
 2. Painel de Controle Duo Life, com todo o escopo em etapas e tarefas.
 3. Mover o vídeo para a pasta Reunioes (confirmar com o Alessandro).
 4. Nada é programado sem a aprovação do Alessandro.
@@ -50,3 +50,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - O campo "gênero" do MFit fica de fora (o cadastro tem só "sexo"). O Diogo pode cadastrar o aluno pela tela do professor quando o aluno não conseguir pelo app.
 - Documento do Projeto atualizado no Google Docs (versão 2) com tudo o que foi decidido nesta conversa.
 - O Alessandro moveu o vídeo da reunião para a pasta Reunioes.
+- O Alessandro pediu para não citar nomes de outros projetos em nada do Duo Life; foram tirados do GitHub, do painel e dos documentos do Drive. A criação das contas do app (tarefa 0.15) fica com o Alessandro, e o Documento do Projeto pede o e-mail da Duo Life para isso.

@@ -5,9 +5,10 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 ## Regras
 
 - Escreva sempre em português do Brasil, em linguagem simples.
-- O Duo Life não se mistura com a PS Log nem com outros clientes: nem no Claude, nem no GitHub, nem no Drive, nem no painel.
+- O Duo Life não se mistura com nenhum outro cliente ou projeto: nem no Claude, nem no GitHub, nem no Drive, nem no painel.
 - Nada é programado sem a aprovação do Alessandro. A programação só começa depois que a Letícia e o Diogo aprovarem o escopo.
-- O painel da PS Log nunca é alterado a partir deste projeto.
+- Painéis e arquivos de outros projetos nunca são alterados a partir deste.
+- Não citar nomes de outros clientes ou projetos em nada do Duo Life (documentos, painel, GitHub, Drive).
 - Cadastro do aluno: nome completo, e-mail, data de nascimento, telefone (WhatsApp), CPF, RG, sexo e endereço (decisão do Alessandro, 31/10).
 - O Diogo (professor) também cadastra aluno pela tela do professor, para quem não conseguir pelo app. Sem campo "gênero" (só "sexo").
 - Entrada no app: login é o e-mail do aluno; a senha é o próprio aluno que cria, no primeiro acesso (decisão do Alessandro, 31/10).
@@ -35,4 +36,4 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - O Alessandro manda o escopo para a Letícia e o Diogo até domingo, 01/11/2026.
 - O vídeo da reunião (`2026-10-30 19-20-36.mp4`) já está na pasta Reunioes (movido pelo Alessandro em 31/10).
 - Logo recebida em 31/10/2026 (está em `marca/`). Prints do MFit recebidos: usar só como contexto, sem guardar as imagens.
-- Aguardando da Letícia e do Diogo: prints da Velocity, valores e validade dos planos, slogan.
+- Aguardando da Letícia e do Diogo: prints da Velocity, valores e validade dos planos, slogan, e o e-mail da Duo Life para o Alessandro criar as contas do app (GitHub, banco de dados, hospedagem).
