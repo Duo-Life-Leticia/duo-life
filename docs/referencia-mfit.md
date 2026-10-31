@@ -19,7 +19,7 @@ dizendo se há risco ou não para o treino.
 ## Ideias para a Duo Life
 
 1. **Professor também cadastra aluno.** Além do aluno se cadastrar sozinho, o Diogo ou a Letícia podem cadastrar alguém
-   (por exemplo, um aluno mais velho na praia) e o app manda o acesso pelo WhatsApp.
+   (por exemplo, um aluno mais velho na praia) e o app manda o acesso; o aluno cria a senha no primeiro acesso.
 2. **WhatsApp com +55 já preenchido**, para o aluno digitar só o DDD e o número.
 3. **PAR-Q com data**, na ficha do aluno: "PAR-Q respondido em dd/mm/aaaa". Se o aluno não respondeu, aparece um aviso
    e ele não consegue agendar.
@@ -32,6 +32,4 @@ dizendo se há risco ou não para o treino.
 
 ## Pontos para confirmar com a Letícia e o Diogo
 
-- **E-mail no cadastro:** o escopo prevê entrada com e-mail e senha, mas a lista da Letícia (nome, nascimento, telefone, CPF)
-  não tem e-mail. Ou o cadastro pede e-mail, ou a entrada é pelo telefone (com código pelo WhatsApp ou SMS).
 - **Professor cadastrar aluno:** querem essa opção, ou só o aluno se cadastra?
