@@ -1,0 +1,940 @@
+Transcrição da reunião de 30/10/2026 (Alessandro, Letícia e Diogo) - Duo Life
+Gravação: 2026-10-30 19-20-36.mp4, 54 min. Transcrição automática (Whisper), pode ter erros de nomes e termos.
+
+[00:00:00] O que você quer fazer? Mas tá tudo assim planejado. Eu sou nutricionista, ele é personal.
+[00:00:07] Hoje em dia eu faço meus agendamentos com o WhatsApp. Para isso exatamente não precisa,
+[00:00:13] mas a gente está criando uma empresa juntos que a gente vai unir os dois. E nisso a gente quer
+[00:00:20] fazer um funcional na praia, em Santos. E aí, isso ainda não começou, então a gente está
+[00:00:28] agora nos uniformes.
+[00:00:31] A gente estava montando tabela de valores.
+[00:00:34] A gente está indo lá ver o espaço para levar o material até a praia.
+[00:00:39] É o plano por exemplo vai ter plano de cinco aulas dez aulas 15 ou 20 aulas.
+[00:00:43] A gente ainda está fazendo esboço e aí a gente estava conversando
+[00:00:48] até comentei com a Solange e falei nossa que a gente quer fazer uma empresa.
+[00:00:52] Como que a gente vai agendar esses alunos por exemplo ou ter o controle
+[00:00:57] porque no início vai começar lá tem dez pessoas a gente consegue gerenciar no WhatsApp.
+[00:01:03] Mas e o negócio é para crescer né então assim são vários pontos então a gente
+[00:01:08] pensou que o ideal seria um aplicativo para a pessoa poder ajudar e ter um controle
+[00:01:14] por exemplo a comprou cinco aulas como que eu vou ter o controle que ela já
+[00:01:19] usou três aí ela vai falar não já usei eu falta um eu falo não mas já foi
+[00:01:24] tudo. Então é aquele negócio que começa a ficar confuso.
+[00:01:28] E aí, por exemplo, eu levei no eu me basei no que eu faço aqui.
+[00:01:35] Tem a Velocity, a La de Bike que eu vou lá, eu clico, eu clico na posição
+[00:01:39] da bicicleta, a agenda cancel.
+[00:01:42] Mas assim, é uma empresa muito grande, tem várias franquias do negócio,
+[00:01:47] é outra coisa, mas alguma coisa mais simples.
+[00:01:49] Então assim, o que eu pensei agora
+[00:01:52] Seria mais para ter um agendamento de aulas, para ter a compra, né?
+[00:02:02] Esse controle, né?
+[00:02:04] Por exemplo, a pessoa viu que ela usou 10, ela usou 5, ela precisa renovar e aí eu
+[00:02:09] pensei que além disso poderia já ter a compra no aplicativo também.
+[00:02:13] Por exemplo, acabou, putz, agora que acabou, compra ali direto.
+[00:02:17] Então compra lá que era o plano de 5, de 10, de 15. Aí a pessoa vai lá e compra.
+[00:02:24] A assinatura mesmo, né? A pessoa comprou cinco aulas, acabou. Ela pode ter até um aviso,
+[00:02:29] pode ter lá quantas aulas ela tem no aplicativo avisando, pra ela já se preparar pra comprar mais, né?
+[00:02:34] Sim. Tá, quando você diz funcional, o que que é funcional? São as aulas?
+[00:02:38] Isso, são as aulas. É uma aula de treinamento funcional, né? Ali na praia, são aulas coletivas ali,
+[00:02:44] e que atende o número maior de pessoas, né?
+[00:02:46] Só que a ideia é que como cresça é isso,
+[00:02:49] a gente tem uma noção até pra preparar a aula ali,
+[00:02:51] pra ver quando vai estar um dia antes,
+[00:02:53] quantas pessoas vão e tudo mais.
+[00:02:53] Quantas pessoas vão, exato.
+[00:02:55] Tá, e nesse aplicativo vocês...
+[00:02:57] Ok.
+[00:02:58] Ok, deixa eu... então vamos entender aqui.
+[00:03:00] Então vocês querem um aplicativo
+[00:03:02] primeiro pra ter um cadastro de clientes, né?
+[00:03:04] Dos alunos, que vocês chamam de alunos, né?
+[00:03:06] De alunos, ok.
+[00:03:07] Esses alunos vão ter acesso à agenda de vocês,
+[00:03:10] porque eles mesmo vão agendar a aula deles?
+[00:03:12] Sim.
+[00:03:13] Ok.
+[00:03:13] Isso.
+[00:03:14] E...
+[00:03:15] É, o primeiro...
+[00:03:16] Pode falar.
+[00:03:17] E na hora que eles agendarem a aula, vocês vão saber quantas pessoas vão para aquela
+[00:03:23] aula.
+[00:03:24] Primeiramente é isso.
+[00:03:26] E depois vocês vão...
+[00:03:27] Quer dizer, antes disso vocês vão fazer um plano de quantidade de aulas com valores,
+[00:03:31] ou seja, e a pessoa...
+[00:03:33] Vamos imaginar que...
+[00:03:34] Ok, vocês estão dando um plano de 5 aulas ou 10, então de repente um plano de 5,
+[00:03:39] quando ela tiver feito 4, vocês já querem que ela renove.
+[00:03:41] Pode estar resgatando.
+[00:03:42] Vamos mandar uma mensagem pra ela dizendo
+[00:03:44] você já fez 4 aulas, se você tem direito a mais uma
+[00:03:46] já quer renovar pra mais 5 ou mais 10
+[00:03:48] não sei, vê os planos que tem
+[00:03:50] ela já entra nos planos e já faz um novo plano
+[00:03:52] exatamente
+[00:03:54] e o que for de 10, de repente 2 aulas antes de acabar
+[00:03:56] a gente manda uma mensagem pra ela
+[00:03:58] pra gerencia isso
+[00:04:00] legal, isso seria padrão
+[00:04:02] e pra quem não tiver participado, por exemplo
+[00:04:04] comprei 5 aulas mas eu não to indo, a gente manda uma mensagem pra ela
+[00:04:06] dizendo, olha, você não vai, vai ter uma aula assim
+[00:04:08] sei lá, faz uma prova, puxa a pessoa de novo pra aula
+[00:04:10] novo pra aula. Acho que isso dá pra fazer também. Até porque vai ter uma
+[00:04:14] validade essas aulas, uma pessoa que compra cinco, dez aulas né, a gente não quer que
+[00:04:18] ela fique ali dois meses prendendo porque nesse meio tempo já vai ter
+[00:04:21] fechado mais pessoas, então lógico que é o melhor dos cenários mas a gente tá
+[00:04:25] evitando problemas né, então imagina que mais dez pessoas fecharam e essas
+[00:04:29] pessoas elas vão, então aquela ali quando ela voltar, se for um número
+[00:04:33] limitado de pessoas tipo 20 pessoas, talvez não tenha mais aquele
+[00:04:37] uma vaga pra ela.
+[00:04:38] Uma vaga pra ela.
+[00:04:39] E até pra pessoa não comprar e não ir, né?
+[00:04:42] Pra estimular um tempo.
+[00:04:44] Então por exemplo, a pessoa comprou cinco aulas, ela vai ter tantas semanas pra usar.
+[00:04:49] A de comprou dez, vai ter mais tempo pra usar.
+[00:04:52] Sim, claro.
+[00:04:53] Isso é uma...
+[00:04:54] A gente vai fazer uma regrinha, né?
+[00:04:56] Uma norma pra ela poder usar.
+[00:04:59] E não ficar...
+[00:05:00] Forçar ela a ir mesmo, né?
+[00:05:02] Certo.
+[00:05:03] E o legal...
+[00:05:04] a notícia é o que eu acho assim é um aplicativo que é mais simples né para até ser prático
+[00:05:09] para o pessoal aí você falou do cadastro eu tenho alguns exemplos falou da Velocity eu uso
+[00:05:14] aplicativo também de personal eu acho que assim é só com o nosso logo aquele quando entra assim o
+[00:05:19] e-mail senha que é bem direto se não tem faz o cadastro se não tem se já tem login né
+[00:05:24] não sei se também ele vai ver com vocês que teria uma uma tela para professor que seria para
+[00:05:29] e uma tela diferente para aluno porque por exemplo ele entraria né acredito eu o aluno ele entrou
+[00:05:36] acessou depois que já fez o cadastro aí dois botões ali simples de uma estética mais bonita de
+[00:05:43] principalmente a de compra né que vão estar os planos aí com essa qualidade que a gente vai colocar
+[00:05:49] e ali a pessoa que não quer comprar também ela consegue visualizar até para mandar para alguém
+[00:05:53] um site que a pessoa conhece e o de agenda porque por exemplo no começo as aulas serão só de
+[00:05:58] quintas um no máximo dois horários. Então assim a gente até falou também teria isso. A gente
+[00:06:04] deixaria um mês para frente da data que tá só para não ficar uma coisa de a pessoa reservar
+[00:06:10] 20 as próximas aulas né ficar aprendendo o cancelamento de até tantas horas antes para se
+[00:06:17] alguém cancelar a outra e deixar outro número também qualquer coisa porque é como a gente
+[00:06:24] a gente trabalha com, a gente vai ter o atendimento dela de nutrição, que aí tem online, tem
+[00:06:30] presencial, tem o meu também e tem o funcional. Então são três produtos, né? O que a gente
+[00:06:36] quer fazer essa aplicativa é por produtos da praia, mas o outro ali dá pra deixar,
+[00:06:40] por exemplo, a nutrição, né, pra gente alimentar, o número dela pra já encaminhar
+[00:06:45] pro WhatsApp pra resolver com ela e o do personal comigo. É uma opção a mais,
+[00:06:50] Mas o foco é esse da praia mesmo e tem essa ideia de poder evitar ali, né, B.O.
+[00:06:56] Porque eu falei pra ela, a pessoa agenda, às vezes não vai, prende o lugar de outro.
+[00:07:00] O funcional ainda dá pra ajustar, pra colocar algo a mais.
+[00:07:04] A veloz, por exemplo, não dá, né? A pessoa fica sem bicicleta se a aula tiver lotado.
+[00:07:08] Então tem que ter uma organização, né?
+[00:07:11] É, e assim, de início é mais pra gente ter um controle pra ter um preparo.
+[00:07:16] Por exemplo, ele vai dar aula e ele vai saber se ele prepara uma aula para 5 ou para 20.
+[00:07:21] Claro.
+[00:07:22] E aí, de repente a gente começa a ver,
+[00:07:24] putz, começou a fazer ali na prática e 20 pessoas é o máximo que dá
+[00:07:29] para a gente conseguir interagir, dar atenção, porque é difícil, né?
+[00:07:33] Então vai ter o controle, de repente, são aulas que consegue,
+[00:07:36] mas aí a gente vai pensar eventualmente em ter aula experimental.
+[00:07:42] Sim.
+[00:07:43] Vai ter experimental, e como nossa, tem uma aula lotada,
+[00:07:46] pessoal vai fazer experimental um dia lotado que ela vai nem ter atenção
+[00:07:50] a gente já tem um controle já consegue mandar uma mensagem no WhatsApp
+[00:07:54] tentando agendar ela para um outro dia a gente já vai conseguir dar mais atenção
+[00:07:57] então é tudo para para ter esse controle melhor para organizar.
+[00:08:02] E aí só tem mais uma coisinha um detalhe que a gente ainda está pensando
+[00:08:07] mas que na hora que eu falei com você
+[00:08:09] eu achei que seria interessante talvez colocar no aplicativo.
+[00:08:12] Como a gente está montando essa empresa que a gente une os dois
+[00:08:16] e a aula do funcional seria só um funcional.
+[00:08:19] Só que como tudo a gente quer atrelar a nutrição,
+[00:08:22] quando a gente começou a montar, quem fechasse o plano
+[00:08:27] ia ter acesso a um guia, né?
+[00:08:29] Que a nossa empresa a gente já tem o nome, que é Dual Life.
+[00:08:32] Dual Life.
+[00:08:33] Teria um guia de nutrição.
+[00:08:35] É um guia básico.
+[00:08:36] Então assim, porque...
+[00:08:37] Com dicas, essas coisas.
+[00:08:38] Dica, dica de pré treino, que comer no pós treino, hidratação, sei lá, a gente ainda tá montando...
+[00:08:46] Um PDF?
+[00:08:47] É, a gente quer fazer um PDF.
+[00:08:49] E aí a gente pensou em, de repente, colocar isso como um A+.
+[00:08:55] Pode ser até quando a pessoa fechar, automaticamente já entra no WhatsApp dela, né?
+[00:09:00] Acho legal.
+[00:09:01] Fechou o plano, você dá isso como um bônus, não sei.
+[00:09:04] E aí ela consegue acessar isso do aplicativo porque também do bem lá no começo a gente fala a gente envia
+[00:09:09] mas é muito ruim também enviar no ataque aquele negócio que é perdido.
+[00:09:13] Também não é até o acesso de qualquer um e se a pessoa fechou ali até pode.
+[00:09:19] Então a pessoa fechou ali está ali que vai ter o plano de 20 que é o nosso melhor custo benefício para vender mais.
+[00:09:25] Aí a pessoa. Todos vão ter o guia mas vai estar ali escrito o valor é você ganha esse guia
+[00:09:31] e ganha uma bem pedança, um exemplo da Letícia também. Então a parte de momento que a pessoa
+[00:09:35] fechou ela encaminha, mas acho que a prior é isso, assim, do, do, a página inicial, né?
+[00:09:41] Em esses dois botões, assim, que eu não sei como é que fala pra você, mas que encaminha de uma
+[00:09:46] outra forma, e o, isso que ela comentou, eu pensei ainda pra ela em colocar, não sei como que é,
+[00:09:52] essa seria essa tela do aluno, né, seria diferente do do professor, mas até um perfil, assim,
+[00:09:57] um terceiro com cantinho para a pessoa
+[00:10:02] ver informações né tipo assim recheio e tal data quando iniciou por exemplo e
+[00:10:07] tenho tantas alas feitas né independente de que se acabou se não acabou mas ela
+[00:10:12] vê isso que apareça pra gente também pra gente poder tá olhando ali pra pessoa
+[00:10:16] que fechou 50 aulas né a gente recebe uma notificação ali pra poder dar um
+[00:10:20] agrado então a aula número 51 é de graça não sei mas tem um perfil que a
+[00:10:26] pessoa olha até para comparar as pessoas gostam disso né
+[00:10:29] mostrar pro outro um nível, não sei, ia ser um progresso, sabe, uma evolução mesmo.
+[00:10:34] Sim, sim. Uma pergunta. Vocês têm alguma coisa, algum plano na ideia, alguma ideia já na cabeça de, por exemplo,
+[00:10:41] quais são os planos que vocês querem fazer? Eu entendi de vocês, por exemplo, 5, 10 e 20.
+[00:10:46] Isso é número real ou vocês só estão...
+[00:10:48] É, não, até agora essa talvez a gente ajuste alguma coisa, mas esse assim são de 5, 10 e 20.
+[00:10:54] Aí o dia 5 a gente meio que sai ganhando o valor ali um pouquinho todos
+[00:10:58] né mas é um valor um pouco mais caro e a gente só iria fornecer esse guia
+[00:11:02] para todo mundo que fechasse o dia 10 ele diminui um pouquinho para dar aquela escala
+[00:11:07] por aula né diminuiu o preço por aula.
+[00:11:09] É um pouquinho e o dia 20 é o que cai bem.
+[00:11:13] Só ter terças de quinta as aulas daria mais ou menos dois meses e meio
+[00:11:17] e daria o guia e talvez uma bem impedância.
+[00:11:19] Pela bem impedância não.
+[00:11:20] Não vai ter não vai ter.
+[00:11:21] vai ter PDF então talvez quem fechar de 20 tem mais acesso no PDF
+[00:11:27] e a comunidade do WhatsApp que a gente vai colocar.
+[00:11:29] Mas são três planos inicialmente.
+[00:11:33] A gente tem até os nomes que a gente pensou.
+[00:11:36] Relacionado com o Mara.
+[00:11:37] Assim é tudo de fraude.
+[00:11:38] Tem a Plano Agua Vila e o outro do Banão.
+[00:11:42] Pode passar?
+[00:11:42] Pode.
+[00:11:43] É só para você entender então o nome da empresa Dual Life.
+[00:11:46] né que a gente a gente mandando a gente fez por exemplo tudo ali
+[00:11:52] relacionado meu e da Letícia né então ela é nutrição e o meu personal são
+[00:11:57] dois pilares ali que se juntaram e tem a ter essa identidade do casal e
+[00:12:01] relacionado muito ao mar então assim o logo que ela vai te mandar
+[00:12:05] depois é uma sereia né que o meu é um siri que é ele direciona meio que
+[00:12:12] pra gente assim que a nós ficamos responsável mais pra frente a
+[00:12:14] a camiseta da sereia é quem é da nutrição, o outro é do personal e o plano é plano sardinha
+[00:12:21] né que é o de cinco aulas, o plano água-viva que é o de três aulas ou de dez aulas e
+[00:12:28] o plano tubarão que é o de vinte aulas.
+[00:12:32] É e aí a gente montou um outro que depois eu posso mostrar pra quem é pro... a gente
+[00:12:37] agora falou com você quando falou nutrição e personal pra encaminhar pro whatsapp, mas
+[00:12:42] mas a gente tá bolando um pra já ter uns combos prontos, né?
+[00:12:47] Desse também.
+[00:12:48] Então, por exemplo, o nosso lá era...
+[00:12:50] É o plano sereia.
+[00:12:51] Se quiser deixar pra tu, é pra escritar pra ele que é uma noção, ó.
+[00:12:53] Mas a gente não precisa talvez colocar valor nesse.
+[00:12:56] Mas seria o plano sereia.
+[00:12:58] É que quem vai lidar com a nutrição dela e o plano sirí pro meu.
+[00:13:02] E o plano duplinha, que é um que já tem um combo fechado que é bom pra gente,
+[00:13:07] que é exato, assim, ninguém mexe.
+[00:13:09] é duas vezes personal um atendimento presencial do plano mais top dela e mensal.
+[00:13:14] Esse é o plano do Plin e tem até um preço lá fechado.
+[00:13:17] A gente pensou fazer assim um negócio feito que é um preço tal e a pessoa
+[00:13:21] facilita pra gente tudo.
+[00:13:23] Mas aí não é da do funcionário.
+[00:13:25] É isso não é do funcionário.
+[00:13:26] É que a gente também esboçou isso mas esse daí pode colocar não que seja o valor
+[00:13:31] mas o nome do plano já por exemplo o dela plano Sereia
+[00:13:36] e com o número do WhatsApp já pra já encaminhar pra quem quiser perguntar sobre esse plano.
+[00:13:41] Os outros não, os outros a gente vai deixar com um valor exatamente igual o da Velocity
+[00:13:45] tipo 60 almas, 600 reais pra pessoa ver que tem aquela escalonada de valores né, que
+[00:13:54] compensa o D20. O D20 vai ser o nosso carro-chefe, acredita a gente.
+[00:14:00] Entendi. Em termos de agenda, deixa eu pensar como a gente poderia fazer.
+[00:14:09] Porque o de agenda, pelo que eu estou entendendo, vocês, obviamente, vão ter que ter acesso
+[00:14:15] à agenda e o aluno a mesma agenda de vocês, só que a lógica é que a de vocês é a mais
+[00:14:19] completa porque vocês têm o global e ele só tem o individual.
+[00:14:23] Exato.
+[00:14:24] Então, na verdade, a gente tem que fazer alguma coisa de que, por exemplo, eu vou
+[00:14:27] fazer a minha aula hoje, mas o João vai fazer a dele. Então na hora que eu marcar a minha,
+[00:14:32] eu tenho que limitar, por exemplo, você vai limitar que para a aula da terça-feira você
+[00:14:36] vai ter no máximo 20 alunos, então você vai abrir 20 vagas. Na hora que chegar o 21º
+[00:14:41] vai falar, opa, fechou, não tem mais, você vai ter que ir para a 5ª.
+[00:14:44] Sim, a gente está visualizando isso mais para frente, mas é uma ideia, porque assim,
+[00:14:50] acredito que, como eu falei para ela, se chegar 21, 22, eu consigo atender. A gente
+[00:14:54] que simplesmente ali na hora vai barrar, mas é uma coisa para ter uma noção, e até
+[00:14:59] para o pessoal acostumar, porque é isso, o aplicativo ele dá uma organização, mas ao mesmo tempo eu
+[00:15:05] queria tirar essa dúvida com você, porque por exemplo, as aulas vão ser terças de quinta, né?
+[00:15:08] Eu não sei como que você vai montou o aplicativo, então a pessoa tem ali o histórico, ela vai se
+[00:15:14] cadastrar, mas entrou um aluno novo, seria ter que fazer alguma alteração, porque eu sei que ele
+[00:15:20] automático, vai mostrar esse histórico dele. Mas é o que você falou, a pessoa vai lá,
+[00:15:25] ela vai fechar, tem 20, aí não sei se a gente pode colocar uma opção assim de... tá cheio,
+[00:15:32] né? A gente vai ter um aviso que tá lotado e encaminha pro WhatsApp da gente pra poder... a
+[00:15:38] gente vê se consegue encaixar, porque talvez cancele também, né? Tem que colocar isso, umas
+[00:15:43] 12 horas de celular. Esse é o ponto. A gente pode deixar a aula, por exemplo, você tem duas
+[00:15:48] a aula de terça. A gente pode deixar em aberto, por exemplo, a gente não sabe quantas pessoas vão
+[00:15:53] se cadastrar, nesse primeiro momento a gente deixa aberto, então todo mundo que se cadastrar na terça
+[00:15:57] vai entrar na aula, não importa quanto seja, a gente não vai saber. Quer dizer, vai saber mais ou menos
+[00:16:02] porque você vai saber a quantidade de alunos que a gente tem, quer dizer, que vocês têm.
+[00:16:05] Cadastrado, né?
+[00:16:06] É, cadastrado. A hora é começar a crescer, vocês vão saber quantos alunos vocês vão ter cadastrado
+[00:16:09] também, então aí você já tem que começar a tomar cuidado com a quantidade de... Vocês vão ver no
+[00:16:14] dia a dia, né? Mas o que eu quero dizer é, a gente pode deixar a aula em aberto, ou a gente já pode
+[00:16:18] limitar desde já. E se a gente limitar, como você disse, a pessoa pode, sei lá, a gente
+[00:16:24] pode mandar uma mensagem para a pessoa, olha, para os que estão cadastrados, olha, você
+[00:16:28] quer ir na aula de hoje, só tem mais duas vagas, não sei, e você força a pessoa,
+[00:16:32] tá entendendo?
+[00:16:33] É legal, se já está perto.
+[00:16:34] A gente deixa uma pizza para a pessoa, olha, você vai na aula de hoje, só tem
+[00:16:36] mais duas vagas, olha, alguém marcou, olha, só tem mais uma vaga. Na hora que
+[00:16:39] acabou a vaga acabou, se o cara te ligar, oh, eu queria ir, mas...
+[00:16:42] Ah, mas e esse número real assim mesmo, tipo assim, está acontecendo, a pessoa
+[00:16:46] cadastrando para não chegar lá e ver que às vezes está mais fácil. Ela vai ter
+[00:16:51] notificação para ela já programar.
+[00:16:55] Não é porque eu marquei minha aula para hoje que eu vou, também posso faltar, mas
+[00:17:01] obviamente tudo aqui vai ser real, mas aí no dia a dia a gente sabe que
+[00:17:05] um vai marcar não vai, vai avisa em cima da hora, mas aí é o que você disse, para abrir uma
+[00:17:11] vaga em cima da hora talvez não detém para outra pessoa, aí são coisas do dia a dia.
+[00:17:14] Sim, porque eu falei para ela, por exemplo, vai, se a gente coloca lá, como vai ser de
+[00:17:20] manhã, o exemplo 7 horas da manhã de terça-feira, 12 horas ali antes, né, 7 horas da noite do
+[00:17:26] outro dia, a gente pode começar a... tá cheio, a pessoa foi lá querer fazer, tá
+[00:17:32] cheio.
+[00:17:33] Então assim, se a pessoa fez antes disso, de cancelar, a gente pode até avisar quando
+[00:17:36] a pessoa for fechar, ó, entrou, tá notado, dá uma olhadinha depois, talvez libere.
+[00:17:41] Por quê?
+[00:17:42] a pessoa cancelar depois desse horário e a outra já viu e deixou de ir, a gente tem que dar um jeito
+[00:17:47] de contabilizar que eu queria tentar ver isso também. Passou das 7 horas do dia anterior,
+[00:17:51] ela colocou e não cancelou, não foi por algum motivo, ela vai contabilizar aquela aula,
+[00:17:57] tem outra pessoa alagada, a pessoa deixou de ir, agora se ela cancelou, a gente até falou pessoal,
+[00:18:03] cancelaram aqui, tenta lá entrar um cadastro lá para agendar que agora tá com uma vaga,
+[00:18:09] E aí a pessoa vai vendo.
+[00:18:10] É, a gente pode, por exemplo,
+[00:18:13] a gente pode colocar essas regras,
+[00:18:15] e se a pessoa avisar com, sei lá,
+[00:18:16] seis horas de antecedência que ela tirar a aula dela,
+[00:18:19] ela liberar a vaga dela,
+[00:18:21] automaticamente a gente manda uma mensagem
+[00:18:22] para outras pessoas dizendo,
+[00:18:23] olha, liberou uma vaga aqui.
+[00:18:25] E as pessoas que vão olhar e...
+[00:18:26] Aí ela serve com conta, tá?
+[00:18:28] Se você fazer isso manualmente, senão...
+[00:18:31] No começo acho que você vai ter tempo, mas sei lá,
+[00:18:32] vamos imaginar que isso vai crescer
+[00:18:34] e daqui a pouco você não vai conseguir organizar tudo.
+[00:18:35] É, sim, por isso eu sei, eu amo o tempo.
+[00:18:37] automatizar o negócio desde o começo, entendeu? Porque acho que se começar legal vai ficar fácil
+[00:18:42] para vocês no futuro, eu imagino. Eu também acho, já começa com... Eu acho que isso é bom até
+[00:18:48] limitar então, porque assim, se não vai encher, tá livre. Se encher, a gente já começa já...
+[00:18:54] E se começar a encher muito, a gente vai ver de aumentar a vaga, é, o grado, né?
+[00:18:58] É, vocês vão perceber, exatamente, vocês vão começar a perceber o negócio assim acontecer,
+[00:19:02] aí sim vocês têm que tomar uma outra, uma posição, ou aumentar a aula, ou não sei,
+[00:19:07] quantidade de pessoas da mesma turma para atender na mesma turma.
+[00:19:11] É que dá para fazer.
+[00:19:14] É então aí seria isso assim é uma coisa meio que simples né.
+[00:19:18] Vai tem eu pensei o A mais mesmo esse menu que já está ali o PDF do guia pronto
+[00:19:25] né só para falar que tem a parte da nutrição que a gente está
+[00:19:30] pegando muito nisso o movimento e nutrição a união dos dois.
+[00:19:34] é por isso que é do life.
+[00:19:35] Então a gente queria só deixar esse guias do que ficar mandando
+[00:19:39] para a pessoa tem que nem tem celular WhatsApp direito.
+[00:19:42] E falando em Santos ainda é pessoal.
+[00:19:44] Tem gente mais velho.
+[00:19:45] É o que a gente está acontecendo hoje de o pessoal tem aquela resistência
+[00:19:48] para fazer é para a gente facilitar mas assim acontece.
+[00:19:51] O pessoal não mexe às vezes tudo.
+[00:19:53] Então é uma estética bonita que o lobo também acho bem bonito
+[00:19:58] mas é uma coisa simples assim não tem muita opção sabe.
+[00:20:01] Comprar a aula claro que depois estando tudo pronto
+[00:20:03] os valores é aquela tela e a outra do dia de agendar né e essa eu não sei como é que
+[00:20:08] ficaria para você porque como é só textas de quintas é um calendário completo ou já
+[00:20:13] é tipo só textas de quintas ali com com a data mesmo a data é só terças e quintas
+[00:20:18] porque não acho que não tem necessidade da pessoa olhar por exemplo vários números
+[00:20:22] da pessoa a gente vai deixar tipo o que você tem disponível terça e quinta e
+[00:20:27] eu naquele momento e o horário acho que vai ficar mais fácil da pessoa mais didático
+[00:20:31] a pessoa vai lá vai entrar e não tem muita chance de errar sabe.
+[00:20:35] E pode falar não pode falar.
+[00:20:40] Não ainda não pretende fazer contrato.
+[00:20:43] Vai tem que fazer né.
+[00:20:44] É porque a gente quer se resbaldar em alguma coisa porque é isso.
+[00:20:48] A pessoal vai eu falei para ela então foi isso hoje.
+[00:20:50] Eu falei quando a pessoa quer arrumar confusão porque assim
+[00:20:54] o que eu acho que é o problema real que isso faz parte
+[00:20:57] mas a gente conversou muito isso hoje.
+[00:20:59] A partir do momento que a pessoa pagou, que às vezes ela pode até pagar sem entrar em
+[00:21:03] contato com a gente, porque para isso que é o aplicativo, a pessoa que torna aquela coisa
+[00:21:08] ela está com a razão, ela já comprou, então vai ter aquela coisa assim de não
+[00:21:12] tem vaga, antes tinha e agora está mais difícil, então vai acontecer.
+[00:21:16] Então é principalmente para isso, principalmente com a validade das aulas.
+[00:21:22] A gente não quer que uma pessoa compre cinco aulas, fique três meses e depois
+[00:21:25] ela volta e queria fazer aquela aula das sete como se tivesse mais ninguém.
+[00:21:30] Sim. Ok, eu posso montar um contratinho também simples e vocês leem e se vocês quiserem...
+[00:21:35] Assim, eu não sou advogado, mas eu posso montar e aí vocês veem se vocês quiserem
+[00:21:40] mandar pra um advogado, se vocês tiverem um advogado...
+[00:21:43] Ah, legal!
+[00:21:44] Ou se vocês já quiserem me dar o contrato pronto da maneira que vocês quiserem.
+[00:21:47] Ah, antes de você dar a coisa, a gente agradece que a gente pega até uma ideia.
+[00:21:51] Eu fiz uma vez que eu tinha uma fictoria de corrida, mas eu falei pra ela, o meu
+[00:21:54] o meu receio era esse que eu também não sou advogado e eu fiquei... eu não sabia, eu pesquisei um pouco mas o que eu podia colocar, né?
+[00:22:01] era eu que criava as regras mas tem um monte de questão do consumidor lá em cima então também contei que meus alunos não iam fazer, bater de frente porque era uma coisa mais simples
+[00:22:12] mas agora como é algo maior a gente quer fazer direitinho pra começar e não ter problema né?
+[00:22:19] legal eu tinha mais uma dúvida mas eu não lembro agora mas ok eu consigo entender
+[00:22:26] assim é vou precisar do logo de vocês também é importante que eu vou colocar já o horário vocês
+[00:22:35] me passaram a hora das aulas de ter 7 é mandar para ele amor é da 7 às 8 por enquanto vai ser
+[00:22:40] esse que entram 7 às 8 mas eu vou fazer um das 8 às 9 também é que eu não vou colocar lá
+[00:22:44] colocar vai dividir os poucos alunos que vão ter no começo, né?
+[00:22:48] Exato.
+[00:22:49] E, deixa eu tirar uma dúvida, quando você, por exemplo, teria como colocar, eu vi até
+[00:22:53] agora do aplicativo do meu cabeleireiro que a gente faz, a pessoa fechou, agendou, automaticamente
+[00:23:00] tem como vir uma mensagem pra gente, até pelo WhatsApp, esse daqui encaminha assim,
+[00:23:05] o nome completo e o número, já passa pro WhatsApp e a confirmação da aula dela.
+[00:23:09] Acho que isso também é bom pra gente ter um controle, que a gente até se baseia
+[00:23:13] por ali, né?
+[00:23:14] Ah, isso que eu ia perguntar, como vocês me disseram que o pessoal às vezes vocês têm
+[00:23:19] bastante clientes que vão ser idosos, como que vocês querem que essas pessoas vejam a
+[00:23:24] agenda pelo WhatsApp?
+[00:23:26] Não, pode ser pelo aplicativo também.
+[00:23:29] Tudo igual para todo mundo, né?
+[00:23:31] Ali a única coisa que tem da aula é que eu iria fazer alguma adaptação por conta
+[00:23:35] de limitação, mas não tem nenhuma alteração no aplicativo, não.
+[00:23:39] A gente vai tentar comunicar.
+[00:23:42] Não, eu fiz a pergunta errada, não é pelo WhatsApp, é pelo celular na verdade ou pelo computador?
+[00:23:47] Ah, pelo celular, né?
+[00:23:49] É pelo celular, a gente vai tentar conversar com o pessoal, até se precisar de alguma ajuda, a gente falou que a gente vai
+[00:23:54] ajudar ou pede para algum conhecido deles mesmo, porque a gente sabe que talvez alguém tenha uma dificuldade, mas por isso que a gente quer que seja muito
+[00:24:00] de dados.
+[00:24:01] Eu penso assim, se for uma coisa muito específica, porque eu também penso que uma pessoa completamente que não está nem conseguindo mexer no celular,
+[00:24:08] é uma outra que vai fazer um movimentinho mas se for uma coisa muito específica ou
+[00:24:13] responsável ela mesmo mandar um WhatsApp para a gente a gente consegue reservar aula da pessoa
+[00:24:18] ali. Às vezes eu mesma tô indo na academia antes o meu plano na Biorítimo eu não consegui
+[00:24:24] acessar as aulas acima das 18 porque eu tinha um limite de acesso mas se eu já tava dentro da
+[00:24:30] academia eu podia participar só que eu não consegui agendar eu ia na recepção pedia para
+[00:24:35] ela agendava para mim. Então se for mais expressões, não vai ser nossa ninguém que consiga.
+[00:24:42] Então aí a gente vai ver.
+[00:24:44] Vamos ver como vai ficar.
+[00:24:48] Legal.
+[00:24:50] Ok.
+[00:24:51] Mas é isso, o resto a gente tem que ir.
+[00:24:54] É mais de exposto, que eu falei, o que a gente está mais acertando é lá do presencial mesmo.
+[00:24:58] Mas isso do que eu comentei com ela, não queria deixar o aplicativo só para o funcional,
+[00:25:03] personal porque é o aplicativo dado lá então tem que ter tudo a gente só não
+[00:25:08] quer colocar os valores ali do do plano da Nutri o plano do personal que a pessoa
+[00:25:12] lida ali da gente tem vários planos entre mestral semestral então seria só
+[00:25:17] talvez uma opção ali de menu a nutrição para agendamentos consultar e
+[00:25:24] mandar o link do WhatsApp porque aí seria mais outra coisa mais personalizado
+[00:25:30] Mas a pessoa pelo menos sabe, às vezes ela olha e fala nossa nutrição como assim né?
+[00:25:33] O que será que é isso?
+[00:25:35] Então é só uma chamada pra ela ver que tem.
+[00:25:38] E aí eu acho que de início é isso, é a coisa mais simples.
+[00:25:41] No WhatsApp também a gente precisa porque a gente vai ter as chamadas lá pra tentar vender.
+[00:25:44] Então esses aí particular é até bom a gente ter o contato no WhatsApp pra tentar
+[00:25:49] tá chamando ali naquele marketing da venda né.
+[00:25:52] Esse daí é pra pessoa não ter trabalho mesmo.
+[00:25:54] Ela vai lá, comprou, se ela quiser e não vai, vai ter uma validade.
+[00:25:57] você levar e também ela agenda aula.
+[00:26:00] Ok. Outra pergunta dos clientes na hora do cadastro, o que vocês precisam de informação?
+[00:26:05] Nome completo, telefone, endereço?
+[00:26:08] Eu acho que CPF é bom também né?
+[00:26:13] CPF, RG.
+[00:26:14] Você me falou agora, até fiquei pensando, como lá vai ser um pouco mais organizado,
+[00:26:22] não sei também se pelo aplicativo, que acho que dá muito trabalho, mas eu queria
+[00:26:26] mandar aquelas anamnésia bem básica a anamnésia de parque ou eu posso deixar
+[00:26:31] impresso para entregar lá não sei mas é uma coisa que assim todo mundo que fosse
+[00:26:35] fazer aquela anamnésia básica que dá uma respaldada da pessoa.
+[00:26:39] Aquele parque sabe tipo ai tem risco aquele negócio essencial.
+[00:26:44] Não responde tudo assim sabe que é bem.
+[00:26:46] Na academia você precisa responder para poder fazer e a pessoa nem lê na verdade.
+[00:26:50] é aí é ou pode ser no
+[00:26:54] que você quer fazer um formulário e preencher e deixar a ficha da pessoa isso ou não?
+[00:26:58] pode até ser esse daí eu não sei como é que te explicar mas o do mfit eu tenho um negócio ele tem
+[00:27:04] aqui um aplicativo tem e ele já encaminha direto é bem simples a pessoa responde o aplicativo e
+[00:27:10] fica lá tipo a naminésia respondido é aquilo para a pessoa passar mal tem aqui um ele já está no
+[00:27:15] o vídeo dela aqui que ela tem o esse base de cão que já não tem nenhuma restrição médica alguma
+[00:27:23] coisa assim nem o negócio meio que montado outro dia também eu estava indo na academia meu dedo não
+[00:27:28] passou eu perguntei porque ela foi porque precisa da renovação do que chama parque aí eu peguei
+[00:27:34] assinei tudo assim não não não não não não quando você vai fazer uma aula experimental na
+[00:27:38] até na SmartFit leva um amigo precisa responder isso é como um
+[00:27:43] tempo de capacidade.
+[00:27:45] Não sei se o Dr. Amiga deixa impresso a gente entrega lá mas se tiver como também é uma opção que eu não sei como é que você colocaria além de achar ele tem que colocar mas é bem básico assim se a gente
+[00:27:56] imprimir uma sobre deixá-la para o pessoal entregar acho que até bom a gente ter com a gente ou se fosse ter no aplicativo porque é para deixar guardado a pessoa fechou e que está numa pastinha isso.
+[00:28:04] É que na passinha dela...
+[00:28:06] Eu acho que é legal ter o aplicativo e ele faz isso na hora que ele faz o cadastro.
+[00:28:10] É.
+[00:28:11] Ele faz todos os dados...
+[00:28:12] Aqui na hora que...
+[00:28:13] Deixa eu ver só.
+[00:28:14] Como escreve o parque?
+[00:28:15] P-A-R-Q.
+[00:28:16] Esse daqui, ó, quando eu vou adicionar um aluno, aí eu tenho o nome completo, e
+[00:28:23] meio o grupo masculino, feminino, data, WhatsApp.
+[00:28:26] Aí embaixo assim, enviar a naminesia.
+[00:28:27] Eu também não sei se vai dar pra...
+[00:28:29] Aí eu só clico assim, sim, né?
+[00:28:31] E ele abre assim, escolher a naminesia.
+[00:28:33] aí só tem o parque e aí na hora que ela entra lá já é aquelas respostas e fica no
+[00:28:38] perfil dela você consegue printar essa tela e me mandar pra mim também?
+[00:28:42] possível.
+[00:28:43] por favor, isso aqui é do outro senhor, do aluno.
+[00:28:46] eu acho que é legal ter sim a gente deixar deixar isso na ficha do cliente.
+[00:28:55] tá e eu vou tentar ver alguém que tem o parque pra te mostrar como é que é.
+[00:29:00] você poder entrar na ficha dele rapidamente, sei lá, não sei, e ver o que está pegando.
+[00:29:05] É.
+[00:29:06] Aqui, eu vou tirar os prints, aí você vê só para...
+[00:29:10] Tá, pode mandar tudo que tiver de informação que a gente vai adaptar, a gente vai se adaptar
+[00:29:14] a todas essas coisas.
+[00:29:17] Pronto, tirei tudo, eu te mostro.
+[00:29:26] Aí é isso, tem no perfil o presente de um aluno meu, aí está assim, avaliações,
+[00:29:30] Aí tá lá na Minésia, aí tá respondida em tal data e tem as perguntas aqui e colocou tudo não.
+[00:29:35] Então é uma segurança mesmo assim, sabe?
+[00:29:37] Claro, é bom pra você ter isso na mão, sim.
+[00:29:42] Puxinho da paletice, olha lá.
+[00:29:48] Ou então, você vai mandar?
+[00:29:49] Aham.
+[00:29:51] Eu vou te encaminhar então.
+[00:29:52] Tá meu, venjador.
+[00:29:54] Tá, nos contratos, nos contratos eu vou fazer o primeiro assim, como eu disse, eu não sou advogado.
+[00:29:59] e aí vocês veem bom se vocês quiserem mudar vocês que vocês quiserem mudar de
+[00:30:04] que não tá bom qualquer coisa vocês me falam e em termos de valores da dos
+[00:30:09] planos vocês quiserem me passar também porque eu também coloco no contrato de
+[00:30:13] 5 a de 10 e de 20 coloco tudo lá cancelamento é importante eu soube por
+[00:30:17] exemplo o de 5 aulas você tem direito você quer dizer você tem o prazo de
+[00:30:21] sei lá x meses pra fazer uma semana pra você tá eu preciso dessas informações também
+[00:30:27] poder colocar tanto no contrato quanto no cadastro da pessoa, para ela saber que as aulas estão acabando
+[00:30:39] e poder mandar mensagens, a gente faz esse tipo de coisa, poder mandar mensagens antes de acabar o plano
+[00:30:44] olha, seu plano vai acabar em tal data, agende sua aula, tá bom, não sei, faz uma propaganda ali na hora.
+[00:30:49] Pagamento também é necessário no contrato né, Alessandro? Colocar fama de pagamento né, porque que te manda?
+[00:30:55] e vocês querem receber por PIX?
+[00:30:59] só PIX tem outro jeito de depósito bancário?
+[00:31:01] da maneira que vocês querem receber eu também
+[00:31:03] porque também é legal a gente falar uma coisa
+[00:31:07] PIX?
+[00:31:09] não dá pra colocar cartão?
+[00:31:11] então mas aí o cartão tu vai colocar numa aula de 20 dias que a pessoa vai pagar e já vai
+[00:31:15] num crédito pode ser, num crédito da tua vista vai que seja
+[00:31:19] mas uma coisa é parcela, acho que nem dá pra fazer porque
+[00:31:23] elas vão ter muitas de um mês, então a pessoa colocar para o mês seguinte ela já acabou a aula, nem pagou ainda
+[00:31:28] pode ser, pode ser
+[00:31:30] é difícil de crédito à vista
+[00:31:32] a gente pode vincular também, por exemplo, eu acho que o que a gente tem que fazer aqui, agora eu vou falar como vendas
+[00:31:38] tudo que a gente puder facilitar para o cliente apertar dois botões e pagar aí tá beleza, tá top, porque a hora que começa a ficar muito difícil, a gente fala
+[00:31:45] depois eu faço daqui e acaba passando.
+[00:31:47] Não é, é geralmente é copiar o código e mandar pro banco ou é que é recode,
+[00:31:53] que é recodida de outro. Mas é código, né?
+[00:31:55] Mas será que no, por exemplo, no de 20 aulas,
+[00:31:59] não poderia dar pra ter opção de parcelamento de dois meses?
+[00:32:05] Eu acho que...
+[00:32:06] Aí a gente que coloca, vai ter duas vezes.
+[00:32:08] É você que decide, é exatamente você que decide.
+[00:32:10] Se vocês virem falar quem quer, eu tenho que fazer.
+[00:32:12] 20 aulas a gente fica nas contas mais ou menos 8, 16, dá dois meses e meio né.
+[00:32:18] Então assim, isso a gente também vai ter que te mandar a validade de cada plano que
+[00:32:22] vai ser diferente, mas acho que poderia ser isso, então é fazer duas vezes só para
+[00:32:27] o pessoal de 20 aulas.
+[00:32:28] É porque aí ela no outro plano se ela for renovar, se ela fizer em duas vezes ela vai
+[00:32:34] ter que pagar de novo em duas vezes sabe.
+[00:32:35] Aí ela vai estar pagando outro mês para renovar de novo, então acho que só de
+[00:32:40] 20 aulas compensa que ainda tem isso ainda pode pagar em dois.
+[00:32:45] Acho que fica assim um tipo cinco aulas bem bem básica
+[00:32:49] mas o completo é diferente do aplicativo mas cinco aulas
+[00:32:53] valor tal bem cada veloz bem fácil assim validade de cinco aulas
+[00:32:58] da duas semanas e meia e vamos colocar assim
+[00:33:02] três semanas ou um mês validade ponto básico
+[00:33:05] A Pairali e Pix, um exemplo, ou o crédito à vista.
+[00:33:09] 10 aulas, valor, mesma coisa, dura dois meses e um mês, né?
+[00:33:15] E Pix, crédito à vista, sabe?
+[00:33:17] E no dia 20, a única coisa que vai ficar duas vezes ao invés de uma só do crédito à vista.
+[00:33:22] Deixa o...
+[00:33:23] A chance do cara parcelar, aham?
+[00:33:24] Sim.
+[00:33:25] Aham.
+[00:33:26] É.
+[00:33:27] Vai sair 3 e um quipouco ali, cada mês mais ou menos, que então é um valor diferente do que o cara chegar lá e pagar 700 reais,
+[00:33:34] vai ser o valor de 20 a 699.
+[00:33:37] Certo.
+[00:33:38] Gilo indo em dois meses e meio não é tão caro pelo que vai entregar.
+[00:33:42] Entendi.
+[00:33:43] Legal.
+[00:33:44] Eu acho que basicamente é isso.
+[00:33:47] Ok.
+[00:33:48] É, se eu lembrar de algum detalhe eu te falo, mas acho que é isso mesmo.
+[00:33:52] É que é bastante coisinha, parece ser mais simples e a gente vai falando, parece
+[00:33:56] ser muita cor.
+[00:33:57] Exatamente.
+[00:33:58] Aquelas informações de tipo, de tela inicial que a pessoa rá falar pra baixo, o Instagram,
+[00:34:03] WhatsApp, tu acha que isso é legal?
+[00:34:05] Eu acho.
+[00:34:07] Deixa a WhatsApp ali, eu quero ver.
+[00:34:09] Talvez não na mesma tela, a gente pode fazer...
+[00:34:11] Eu vou pensar, mas a gente pode fazer uma coisa
+[00:34:13] simples, é que eu tô dizendo, pra
+[00:34:15] o usuário tem que ser muito simples.
+[00:34:17] Não pode ter muita coisa porque ele começa
+[00:34:19] a complicar o negócio.
+[00:34:21] Então de repente a gente pode fazer uma página,
+[00:34:23] a primeira página, na hora que ele entrar
+[00:34:25] já tem ali o lugar de ele marcar a aula
+[00:34:27] dele, que é a primeira coisa que
+[00:34:29] tinha que ter essa na verdade.
+[00:34:31] Mas fora, quer dizer, paralelamente a gente pode fazer uma propaganda no seu Instagram,
+[00:34:35] do seu Facebook, sei lá, outras coisas, da Letícia ou até mesmo das suas aulas particulares.
+[00:34:42] Então isso daí paralelamente, não ali focado no negócio.
+[00:34:46] Quer dizer, uma ideia.
+[00:34:48] Aí a gente de repente pode criar, fazer um link pro Instagram ou você...
+[00:34:54] É, tipo até uma chamada assim, né, no personal, venha treinar com a gente, personal,
+[00:35:00] planos depois depois a gente pode até pensar a frase e colocar né fazer plano alimentar.
+[00:35:04] No aplicativo eu pensei que tem um slogan mais forte.
+[00:35:07] Não só porque.
+[00:35:08] A gente quer que fique claro para a pessoa que ali é nutrição qualquer coisa de nutrição
+[00:35:12] qualquer coisa de treinamento né porque é isso que a gente quer que o pessoal crie
+[00:35:17] essa identidade olhar para a gente e falar assim é uma empresa de nutrição e de
+[00:35:22] treinamento de personal né.
+[00:35:23] É tipo até chamativo mesmo venha fazer com a gente planos venha fazer seu plano
+[00:35:28] alimentar a gente pensar nisso aí de ser uma chamada é exatamente como uma promoção
+[00:35:34] na verdade é exatamente um marketing para o que eu quero mandar para ele tipo assim é
+[00:35:39] vai o plano seria coloca entre parentes nutrição embaixo venho fazer seu
+[00:35:43] planejamento alimentar porque é o que todo mundo entende o negócio vai ficar
+[00:35:48] assim o plano alimentar é nutrição e embaixo deixa o meu plano seria entre
+[00:35:52] parentes personal venha venha treinar com a gente só muda porque a gente
+[00:35:58] eu não sei se eles sabem isso, igual para todos só que mudando a profissão só.
+[00:36:02] Eu acho que é legal sim, não custa nada deixar lá e quem clicar vocês vão ganhar mais.
+[00:36:07] É.
+[00:36:08] Vocês estão jogando o trabalho de vocês, eu acho.
+[00:36:10] Porque muitas pessoas de repente estão fazendo, por exemplo, estão fazendo um funcional lá,
+[00:36:13] não sabem que a Letícia é...
+[00:36:15] Não sabe.
+[00:36:16] Não sabe que você de repente dá aula particular, por exemplo, só está fazendo um funcional.
+[00:36:19] Então ali de repente no aplicativo o cara está funcionando e olha que legal,
+[00:36:22] sei lá, não sei.
+[00:36:23] Põe fotos, põe, sei lá, videozinhos de chamada de vocês chamarem.
+[00:36:27] aquele fale com nós, fale com nós que não, mas assim, quem somos nós, né?
+[00:36:33] Mas é o que tu falou, eu não quero deixar muito aquela poluição porque
+[00:36:36] mas é só a pessoa interessada aqui fuçar para estar aquela coisa assim, quem somos nós.
+[00:36:41] Ali a gente deixa até um pouco da gente, tipo duas linhas falando
+[00:36:45] e tá ali, porque foi o que ele te escreveu, é um slogan,
+[00:36:49] mas é uma chamada mesmo para a pessoa ver que a gente vai falar pessoalmente,
+[00:36:53] mas ali ela vai ver o que tem.
+[00:36:55] Eu acho importante tudo isso acho que é importante. É legal porque até por exemplo tem lá uma pessoa
+[00:37:04] que faz as nossas aulas tá do lado de alguém já mostra nossa que legal o negócio bem feito da
+[00:37:12] longo prazo traz um recolhimento. Até o aplicativo pode ser uma ferramenta.
+[00:37:20] É verdade.
+[00:37:22] Não vai ficar dependendo da gente falar pra todo mundo, mas que a gente tem que falar.
+[00:37:24] Imagina, a pessoa fechou sem falar com a gente,
+[00:37:26] vai contar, que vai vir perguntar,
+[00:37:28] a pessoa já vai ter uma noção o que é, né?
+[00:37:30] Exatamente, eu acho.
+[00:37:32] É isso aí, eu acho que é legal.
+[00:37:34] E também depois, mais pra frente,
+[00:37:36] a gente pode abrir um campuzinho pra essas pessoas que são novas,
+[00:37:40] e que tá vindo como indicação,
+[00:37:42] você tem um videozinho explicando o que é a aula,
+[00:37:44] ou um video de uma aula,
+[00:37:46] sei lá, qualquer coisa assim.
+[00:37:48] É legal. Você falou agora de um insidio, acho que até uma coisa para de observação para a pessoa
+[00:37:55] deixar não nota mas ela deixar um comentário sobre a aula ou não esse negócio. É por isso que eu
+[00:38:02] falei eu acho assim entrou no aplicativo sei lá e meio que eu imagino né e meio e senha entrou na
+[00:38:08] página dela bem nítida assim comprar aula e agendar aí que nem você falou um e três e
+[00:38:14] de campo assim só esse risco vai estar talvez esse quem somos nós é o que vai falar da gente e eu
+[00:38:22] queria esse negócio do perfil para pessoa só entrar tipo assim Letícia iniciou iniciou tanto 50 aulas
+[00:38:29] e a linha pode ter tipo assim deixe seu comentário sobre e esse documentário fica ali até pro tipo
+[00:38:35] avaliação que tem no tripadvisor de viagem assim a pessoa vê quem avaliou a aula não sei uma
+[00:38:41] uma interação né? Sim, eu acho legal. E nessa mesma tela que você disse, na primeira tela, na hora que
+[00:38:49] aparecer que vai ter a agenda da pessoa que ela tem que clicar e marcar o lado dela, eu acho que é legal
+[00:38:53] do lado a gente colocar alguma coisa no sentido de, ó, seu plano de cinco aulas você já usou duas,
+[00:39:00] você tem direito a mais três. E ali ela também bateu o olho e saber nitidamente quantas aulas
+[00:39:05] Tá, então, no Davilost esse fica um balãozinho, só com simblazinho, por exemplo, fechei três pra fazer com ela, que ela faz pelo Total Pes, né?
+[00:39:14] O meu tinha três, depois que eu fui lá fazer ela já ficou dois, assim, então fica um balão tipo notificação do WhatsApp, sabe?
+[00:39:20] Só que é amarenguinho, o nosso pode ser azul, que é da Dual Life. A pessoa já vai entrar e ela vai ver que tem aquele, aquela pendência ali.
+[00:39:28] Perfeito, legal.
+[00:39:30] Dá o print da Davilost pra ele, pra mim também, pra ter uma noção, não sei.
+[00:39:34] Então. E aí ele...
+[00:39:36] É, que esse mercado que vocês estão me dizendo pra mim é tudo novo, tá?
+[00:39:39] Então talvez eu tenha uma dúvida no meio do caminho, aí eu vou perguntando pra vocês.
+[00:39:42] É, a gente também. A gente também.
+[00:39:44] Eu vou te mandar, mas eu acho até bem legal.
+[00:39:46] E eu acho, mesmo assim, eu acho uma poluição visual ainda da Velost.
+[00:39:49] Mas quando você fuça, você vê que... Porque eles têm muita opção e muita regra.
+[00:39:53] Então eles precisam disso, né?
+[00:39:55] Mas esse daqui, aquele balãozinho amarelo que ela vai te mandar ali em cima,
+[00:39:59] comprar a aula e fica esse número.
+[00:40:01] Eu vou circular.
+[00:40:03] Isso daqui que eu coloquei que eu acho legal porque eu acho que as pessoas gostam de ter perfil de comparar, de mostrar quantas aulas fez.
+[00:40:10] O deles é assim baixo, é quantas aulas eu fiz e mais pra trás.
+[00:40:15] Dá pra ver?
+[00:40:17] Ali em cima da tela...
+[00:40:19] Isso, tem três informações, pode deixar mais longe, é bom que eu achei.
+[00:40:23] Em cima aqui...
+[00:40:25] Ah, agora foi.
+[00:40:27] Ah, eu vou mandar aqui.
+[00:40:29] E ali ele tem uma balãozinha visão de quantas aulas tem.
+[00:40:33] Aham.
+[00:40:34] Legal.
+[00:40:35] O que eu vou fazer é o seguinte agora.
+[00:40:38] Eu vou pegar todas as informações de vocês e eu vou fazer um escopo do que a gente conversou
+[00:40:42] aqui.
+[00:40:43] Tá.
+[00:40:44] Um resumão do que eu entendi pra gente poder... e vamos dividir em etapas, tá?
+[00:40:50] Então aí vocês me dizem se é isso mesmo que a gente conversou, se tá dentro do
+[00:40:53] que a gente conversou pra eu começar a montar a estrutura do negócio.
+[00:40:56] Tá.
+[00:40:57] Antes de eu fazer qualquer coisa de aplicativo, eu vou estruturar o que a gente conversou.
+[00:41:01] E aí vocês talvez fiquem um pouco grande, mas aí não tem problema.
+[00:41:05] Vocês vão anotando, olha, não é isso, não é A, é B, não é B, é C.
+[00:41:08] Vocês vão anotando, me passa de novo, eu refaço.
+[00:41:11] E aí a gente passa para o negócio mesmo de começar a montagem do aplicativo.
+[00:41:16] Tá bom.
+[00:41:17] Pode ser?
+[00:41:18] Pode.
+[00:41:19] Com certeza.
+[00:41:21] E aí a gente precisa mandar essas informações para o contrato.
+[00:41:25] é a gente até precisa sentar e organizar isso dos valores e do cancelamento para
+[00:41:31] estudar fazer as contas a gente viu ali no começo mas acho que a gente vai ter que
+[00:41:35] ver de novo até quando a gente pode mandar isso você vai ver isso aqui
+[00:41:39] amanhã eu vou assim depois é só para saber sobre o contrato eu vou não precisa
+[00:41:45] me mandar agora porque na verdade eu vou como eu te disse eu vou montar o
+[00:41:48] escopo do que a gente conversou então vou demorar até domingo talvez tá não
+[00:41:52] O contrato é só adicionar depois que estiver pronto, né?
+[00:41:54] O PDF ali, ele fica fácil, mais fácil, né?
+[00:41:57] Isso, exatamente.
+[00:41:58] E assim, outra coisa, eu vou colocar números aqui de contratos e de valores fictícios,
+[00:42:04] depois a gente muda, tá?
+[00:42:05] Só pra eu ter...
+[00:42:06] Tá bom.
+[00:42:07] Só pra gente começar a entender, deixar assim, mais estruturado o negócio.
+[00:42:10] Então os números, de repente, que eu tô te passando não vai ser o que vai pro
+[00:42:12] aplicativo, tá?
+[00:42:13] É só pra gente estruturar o negócio.
+[00:42:14] Tá bom, estruturar mesmo.
+[00:42:15] É, estruturar.
+[00:42:16] Tá bom, sem que também tiver ideia de como é alguma coisa, se você tiver dúvida,
+[00:42:21] porque acho que vai surgir na hora da de fazer na prática, aí você vai falando da gente, a gente vai...
+[00:42:26] Eu vou passar o seu número também pro Diogo, porque se ele...
+[00:42:30] É, mas faz-me um grupo na frente.
+[00:42:32] Ah, pode ser, vou montar.
+[00:42:33] Porque aí fica mais fácil, tipo, né? Todo mundo vai entender o que a gente está fazendo.
+[00:42:35] É, a gente vai se complementando também.
+[00:42:37] Exato. Coloca o nome da empresa de vocês no grupo pra eu saber e fica nós três aí, todo mundo vai falar a mesma língua aí, todo mundo vai saber do que tá rolando.
+[00:42:44] Tá bom. Tá bom, vou montar hoje já.
+[00:42:46] Aham.
+[00:42:47] Beleza.
+[00:42:48] Obrigado, violência.
+[00:42:50] Não, perfeito. Nossa, que legal. A gente estava pensando, nossa, porque eu escrevi tão
+[00:42:55] pouquinho coisa, né? Só que vai desenrolando e a gente vai falar, nossa, que legal.
+[00:42:59] É, mas é tão simples, né? A gente acha que é só uma coisa. Ah, tem a gente também.
+[00:43:03] É, mas é que vai destacar, né? Porque quando a pessoa quer tentar fazer igual,
+[00:43:07] ali vê que é um trabalho e não sai de uma hora pra outra, né? É isso que dá uma credibilidade, né, pra gente.
+[00:43:13] Exatamente, exatamente. Legal.
+[00:43:16] Ah, legal. Tá bom.
+[00:43:17] Então tá, vamos falar. Eu vou pedir pra você até domingo pra eu poder mandar esse escopo pra vocês.
+[00:43:23] Fica em paz. Aqui é feriado ainda, segunda-feira também.
+[00:43:27] Ah, mas beleza. Dá pra trabalhar. Eu trabalho aqui durante o dia, faço trabalho com construção,
+[00:43:34] mas aí à noite eu tô tranquilo em casa e eu consigo ir mexendo um pouquinho.
+[00:43:37] E você tá morando aonde aí?
+[00:43:40] Eu moro em Conérgica.
+[00:43:41] Ah, tá. Sei.
+[00:43:43] É próximo de Nova Iorque.
+[00:43:44] Eu estou no meio do New York de Manhattan.
+[00:43:48] Perto da onde o Rogério mora, não é?
+[00:43:50] Não, a gente mora na mesma...
+[00:43:52] O Rogério mora no mesmo estado, na verdade.
+[00:43:55] Eu moro 20 minutos da casa do Ro.
+[00:43:58] Ah, é do lado, então.
+[00:44:00] Claro que é legal.
+[00:44:01] Aí faz muito frio, essa cidade que é frio.
+[00:44:04] Então, agora...
+[00:44:06] É porque aqui é assim.
+[00:44:08] É o oposto daí.
+[00:44:10] Aqui nós estamos no...
+[00:44:11] Vai entrar o inverno e vai entrar o verão.
+[00:44:13] E aí quando é outono, aí é primavera aqui. Então agora a gente tá saindo do outono e entrando no inverno.
+[00:44:18] É, nosso primavera tá aparecendo no inverno também. A inverno tá aparecendo também.
+[00:44:22] É, nossa, tá super frio aqui.
+[00:44:24] Aqui não, aqui as quatro estações do ano são bem definidas.
+[00:44:29] Cara, bem definidas. Então assim, o inverno a gente tem aqui, supostamente era pra ser três meses, mas a gente tem cinco de inverno.
+[00:44:37] Mas é um inverno pesado, né?
+[00:44:39] Tem aquele negócio que fala assim, ah, hoje será que vai espazer calor? Não, não tem como. Todo dia do inverno é frio.
+[00:44:45] Nossa.
+[00:44:46] Todo dia do inverno é frio, cara, desesperado.
+[00:44:49] Vai até enjoar mesmo, aí você vai pra outra cansa no outro.
+[00:44:52] Aí tem que acender essa lareira que tu colocou aí pra poder esquentar muito, não?
+[00:44:56] É, exatamente.
+[00:44:57] Cara, todo inverno eu falei, vou embora dessa terra aqui, mas depois o espaço fica bom.
+[00:45:03] Aí acaba.
+[00:45:04] Aí eu me arrependo de falar.
+[00:45:07] aqui é gostoso demais assim, não tem currido assim é muito bom
+[00:45:14] é tudo tem um lado bom e um lado ruim, não adianta, temos que ver o que a gente prioriza
+[00:45:20] tá melhor que a gente aqui com certeza, se tu ver como é que tá aqui, o nosso presidente tá melhor com certeza
+[00:45:26] o pau tá quebrando aí, tá feio o negócio
+[00:45:28] tá feio, pode ser
+[00:45:30] Pois é. Bom, eu não sei em quem vocês votaram, mas o cara tá aí é porque o povo quis que ele tivesse, né?
+[00:45:38] Isso é o pior.
+[00:45:40] É, vamos ver como que vai ficar, né?
+[00:45:42] Parece que não vai ficar bom, né? Mas vamos esperar.
+[00:45:47] Vai continuar ruim.
+[00:45:48] Quando acho que vai piorar, ainda dá muito.
+[00:45:51] Não tem a dúvida, não tem a dúvida.
+[00:45:53] É o que eu falo, eu não sou de esquerda, não sou de direita.
+[00:45:58] Mas, mas, se o Flávio Bolsonaro entrasse eu acho que também não ia mudar muita coisa.
+[00:46:03] Mas...
+[00:46:04] Então...
+[00:46:05] Eu vou ter...
+[00:46:06] A gente está vendo que não está legal, né?
+[00:46:08] Era uma opção, né?
+[00:46:09] Era uma opção, exatamente.
+[00:46:10] Era uma opção, exatamente.
+[00:46:12] É tudo um tiro no escuro, na verdade.
+[00:46:14] É porque o que eu penso assim, se você está vendo que o negócio está ruim e você
+[00:46:17] tem uma chance de mudar, ué, se está ruim você não muda.
+[00:46:21] Exato.
+[00:46:22] É, mas é o que a gente pensa, até que não é grande conversa assim, que não
+[00:46:25] ligado e não precisa ser até que é bom o mínimo né.
+[00:46:28] Mas assim o fato é que está ruim e aí eu vou parar.
+[00:46:32] O que me indigna não é que o Bolsonaro é o exemplo só que a galera
+[00:46:35] sair para soltar fogos comendo para comemorar comendo pouco ovo
+[00:46:40] como se tivesse colocando o Barack Obama aqui brasileiro.
+[00:46:43] Isso está aí me deixa louco porque não está bom.
+[00:46:47] Os caras me ligando aqui eu vou eu vou ter bom eu não sei quem você.
+[00:46:50] Eu voltei no Bolsonaro.
+[00:46:51] Voltei no Bolsonaro.
+[00:46:52] A gente é bom muito mencionado.
+[00:46:54] Eu voltei no Bolsonaro.
+[00:46:56] Pô, foi só me ligando.
+[00:46:58] Parecia que estava jogando o Corinthians de Palmeiras, bicho.
+[00:47:00] Já mudou o negócio aqui.
+[00:47:02] É o que o pessoal falou.
+[00:47:06] Na real, quem conhece mais, não sei, família, não era tão ligado.
+[00:47:10] Mas assim, eu sei quem está ruim do jeito que está.
+[00:47:12] Essa eleição foi uma eleição perdida porque não era em quem vai ser o melhor para o Brasil.
+[00:47:16] Era a galera que escolheu.
+[00:47:18] Ou um ou outro.
+[00:47:20] Ele está fora do negócio.
+[00:47:22] Isso meu medo, quem que fala assim, daqui a quatro anos esse Luan é possível que vai pulsar,
+[00:47:27] que esse cara aí, né, não tem como...
+[00:47:29] Aparece qualquer besta que vai falar que vai dar sequência, o pessoal vai votar no besta do PT só pra me ser.
+[00:47:34] Então assim, acho que a gente vai pro Estados Unidos pra connect, gente.
+[00:47:38] Vai fazer tudo...
+[00:47:39] Pode ver.
+[00:47:40] Aqui tem trabalho, hein.
+[00:47:42] É bom, hein. Vou te falar que aqui não é ruim.
+[00:47:44] É mesmo?
+[00:47:45] É bom, sim.
+[00:47:46] Bom, eu vou te falar.
+[00:47:48] Bom, eu vou falar pra vocês e você...
+[00:47:50] Eu já imagino a resposta. Aqui você trabalha demais.
+[00:47:52] Você trabalha demais, mas eu sei que aí também se trabalha.
+[00:47:55] Mas aqui só tem um detalhe. Aqui você consegue prosperar.
+[00:47:58] É, então.
+[00:48:00] Aqui você trabalha também, você não tem frescura.
+[00:48:02] Você trabalha, mas você tem retorno, né?
+[00:48:05] Eu tenho retorno. Por exemplo, tudo aqui é acessível, sabe?
+[00:48:08] O que o rico tem, você pode ter.
+[00:48:10] Você fala, po, mas você não pode ter uma BMW.
+[00:48:12] Você pode ter uma BMW aqui.
+[00:48:14] É como você diz, depende do que você quer.
+[00:48:16] Pra mim não vale a pena ter, mas assim, eu poderia ter porque é possível, não é uma coisa absurda.
+[00:48:21] Entende?
+[00:48:23] É uma coisa de uma pique inteira, né?
+[00:48:25] Exatamente.
+[00:48:26] Pô, você quer ter um celular?
+[00:48:27] Qual que é o melhor celular? iPhone 18 Pro Max, sei lá qual que é.
+[00:48:31] Puta que custa mil dólares.
+[00:48:33] É, não tenho sei.
+[00:48:35] Não, mas o expertista tá falando que a gente tá ruim, viu?
+[00:48:37] É, o expertista tá falando que a gente tá ruim, isso que eu fico louco.
+[00:48:41] Tá tão ruim que a gente tá indo viajando ela, Paul Lange.
+[00:48:44] né? Pra pagando barato, né? Pra ir no parque. Aí os caras vão assim, porra, o cara vai jogar, o
+[00:48:49] Flávio Bolsonaro vai ganhar, vai entregar o Brasil pro... Então por favor, entra aqui, entra aqui.
+[00:48:55] Seria a melhor coisa do mundo, inclusive. Então, é, não dá pra entender, né? É muito...
+[00:49:00] Fora a segurança. A segurança ali, a qualidade de vida é outra.
+[00:49:05] É, não tem noção mesmo, né? Porque foi dado, não é possível mesmo. E é próximo da gente,
+[00:49:10] normalmente é normal assim tô falando que é mas agora defender como se fosse nossa estamos salvos
+[00:49:16] porque Bolsonaro ia se virar a ditadura eu falei isso não vai ter mas não é assim.
+[00:49:20] Não do jeito que o pessoal tá falando parece que o cara ia sair atirando em todo mundo no meio da rua.
+[00:49:24] É o tanque de guerra na rua esse que é o problema.
+[00:49:26] Não sei o que o cara fez ali ele fez uma lavagem.
+[00:49:29] O pessoal fala a escravidão vai voltar né aí eu só vejo o pessoal comentando mas tu viveu na escravidão?
+[00:49:34] Tu foi escravo pra voltar? Alguém te prendeu se bateu porque tu é um sexo de mal não tem nada.
+[00:49:39] É uma lavagem cerebral forte.
+[00:49:41] Muito forte.
+[00:49:43] Esse é o problema.
+[00:49:45] É o absurdo.
+[00:49:47] O cara
+[00:49:49] trata o negócio como socialismo,
+[00:49:51] como comunismo,
+[00:49:53] e depois por fora fala, não, não, eu sou
+[00:49:55] capitalista.
+[00:49:57] Os caras acreditam, velho.
+[00:49:59] Não, o pessoal está falando de
+[00:50:01] o medo do tuetista é falar que ia acabar a democracia
+[00:50:03] e passar a mão do Bolsonaro
+[00:50:05] na eleição. Aí não é
+[00:50:07] Aí não é democracia, porque aí é...
+[00:50:09] Ou seja, se quiser tirar o PT aqui, a gente não tira.
+[00:50:12] Não tira, cara.
+[00:50:13] Não tira, velho.
+[00:50:14] O Alexandre de Moraes está dominando tudo aí,
+[00:50:16] metendo canetada em todo mundo aí,
+[00:50:18] ninguém fala nada.
+[00:50:19] Exatamente.
+[00:50:20] O cara inventou a eleição eleitoral.
+[00:50:21] Eu acho que nem adiantou votar.
+[00:50:22] Eu acho que nem adiantou.
+[00:50:23] Todo mundo falando aí nos Estados Unidos,
+[00:50:24] o Trump e o Alomanska que não tinha como que dado aquilo,
+[00:50:27] mas não agravou.
+[00:50:28] A conta não bate.
+[00:50:29] Exatamente.
+[00:50:30] Pois é.
+[00:50:31] Mas enfim, fazer o quê?
+[00:50:32] Seguirmos.
+[00:50:33] Infelizmente, eu sei que eu não vivo no Brasil,
+[00:50:36] mas eu sou brasileiro e eu gostaria de ver mudança, infelizmente não vai ser dessa vez.
+[00:50:40] Vamos esperar né, senão a gente vai para os Estados Unidos.
+[00:50:46] Bora, bora, aqui tem trabalho demais.
+[00:50:48] Aqui não, Favê Maria.
+[00:50:50] Se você estiver aberto para trabalhar, por exemplo, eu sou peão aqui, eu trabalhei na construção.
+[00:50:55] Quando eu estava no Brasil eu tinha uma empresa, eu alugava máquina de xerox e tudo mais.
+[00:51:01] Aí eu quebrei e vim para cá, porque eu cheguei aqui e não sabia colocar um parafuso na parede.
+[00:51:05] É sério?
+[00:51:06] Sério?
+[00:51:07] Eu não sabia nada.
+[00:51:08] A gente se adapta né, o ser humano se tira.
+[00:51:09] É só querer né?
+[00:51:10] É só querer.
+[00:51:11] É só jogar a carteira de trabalho que a gente faz, é diferente do deles né, que só
+[00:51:15] quer o...
+[00:51:16] Como é que é o nome?
+[00:51:17] Do benefício né?
+[00:51:18] Exatamente.
+[00:51:19] Por isso que eu tenho que dizer aqui, se você tiver aberto a trabalhar, a regaçar
+[00:51:23] as mãos, cara, não tem como dar errado.
+[00:51:25] Não tem como dar errado.
+[00:51:26] Vai ralar pra caramba.
+[00:51:28] É, eu tenho amigos aí, eles só falam bem, não tem como.
+[00:51:32] Ninguém quer voltar.
+[00:51:33] Ninguém quer voltar.
+[00:51:34] Eu sou um que não vou, assim, por vontade de mim eu não voltaria, não sei se tem algum problema, mas assim, se você falar quer voltar, não volto de jeito nenhum.
+[00:51:41] Não, não volto mesmo.
+[00:51:43] Se um dia acontecer, sei lá, de algum problema que eu tenha que sair dos Estados Unidos, eu bato no Brasil e vou pra outro país. Na hora, eu fico aí 15 dias, 1 mês e vasso daí.
+[00:51:53] É, até o Portugal aí.
+[00:51:55] Canadá, Portugal, Brasil não fico, eu tenho certeza disso.
+[00:51:59] É não, mas tá muito ruim, quem compara assim não tem como.
+[00:52:04] Uma coisa que eu acho muito ruim mesmo é a segurança.
+[00:52:08] É o tempo todo com medo.
+[00:52:11] Isso aqui não é normal.
+[00:52:14] Você suar pra comprar o seu negócio e alguém vai tomar na mão duro.
+[00:52:19] É, fora o resto. Você pode ainda não só roubar, mas pode levar um tiro ainda.
+[00:52:26] tudo é...
+[00:52:27] não, eu tô saindo ainda legal, mas assim, com certeza.
+[00:52:30] Exatamente, né?
+[00:52:31] Já passei por situações assim, por causa da galera.
+[00:52:34] Já?
+[00:52:35] Já, eu tava andando de moto e tava voltando pra casa com a moto na marginal Tietê pra
+[00:52:38] entrar na bandeira antes, o cara de domingo, aí os caras vieram me assaltar, me roubaram
+[00:52:44] e aí eu fui, bom, eu tava numa guarita, sei lá, 500 metros de uma guarita de polícia,
+[00:52:50] fui até lá a pé, falei, mano, os caras acabaram de me roubar, eu falei, que moto
+[00:52:52] você tinha?
+[00:52:53] eu falei, você é doido andar com uma moto dessa sozinha?
+[00:52:55] você é policial? você também tá dizendo um negócio desse?
+[00:52:58] eu não tô entendendo, eu já tava puto, eu falei não tô entendendo o que você tá me dizendo
+[00:53:01] você tá me dizendo que eu não posso andar com a minha moto aonde eu quero
+[00:53:03] posso transitar na minha moto no lugar que eu moro
+[00:53:06] era meio dia, eu falei, o que é outro? é meio dia, eu tô na...
+[00:53:09] a porra, vocês tá de brincadeira comigo?
+[00:53:12] aí eu falei, não, você não sabe que tem gente que eu vou falar?
+[00:53:14] eu sei, se você sabe também que vocês não estão fazendo nada
+[00:53:16] ele sabe que ele me falou, aqui não é minha jurisdição, eu não posso fazer nada, é outra jurisdição
+[00:53:19] eu falei, vocês estão de brincadeira comigo?
+[00:53:21] ela não é cida não é a vez ainda que ele perou pro cara roubar porque depois ele vem de
+[00:53:26] a peste e tirou um pouquinho cara não ouvi mais nada
+[00:53:31] só isso não vai compensar não é possível porque o cara fica cego mas é infelizmente
+[00:53:36] tá difícil mas fazer o que é é é isso aí bom mas tá bom
+[00:53:43] obrigada viu obrigado pela atenção eu vou montar o grupo e aí ele manda o
+[00:53:49] logo também eu vou mandar algumas informações até amanhã eu mando tudo que a gente vê assim
+[00:53:54] o slogan também uma frase que a gente tá pensando né é e aí o que você precisar
+[00:54:01] também você vai falando tá bom não tem problema eu vou tá bom aí do meu lado aqui
+[00:54:07] eu vou fazer esse escopo mando pra vocês até domingo e aí vocês dão uma olhada
+[00:54:11] e a gente muda o que precisa mudar pra poder já pra parte de fazer a programação
+[00:54:15] o negócio tá bom tá bom obrigado viu combinado obrigado obrigado boa noite tá bom a gente fala tchau tchau
