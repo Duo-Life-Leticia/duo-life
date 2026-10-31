@@ -2,41 +2,36 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
 <style>
-/* Layout: faixa de mar no topo, prazo do escopo em destaque, "onde estamos", trilha das 4 etapas, tarefas por etapa, regras + pastas + histórico. */
+/* Layout: logo e faixa de mar no topo, prazo do escopo em destaque, "onde estamos", trilha das 4 etapas, tarefas por etapa, regras + pastas + histórico. */
 :root {
-  --bg: #eef5f8; --panel: #ffffff; --ink: #0d2a3a; --muted: #4f6b7a; --line: #d3e3ea;
-  --deep: #0b3c5d; --sea: #1673b8; --sea-soft: #e1effa; --sereia: #128c84; --siri: #d9502f; --siri-soft: #fdebe5;
-  --st-nao: #8496a0; --st-and: #1673b8; --st-agu: #b8690f; --st-ok: #2b7a4b;
-  --display: "Bricolage Grotesque", "Trebuchet MS", Arial, sans-serif;
+  /* Cores da marca Duo Life (logo): azul-marinho de fundo e dourado. Um tema só, claro ou escuro, até a aprovação da Letícia e do Diogo. */
+  --bg: #021a4b; --panel: #0a2560; --ink: #f4ecd8; --muted: #b8c2dc; --line: #1f3d7a;
+  --deep: #e8b04a; --sea: #f2c45a; --sea-soft: #12306b; --sereia: #f7e082; --siri: #e8b04a; --siri-soft: #1a2f5e;
+  --st-nao: #8a96b5; --st-and: #f2c45a; --st-agu: #e58a3a; --st-ok: #63c48d;
+  --display: "Cinzel", Georgia, "Times New Roman", serif;
   --body: "Nunito Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #08161e; --panel: #0f2230; --ink: #e2eef4; --muted: #9bb4c1; --line: #1f3a4a;
-  --deep: #cfe6f5; --sea: #5fb0ee; --sea-soft: #12314a; --sereia: #4cc7bc; --siri: #ff8a6b; --siri-soft: #3a1c14;
-  --st-nao: #7a8d97; --st-and: #5fb0ee; --st-agu: #e9a245; --st-ok: #5fc08a; color-scheme: dark; } }
-:root[data-theme="dark"] {
-  --bg: #08161e; --panel: #0f2230; --ink: #e2eef4; --muted: #9bb4c1; --line: #1f3a4a;
-  --deep: #cfe6f5; --sea: #5fb0ee; --sea-soft: #12314a; --sereia: #4cc7bc; --siri: #ff8a6b; --siri-soft: #3a1c14;
-  --st-nao: #7a8d97; --st-and: #5fb0ee; --st-agu: #e9a245; --st-ok: #5fc08a; color-scheme: dark; }
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 18px 48px; }
 .wrap { max-width: 1100px; margin: 0 auto; display: grid; gap: 22px; }
 header { display: grid; gap: 10px; }
 .top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 16px; }
-.brand { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 6vw, 46px); line-height: 1; margin: 0; color: var(--deep); letter-spacing: -.01em; text-wrap: balance; }
+.brand { font-family: var(--display); font-weight: 700; font-size: clamp(30px, 6vw, 46px); line-height: 1; margin: 0; color: var(--deep); letter-spacing: .02em; text-wrap: balance; }
 .brand small { display: block; font-family: var(--body); font-weight: 700; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--sea); margin-bottom: 6px; }
+.logo { display: block; width: min(340px, 80vw); height: auto; margin: 0 0 6px -6px; }
 .sub { color: var(--muted); font-size: 14px; margin: 0; }
 .duo { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag { font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px; border: 1.5px solid currentColor; }
 .tag.sereia { color: var(--sereia); } .tag.siri { color: var(--siri); }
 .wave { display: block; width: 100%; height: 18px; color: var(--sea); }
-h2 { font-family: var(--display); font-weight: 800; font-size: 23px; margin: 0 0 10px; color: var(--deep); text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 23px; margin: 0 0 10px; color: var(--deep); text-wrap: balance; }
 .prazo { background: var(--siri-soft); border: 2px solid var(--siri); border-radius: 14px; padding: 16px 18px; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: center; }
 .prazo .cnt { grid-row: span 2; text-align: center; min-width: 88px; }
-.prazo .cnt b { display: block; font-family: var(--display); font-weight: 800; font-size: 44px; line-height: 1; color: var(--siri); font-variant-numeric: tabular-nums; }
+.prazo .cnt b { display: block; font-family: var(--display); font-weight: 700; font-size: 44px; line-height: 1; color: var(--siri); font-variant-numeric: tabular-nums; }
 .prazo .cnt span { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--siri); }
 .prazo h2 { margin: 0; font-size: 21px; color: var(--ink); }
 .prazo p { margin: 0; font-size: 14px; color: var(--ink); min-width: 0; }
@@ -47,13 +42,13 @@ h2 { font-family: var(--display); font-weight: 800; font-size: 23px; margin: 0 0
 .now dl { margin: 0; display: grid; grid-template-columns: minmax(130px, 210px) 1fr; gap: 8px 16px; }
 .now dt { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
 .now dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
-.now dd.big { font-family: var(--display); font-size: 22px; font-weight: 800; color: var(--sea); line-height: 1.15; }
+.now dd.big { font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--sea); line-height: 1.15; }
 @media (max-width: 560px) { .now dl { grid-template-columns: 1fr; gap: 2px; } .now dd { margin-bottom: 8px; } }
 .track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .stage { padding: 12px 14px; border-left: 1px solid var(--line); display: grid; gap: 6px; min-width: 0; align-content: start; }
 .stage:first-child { border-left: none; }
 .stage .n { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-.stage .t { font-family: var(--display); font-size: 19px; font-weight: 800; line-height: 1.1; }
+.stage .t { font-family: var(--display); font-size: 19px; font-weight: 700; line-height: 1.1; }
 .bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--st-ok); width: 0; transition: width .4s; }
 .stage .c { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -65,7 +60,7 @@ h2 { font-family: var(--display); font-weight: 800; font-size: 23px; margin: 0 0
 .etapa { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .etapa > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .etapa > summary::-webkit-details-marker { display: none; }
-.etapa > summary h3 { margin: 0; font-family: var(--display); font-size: 19px; font-weight: 800; }
+.etapa > summary h3 { margin: 0; font-family: var(--display); font-size: 19px; font-weight: 700; }
 .etapa > summary span { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .etapa > summary:focus-visible { outline: 2px solid var(--sea); outline-offset: -2px; }
 .row { display: grid; grid-template-columns: 44px 1fr auto; gap: 10px; padding: 10px 16px; border-top: 1px solid var(--line); align-items: start; }
@@ -73,10 +68,8 @@ h2 { font-family: var(--display); font-weight: 800; font-size: 23px; margin: 0 0
 .row .txt { min-width: 0; overflow-wrap: anywhere; }
 .row .obs { display: block; font-size: 13px; color: var(--muted); }
 .row.destaque { background: var(--siri-soft); }
-.pill { border: none; cursor: pointer; font: inherit; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; color: #fff; background: var(--st-nao); white-space: nowrap; }
+.pill { border: none; cursor: pointer; font: inherit; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; color: #021a4b; background: var(--st-nao); white-space: nowrap; }
 .pill[data-s="andamento"] { background: var(--st-and); } .pill[data-s="aguardando"] { background: var(--st-agu); } .pill[data-s="concluido"] { background: var(--st-ok); }
-:root[data-theme="dark"] .pill { color: #08161e; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pill { color: #08161e; } }
 .pill:disabled { cursor: default; }
 .pill:focus-visible { outline: 2px solid var(--sea); outline-offset: 2px; }
 .empty { padding: 12px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
@@ -96,7 +89,8 @@ h2 { font-family: var(--display); font-weight: 800; font-size: 23px; margin: 0 0
   <header>
     <div class="top">
       <div>
-        <p class="brand"><small>Plataforma em construção</small>Duo Life · Painel de Controle</p>
+        <img class="logo" src="logo-duo-life-horizontal.jpg" alt="Duo Life">
+        <p class="brand"><small>Plataforma em construção</small>Painel de Controle</p>
         <p class="sub">Funcional na praia, em Santos · Sócios: Letícia e Diogo · Projeto conduzido por Alessandro</p>
       </div>
       <div style="display:grid;gap:6px;justify-items:end">

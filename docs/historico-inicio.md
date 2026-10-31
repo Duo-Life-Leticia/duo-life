@@ -37,3 +37,9 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - Painel de controle criado no Claude: [Painel Duo Life Plataforma](https://claude.ai/artifact/VohgRMLrRaPzMrKJGgNP2X) (código em `painel/painel-duo-life.html`; tarefas, status e histórico ficam no banco de dados do painel)
 - Etapas propostas: 0 Escopo e preparação, 1 Aplicativo básico, 2 Avisos e conteúdo, 3 Perfil e divulgação
 - Pendente: o Alessandro enviar o escopo até 01/11; confirmar se pode mover o vídeo para a pasta Reunioes
+
+## Terceira conversa (31/10/2026)
+
+- O Alessandro mandou a logo da Duo Life (sereia, sol e siri, em dourado sobre azul-marinho). Ela fica em `marca/`.
+- Regra nova: tudo usa as cores da logo, fundo azul-marinho e botões dourados, até a Letícia e o Diogo aprovarem. Detalhes em `marca/identidade-visual.md`.
+- O painel de controle foi atualizado com a logo e as cores. A tarefa 0.6 (receber a logo) foi marcada como concluída.
