@@ -30,3 +30,10 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 2. Painel de Controle Duo Life, com todo o escopo em etapas e tarefas.
 3. Mover o vídeo para a pasta Reunioes (confirmar com o Alessandro).
 4. Nada é programado sem a aprovação do Alessandro.
+
+## Segunda conversa (31/10/2026)
+
+- Documento do projeto criado no Drive (pasta 01): [Documento do Projeto - Plataforma Duo Life](https://docs.google.com/document/d/1-GWToSORRFPkXWvnjf5Vs_UazFg01SBf_rFNpR77270/edit)
+- Painel de controle criado no Claude: [Painel Duo Life Plataforma](https://claude.ai/artifact/VohgRMLrRaPzMrKJGgNP2X) (código em `painel/painel-duo-life.html`; tarefas, status e histórico ficam no banco de dados do painel)
+- Etapas propostas: 0 Escopo e preparação, 1 Aplicativo básico, 2 Avisos e conteúdo, 3 Perfil e divulgação
+- Pendente: o Alessandro enviar o escopo até 01/11; confirmar se pode mover o vídeo para a pasta Reunioes
