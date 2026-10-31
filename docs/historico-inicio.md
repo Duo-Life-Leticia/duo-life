@@ -52,3 +52,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - O Alessandro moveu o vídeo da reunião para a pasta Reunioes.
 - O Alessandro pediu para não citar nomes de outros projetos em nada do Duo Life; foram tirados do GitHub, do painel e dos documentos do Drive. A criação das contas do app (tarefa 0.15) fica com o Alessandro, e o Documento do Projeto pede o e-mail da Duo Life para isso.
 - Entraram no Documento do Projeto: acessos (Letícia e Diogo administradores, aluno só vê o que é dele), saldo sempre visível, pós-venda e renovação automáticos (aviso com 2 e com 1 aula, por e-mail, SMS ou WhatsApp, novo contrato e pagamento no app) e a anamnese pedida pelo Diogo. Nova seção 8, Pauta da próxima reunião.
+- Aluno sumido: mensagem automática pelo app para quem fechou o plano e não marca aulas ou falta muito. Entrou no escopo e na pauta (definir quando mandar e a marcação de presença).
