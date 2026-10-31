@@ -44,3 +44,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - Regra nova: tudo usa as cores da logo, fundo azul-marinho e botões dourados, até a Letícia e o Diogo aprovarem. Detalhes em `marca/identidade-visual.md`.
 - O painel de controle foi atualizado com a logo e as cores. A tarefa 0.6 (receber a logo) foi marcada como concluída.
 - A Letícia mandou pelo WhatsApp os planos (Sardinha 5, Água-Viva 10, Tubarão 20 aulas), o horário (7h às 8h), os dados do cadastro (nome completo, data de nascimento, telefone, CPF), o endereço só no pagamento com cartão e o PAR-Q obrigatório. Está em `docs/informacoes-leticia-2026-10-31.md`. Falta passar para o Documento do Projeto no Drive.
+- Chegaram os prints do MFit (cadastro de aluno, ficha, PAR-Q). O Alessandro pediu para usar só o contexto, sem as imagens: as ideias estão em `docs/referencia-mfit.md`.

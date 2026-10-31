@@ -15,6 +15,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Transcrição da reunião de 30/10/2026: `docs/transcricao-reuniao-2026-10-30.txt`
 - Resumo das conversas anteriores: `docs/historico-inicio.md`
 - Informações da Letícia para o app (planos, horário, cadastro, pagamento, PAR-Q): `docs/informacoes-leticia-2026-10-31.md`
+- Ideias tiradas dos prints do MFit (só contexto, sem imagens): `docs/referencia-mfit.md`
 - Logo e cores: `marca/` (`logo-duo-life.jpg`, `logo-duo-life-horizontal.jpg`, `identidade-visual.md`)
 - Documento do projeto (escopo): https://docs.google.com/document/d/1-GWToSORRFPkXWvnjf5Vs_UazFg01SBf_rFNpR77270/edit
 - Painel de controle: https://claude.ai/artifact/VohgRMLrRaPzMrKJGgNP2X (código em `painel/painel-duo-life.html`, com a logo publicada junto como `logo-duo-life-horizontal.jpg`; tarefas, status, resumo "Onde estamos" e histórico ficam no banco de dados do painel, coleções `tarefas`, `estado` e `historico`)
@@ -28,5 +29,5 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 
 - O Alessandro manda o escopo para a Letícia e o Diogo até domingo, 01/11/2026.
 - Confirmar com o Alessandro antes de mover o vídeo da reunião (`2026-10-30 19-20-36.mp4`, na raiz da pasta Duo Life) para a pasta Reunioes.
-- Logo recebida em 31/10/2026 (está em `marca/`).
-- Aguardando da Letícia e do Diogo: prints do MFit (cadastro e PAR-Q) e da Velocity, valores e validade dos planos, slogan.
+- Logo recebida em 31/10/2026 (está em `marca/`). Prints do MFit recebidos: usar só como contexto, sem guardar as imagens.
+- Aguardando da Letícia e do Diogo: prints da Velocity, valores e validade dos planos, slogan.
