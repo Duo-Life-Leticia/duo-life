@@ -56,3 +56,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - Vagas: limite por aula, agenda única em tempo real para todos, sem superlotação nem marcação repetida, contagem regressiva por mensagem e aviso de aula cheia. Entrou no escopo e na pauta.
 - Avisos de vagas definidos pelo Alessandro: com 3 vagas, com 1 vaga e quando lotar.
 - Cada aluno pode ter no máximo 4 aulas marcadas ao mesmo tempo, dentro da janela de um mês.
+- 01/11: o painel passou a abrir em qualquer aparelho (iPhone, Mac, Android, Windows) mesmo sem conta Claude, com uma cópia dos dados gravada na página (`painel/atualizar-copia.py`).

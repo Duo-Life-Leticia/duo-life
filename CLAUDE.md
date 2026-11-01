@@ -30,7 +30,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Pagamento (decisão e comparação de serviços): `docs/pagamento.md`
 - Logo e cores: `marca/` (`logo-duo-life.jpg`, `logo-duo-life-horizontal.jpg`, `identidade-visual.md`)
 - Documento do projeto (escopo): https://docs.google.com/document/d/1-GWToSORRFPkXWvnjf5Vs_UazFg01SBf_rFNpR77270/edit
-- Painel de controle: https://claude.ai/artifact/VohgRMLrRaPzMrKJGgNP2X (código em `painel/painel-duo-life.html`, com a logo publicada junto como `logo-duo-life-horizontal.jpg`; tarefas, status, resumo "Onde estamos" e histórico ficam no banco de dados do painel, coleções `tarefas`, `estado` e `historico`)
+- Painel de controle: https://claude.ai/artifact/VohgRMLrRaPzMrKJGgNP2X (código em `painel/painel-duo-life.html`, com a logo publicada junto como `logo-duo-life-horizontal.jpg`; tarefas, status, resumo "Onde estamos" e histórico ficam no banco de dados do painel, coleções `tarefas`, `estado` e `historico`). O painel também guarda uma cópia desses dados dentro da página, para quem abre sem conta Claude (Letícia, Diogo, qualquer aparelho). Depois de mudar os dados, baixe as coleções com o ArtifactData (out_dir) e rode `python3 painel/atualizar-copia.py <pasta>` antes de publicar de novo
 - Google Drive, pasta Plataforma - Clientes → Duo Life (id 1RhNF1ive4pycA4-j-Rz74OuCDx0xVim0):
   - 00 - Painel de Controle: 1VoXPo2ftmN59j_1mCjoYxCG67PFmvwgy
   - 01 - Documentos do Projeto: 1rQNsWckzYnu_vWSZd-1dih5bs8d7oxTr
