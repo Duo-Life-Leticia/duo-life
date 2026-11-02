@@ -57,3 +57,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - Avisos de vagas definidos pelo Alessandro: com 3 vagas, com 1 vaga e quando lotar.
 - Cada aluno pode ter no máximo 4 aulas marcadas ao mesmo tempo, dentro da janela de um mês.
 - 01/11: o painel passou a abrir em qualquer aparelho (iPhone, Mac, Android, Windows) mesmo sem conta Claude, com uma cópia dos dados gravada na página (`painel/atualizar-copia.py`).
+- 01/11: o Alessandro mandou o escopo para a Letícia e o Diogo, dentro do prazo. Tarefa 0.4 concluída no painel.
