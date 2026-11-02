@@ -58,3 +58,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - Cada aluno pode ter no máximo 4 aulas marcadas ao mesmo tempo, dentro da janela de um mês.
 - 01/11: o painel passou a abrir em qualquer aparelho (iPhone, Mac, Android, Windows) mesmo sem conta Claude, com uma cópia dos dados gravada na página (`painel/atualizar-copia.py`).
 - 01/11: o Alessandro mandou o escopo para a Letícia e o Diogo, dentro do prazo. Tarefa 0.4 concluída no painel.
+- 02/11: chegaram as respostas da Letícia (PDF). Tudo passado para o Documento do Projeto (versão 3), para o painel e para `docs/respostas-leticia-2026-11-02.md`. A confirmar: horário das aulas.
