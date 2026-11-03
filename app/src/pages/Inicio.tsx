@@ -119,6 +119,12 @@ export default function Inicio() {
       )}
 
       <AtivarCelular para="aluno" />
+
+      <nav className="menu-extra" aria-label="Mais">
+        <Link to="/perfil">Meu perfil</Link>
+        <Link to="/nutricao-personal">Nutrição e Personal</Link>
+        <Link to="/quem-somos">Quem somos</Link>
+      </nav>
     </main>
   );
 }

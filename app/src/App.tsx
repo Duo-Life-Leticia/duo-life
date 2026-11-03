@@ -19,6 +19,9 @@ import ProfessorGuias from "./pages/ProfessorGuias";
 import Comprar from "./pages/Comprar";
 import Pagamento from "./pages/Pagamento";
 import Contrato from "./pages/Contrato";
+import MeuPerfil from "./pages/Perfil";
+import NutricaoPersonal from "./pages/NutricaoPersonal";
+import QuemSomos from "./pages/QuemSomos";
 
 type Sessao = { perfil: Perfil | null; parq: SituacaoParq | null; recarregar: () => Promise<void> };
 const SessaoCtx = createContext<Sessao>({ perfil: null, parq: null, recarregar: async () => {} });
@@ -75,6 +78,9 @@ export default function App() {
         <Route path="/comprar/:plano" element={aluno && parq?.valido ? <Comprar /> : <Navigate to={inicio} replace />} />
         <Route path="/pagamento/:id" element={aluno ? <Pagamento /> : <Navigate to={inicio} replace />} />
         <Route path="/contrato" element={<Contrato />} />
+        <Route path="/perfil" element={aluno && parq?.valido ? <MeuPerfil /> : <Navigate to={inicio} replace />} />
+        <Route path="/nutricao-personal" element={<NutricaoPersonal />} />
+        <Route path="/quem-somos" element={<QuemSomos />} />
         <Route path="*" element={<Navigate to={inicio} replace />} />
       </Routes>
     </SessaoCtx.Provider>

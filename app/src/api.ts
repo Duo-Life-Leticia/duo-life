@@ -40,6 +40,8 @@ export type Cobranca = { compraId: string; link: string | null; pixCopiaCola: st
 export type SituacaoCompra = { status: string; plano_id: string; aulas_total: number; valor_centavos: number; forma_pagamento: string | null;
   link_pagamento: string | null; pix_copia_cola: string | null; pix_qrcode: string | null; valido_ate: string | null };
 export type Aviso = { id: string; titulo: string; texto: string; link: string | null; lido: boolean; criado_em: string };
+export type ResumoPerfil = { inicio: string | null; aulas_feitas: number; faltas: number; por_mes: { mes: string; aulas: number }[]; proximo_marco: number | null };
+export type MeusDados = Pick<NovoAluno, "nome_completo" | "telefone" | "endereco">;
 export type ArquivoGuia = "guia-duo-life.pdf" | "nutricao-tubarao.pdf";
 // Erro especial: o pagamento pelo app ainda não foi ligado ao Asaas.
 export const PAGAMENTO_NAO_LIGADO = "nao_configurado";
@@ -83,6 +85,10 @@ export interface Api {
   guias(): Promise<{ guia: boolean; tubarao: boolean }>;
   abrirGuia(arquivo: ArquivoGuia): Promise<string | null>;
   enviarGuia(arquivo: ArquivoGuia, pdf: File): Promise<void>;
+  // Perfil do aluno
+  meuPerfil(): Promise<ResumoPerfil>;
+  meusDados(): Promise<MeusDados & { email: string }>;
+  atualizarDados(d: MeusDados): Promise<void>;
 }
 
 const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
@@ -287,6 +293,21 @@ function criarSupabase(sb: SupabaseClient): Api {
       const { error } = await sb.storage.from("guias").upload(arquivo, pdf, { upsert: true, contentType: "application/pdf" });
       falha(error);
     },
+    async meuPerfil() {
+      const linhas = await rpc<ResumoPerfil[]>("meu_perfil");
+      return linhas?.[0] ?? { inicio: null, aulas_feitas: 0, faltas: 0, por_mes: [], proximo_marco: 30 };
+    },
+    async meusDados() {
+      const { data: { user } } = await sb.auth.getUser();
+      const { data, error } = await sb.from("perfis").select("nome_completo, telefone, endereco, email").eq("id", user!.id).single();
+      falha(error);
+      return data as MeusDados & { email: string };
+    },
+    async atualizarDados(d) {
+      const { data: { user } } = await sb.auth.getUser();
+      const { error } = await sb.from("perfis").update(d).eq("id", user!.id);
+      falha(error);
+    },
   };
 }
 
@@ -310,6 +331,7 @@ type EstadoDemo = {
   avisos: Aviso[];
   avisosAluno: Aviso[];
   guiasDemo: Record<string, boolean>;
+  dadosAluno: MeusDados;
 };
 
 const PLANOS_DEMO: Plano[] = [
@@ -347,10 +369,11 @@ function jaComecou(data: string): boolean {
 }
 
 function criarDemo(): Api {
-  const CHAVE = "duolife-demo-v5";
+  const CHAVE = "duolife-demo-v6";
   const inicial = (): EstadoDemo => ({
     logado: null, parq: null, compras: 5, validoAte: daquiA(30), agendamentos: [],
     extras: {}, presencas: {}, limites: {}, canceladas: {}, comprasDemo: {}, avisosAluno: [], guiasDemo: {},
+    dadosAluno: { nome_completo: "Aluno de Demonstração", telefone: "+55 13 98888-0000", endereco: "Santos, SP" },
     avisos: [{ id: "av1", titulo: "Aula marcada", texto: "Ana Paula marcou a aula de quinta, às 8h.", link: null, lido: false, criado_em: new Date().toISOString() }],
     alunos: [
       alunoExemplo("demo-ana", "Ana Paula Souza", 8, "ok", "1962-03-14"),
@@ -578,6 +601,16 @@ function criarDemo(): Api {
     },
     async abrirGuia() { return null; },
     async enviarGuia(arquivo) { await espera(); estado.guiasDemo[arquivo] = true; avisar(); },
+    async meuPerfil() {
+      const hoje = new Date(`${hojeSP()}T12:00:00`);
+      const por_mes = [5, 4, 3, 2, 1, 0].map((n, i) => {
+        const d = new Date(hoje.getFullYear(), hoje.getMonth() - n, 1);
+        return { mes: `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`, aulas: [0, 3, 6, 7, 8, 2][i] };
+      });
+      return { inicio: daquiA(-120), aulas_feitas: 26, faltas: 1, por_mes, proximo_marco: 30 };
+    },
+    async meusDados() { return { ...estado.dadosAluno, email: "aluno@demo" }; },
+    async atualizarDados(d) { await espera(); estado.dadosAluno = d; avisar(); },
   };
 }
 

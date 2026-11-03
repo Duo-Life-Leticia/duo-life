@@ -41,6 +41,7 @@ export default function Entrar() {
         <p className="sub">Faça o seu cadastro e crie a sua senha. Leva poucos minutos.</p>
         <Link className="botao contorno" to="/cadastro">Criar meu cadastro</Link>
         <Link className="link centro" to="/planos">Ver os planos</Link>
+        <Link className="link centro" to="/quem-somos">Quem somos</Link>
       </section>
     </main>
   );

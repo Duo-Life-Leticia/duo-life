@@ -12,7 +12,8 @@ Sem as chaves do Supabase, o app abre em **modo demonstração**, com dados de e
 4. Deve aparecer "Success. No rows returned".
 5. Faça o mesmo com `supabase/migrations/0002_tela_professor.sql` (funções da tela do professor)
    e com `supabase/migrations/0003_pagamento_e_avisos.sql` (pagamento pelo app e avisos para os professores).
-6. Depois, `supabase/migrations/0004_avisos_automaticos_e_guias.sql` (Etapa 2: avisos automáticos e guias).
+6. Depois, `supabase/migrations/0004_avisos_automaticos_e_guias.sql` (Etapa 2: avisos automáticos e guias)
+   e `supabase/migrations/0005_perfil_e_marcos.sql` (Etapa 3: perfil do aluno e marcos de 30 e 50 aulas).
 7. O pagamento pelo Asaas tem o passo a passo próprio em `docs/asaas-como-ligar.md`.
 8. A notificação no celular e os guias têm o passo a passo em `docs/avisos-celular-como-ligar.md`.
 
@@ -93,3 +94,17 @@ Ao entrar de novo, eles veem a **tela do professor**, e não a do aluno.
 - Contrato completo dentro do app (tela "Contrato").
 - Aba "Avisos" do professor, com contador: cada aula marcada ou cancelada pelos alunos.
   A notificação no celular (fora do app) entra na Etapa 2, junto com os avisos dos alunos.
+
+## Etapa 3 · Perfil e divulgação
+
+- **Meu perfil** (aluno): aulas feitas, desde quando treina, próxima meta (30 e 50 aulas) com barra de progresso,
+  gráfico de aulas por mês (últimos 6 meses) e edição de nome, WhatsApp e endereço.
+- **Marcos de 30 e 50 aulas**: ao marcar a presença que completa 30 ou 50 aulas, a Letícia e o Diogo recebem
+  "Fulana completou 30 aulas. Que tal fazer um agrado?" e o aluno recebe os parabéns.
+- **Nutrição e Personal**: Sereia, Siri e Duplinha com o botão "Consultar opções" (abre o WhatsApp com a mensagem pronta).
+- **Quem somos**: logo, slogan, duas linhas sobre a Duo Life, Instagram e WhatsApp.
+- Na tela inicial do aluno, um menu discreto no fim: Meu perfil · Nutrição e Personal · Quem somos.
+
+Para os botões de WhatsApp e Instagram funcionarem, preencha `app/src/config.ts` com o WhatsApp da Letícia,
+o do Diogo e o Instagram da Duo Life. Enquanto estiverem vazios, os botões aparecem como "(em breve)".
+O texto do "Quem somos" é uma proposta para a Letícia e o Diogo aprovarem.
