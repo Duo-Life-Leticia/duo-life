@@ -20,7 +20,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Entrada no app: login é o e-mail do aluno; a senha é o próprio aluno que cria, no primeiro acesso (decisão do Alessandro, 31/10).
 - Pagamento dentro do app, por Pix, crédito ou débito, direto na conta da Duo Life (decisão do Alessandro, 31/10). Serviço: Asaas, na conta que a Letícia já tem (03/11). Na praia: celular (Asaas Tap), maquininha (Asaas Smart) e Pix (03/11).
 - Planos: Sardinha 5 aulas R$ 230 (30 dias), Água-Viva 10 aulas R$ 420 (50 dias), Tubarão 20 aulas R$ 720 (80 dias). Sem comentários/avaliações e sem aviso de validade. Slogan: "Dois pilares. Um resultado." (03/11).
-- Tudo o que for feito usa as cores da logo (fundo azul-marinho `#021A4B`, botões e títulos dourados `#E8B04A`) até a aprovação da Letícia e do Diogo. Detalhes em `marca/identidade-visual.md`.
+- Tudo o que for feito usa as cores da logo (fundo azul-marinho `#021A4B`, botões e títulos dourados `#E8B04A`, sempre em degradê metálico como o da logo) até a aprovação da Letícia e do Diogo. Detalhes em `marca/identidade-visual.md`.
 
 ## Onde está cada coisa
 

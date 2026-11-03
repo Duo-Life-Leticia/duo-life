@@ -29,3 +29,12 @@ Definida pelo Alessandro em 31/10/2026, a partir da logo. Vale para tudo o que f
 
 - Títulos: Cinzel (serifa clássica, parecida com a da logo)
 - Texto: Nunito Sans
+
+## Degradê dourado (decidido em 03/11/2026)
+
+Tudo o que é dourado usa um degradê metálico, como o da logo, em vez da cor lisa:
+botões, bordas de destaque, selos, títulos, preços, números do saldo e links.
+
+- Botões e bordas: `linear-gradient(135deg, #b9801f 0%, #f7e082 28%, #e8b04a 50%, #fbe7a1 68%, #c98e22 100%)`
+- Textos: `linear-gradient(180deg, #fbe7a1 0%, #f2c75c 45%, #d89a2e 75%, #b9801f 100%)`
+- O texto dos botões dourados continua azul-marinho `#021A4B`.

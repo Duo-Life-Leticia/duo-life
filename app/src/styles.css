@@ -9,6 +9,9 @@
   --texto: #f4ecd8;
   --texto-2: #b8c2dc;
   --sobre-dourado: #021a4b;
+  /* Degradê dourado metálico, como o da logo: brilho claro, dourado e sombra. */
+  --ouro: linear-gradient(135deg, #b9801f 0%, #f7e082 28%, #e8b04a 50%, #fbe7a1 68%, #c98e22 100%);
+  --ouro-texto: linear-gradient(180deg, #fbe7a1 0%, #f2c75c 45%, #d89a2e 75%, #b9801f 100%);
   --erro: #ff9a8a;
   --ok: #7fd6a2;
   --titulo: "Cinzel", Georgia, "Times New Roman", serif;
@@ -30,6 +33,17 @@ body {
 .logo.pequena { width: 150px; margin: 0; }
 .topo { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 h1, h2 { font-family: var(--titulo); color: var(--dourado); font-weight: 700; margin: 0; line-height: 1.15; }
+/* Texto em degradê dourado (cai para dourado liso se o navegador não suportar). */
+h1, h2, .slogan, .balao .numero, .balao .rotulo, .plano .preco, .link, .botao.contorno, .item .detalhe.alerta {
+  background: var(--ouro-texto); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+/* Borda em degradê dourado, com cantos arredondados. */
+.borda-ouro, .balao, .plano.destaque, .botao.contorno { position: relative; }
+.balao::before, .plano.destaque::before, .botao.contorno::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; background: var(--ouro); pointer-events: none;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
 h1 { font-size: 26px; }
 h2 { font-size: 20px; }
 p { margin: 0; }
@@ -46,21 +60,22 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--dourado); o
 .botao {
   display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%;
   font: inherit; font-weight: 800; font-size: 18px; text-decoration: none; cursor: pointer;
-  background: var(--dourado); color: var(--sobre-dourado); border: none; border-radius: 14px; padding: 15px 18px; min-height: 54px;
+  background: var(--ouro); color: var(--sobre-dourado); border: none; border-radius: 14px; padding: 15px 18px; min-height: 54px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .35);
 }
-.botao:active { background: var(--dourado-escuro); }
+.botao:active { filter: brightness(.9); }
 .botao:disabled { opacity: .55; cursor: default; }
 .botao.grande { min-height: 76px; font-size: 21px; border-radius: 18px; }
-.botao.contorno { background: transparent; color: var(--dourado); border: 2px solid var(--dourado); }
+.botao.contorno { background-color: transparent; border: none; box-shadow: none; }
 .botao.pequeno { width: auto; min-height: 44px; font-size: 16px; padding: 10px 16px; }
-.link { color: var(--dourado); font-weight: 700; background: none; border: none; font: inherit; cursor: pointer; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; }
+.link { color: var(--dourado); font-weight: 700; text-decoration-color: var(--dourado); background-color: transparent; border: none; font: inherit; cursor: pointer; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; }
 .centro { text-align: center; }
 .aviso { border-radius: 12px; padding: 12px 14px; font-size: 15px; background: #3a1f2a; color: var(--erro); border: 1px solid #6b3040; }
 .aviso.ok { background: #13392b; color: var(--ok); border-color: #22603f; }
 .aviso.info { background: var(--cartao); color: var(--dourado-claro); border-color: var(--dourado-escuro); }
-.demo { background: var(--dourado-claro); color: var(--sobre-dourado); text-align: center; font-size: 14px; font-weight: 700; padding: 8px 12px; }
+.demo { background: var(--ouro); color: var(--sobre-dourado); text-align: center; font-size: 14px; font-weight: 700; padding: 8px 12px; }
 /* Balão de saldo */
-.balao { background: linear-gradient(160deg, #123579, var(--cartao)); border: 2px solid var(--dourado); border-radius: 22px; padding: 20px; text-align: center; display: grid; gap: 4px; }
+.balao { background: linear-gradient(160deg, #123579, var(--cartao)); border: none; border-radius: 22px; padding: 20px; text-align: center; display: grid; gap: 4px; }
 .balao .numero { font-family: var(--titulo); font-size: 56px; line-height: 1; color: var(--dourado); }
 .balao .rotulo { font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: 14px; color: var(--dourado-claro); }
 /* Listas de aulas e planos */
@@ -69,13 +84,13 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--dourado); o
 .item .dia { font-weight: 800; font-size: 18px; }
 .item .detalhe { color: var(--texto-2); font-size: 15px; }
 .item .detalhe.alerta { color: var(--dourado-claro); font-weight: 700; }
-.selo { display: inline-block; font-size: 13px; font-weight: 800; padding: 3px 10px; border-radius: 999px; background: var(--dourado); color: var(--sobre-dourado); }
+.selo { display: inline-block; font-size: 13px; font-weight: 800; padding: 3px 10px; border-radius: 999px; background: var(--ouro); color: var(--sobre-dourado); }
 .plano { display: grid; gap: 8px; background: var(--cartao); border: 1px solid var(--linha); border-radius: 18px; padding: 18px; }
-.plano.destaque { border: 2px solid var(--dourado); }
+.plano.destaque { border-color: transparent; }
 .plano .preco { font-family: var(--titulo); font-size: 30px; color: var(--dourado); }
 .parq-pergunta { display: grid; gap: 10px; padding: 14px 0; border-top: 1px solid var(--linha); }
 .parq-pergunta:first-of-type { border-top: none; }
 .sim-nao { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .sim-nao button { font: inherit; font-weight: 800; font-size: 18px; min-height: 52px; border-radius: 12px; cursor: pointer; background: transparent; color: var(--texto); border: 2px solid var(--linha); }
-.sim-nao button[aria-pressed="true"] { background: var(--dourado); color: var(--sobre-dourado); border-color: var(--dourado); }
+.sim-nao button[aria-pressed="true"] { background: var(--ouro); color: var(--sobre-dourado); border-color: var(--dourado); }
 .voltar { align-self: flex-start; }
