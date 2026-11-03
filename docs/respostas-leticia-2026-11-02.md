@@ -26,7 +26,7 @@ O PDF original não fica no repositório.
 
 ## Aulas
 
-- Horário: **a confirmar**. A Letícia escreveu "somente das 8h às 9h, inicialmente, terças e quintas"; em 31/10 tinha confirmado das 7h às 8h.
+- Horário: das 8h às 9h, terças e quintas (confirmado pelo Alessandro em 03/11).
 - Vagas: abertas, sem limite, nos 3 primeiros meses de funcionamento; depois o limite é ligado (03/11).
 - Máximo de **2 aulas marcadas** ao mesmo tempo por aluno (o Alessandro tinha proposto 4).
 - Cancelamento até **6 horas** antes; sem cancelar e sem ir, a aula conta.
@@ -60,3 +60,7 @@ O PDF original não fica no repositório.
 - Slogan: "Dois pilares. Um resultado."
 - Pagamento na praia: celular (Asaas Tap), maquininha (Asaas Smart) e Pix.
 - Limite de vagas ligado depois de 3 meses de funcionamento.
+- Horário das aulas: das 8h às 9h.
+- Asaas: a conta que a Letícia já tem.
+- Aluno sumido: aviso depois de 10 dias sem marcar aula ou de 2 faltas seguidas, com os textos do escopo.
+- PAR-Q: as 7 perguntas do print do Diogo (`docs/par-q.md`).
