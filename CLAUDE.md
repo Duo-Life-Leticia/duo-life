@@ -48,4 +48,4 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Logo recebida em 31/10/2026 (está em `marca/`). Prints do MFit recebidos: usar só como contexto, sem guardar as imagens.
 - Respostas da Letícia recebidas em 02/11 e passadas para o escopo (versão 3) e para o painel.
 - E-mail da Duo Life para as contas do app (GitHub, banco de dados, hospedagem): duolife.ltda@gmail.com (recebido em 03/11). O Alessandro cria as contas.
-- Aguardando: prints da Velocity (o Alessandro acha que já mandou, mas só chegaram prints do MFit). Rascunho do contrato pronto (03/11); falta a Letícia e o Diogo revisarem e responderem as 6 decisões do fim dele.
+- Aguardando: prints da Velocity (o Alessandro acha que já mandou, mas só chegaram prints do MFit). Contrato v2 (03/11) com as decisões do Alessandro: CPF da Letícia, validade a partir da compra, multa de 50% na desistência com aulas feitas (confirmar com advogado), uso de imagem incluído, atestado obrigatório com "sim" no PAR-Q. Faltam nome completo e CPF da Letícia e sobrenome do Diogo (em vermelho).
