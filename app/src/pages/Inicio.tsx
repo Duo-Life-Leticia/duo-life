@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { api, type ArquivoGuia, type Aula, type Aviso, type Saldo } from "../api";
 import AtivarCelular from "./AtivarCelular";
 import { useSessao } from "../App";
-import { dataBr, dataCurta, erroTexto, hora } from "../util";
+import { dataBr, dataCurta, erroTexto, hora, nomeSaudacao } from "../util";
 
 export default function Inicio() {
   const { perfil, parq } = useSessao();
@@ -41,7 +41,7 @@ export default function Inicio() {
     catch (e) { setMsg({ tipo: "erro", texto: erroTexto(e) }); }
   }
 
-  const primeiroNome = perfil?.nome_completo.split(" ")[0] ?? "";
+  const primeiroNome = nomeSaudacao(perfil);
 
   return (
     <main className="pagina">
@@ -49,7 +49,7 @@ export default function Inicio() {
         <img className="logo pequena" src="/logo-horizontal.jpg" alt="Duo Life" />
         <button className="link" onClick={() => api.sair()}>Sair</button>
       </div>
-      <h1>Olá, {primeiroNome}!</h1>
+      <h1>{primeiroNome ? `Olá, ${primeiroNome}!` : "Olá!"}</h1>
 
       {avisos.length > 0 && (
         <section className="cartao" aria-label="Avisos">

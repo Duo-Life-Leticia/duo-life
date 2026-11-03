@@ -3,7 +3,7 @@ import { api, type NovoAluno } from "../api";
 import { erroTexto } from "../util";
 import ProfessorTopo from "./ProfessorTopo";
 
-const vazio: NovoAluno = { nome_completo: "", email: "", data_nascimento: "", telefone: "+55 ", cpf: "", rg: "", sexo: "", endereco: "" };
+const vazio: NovoAluno = { nome_completo: "", apelido: "", email: "", data_nascimento: "", telefone: "+55 ", cpf: "", rg: "", sexo: "", endereco: "" };
 
 function mascaraCpf(v: string) {
   const d = v.replace(/\D/g, "").slice(0, 11);
@@ -39,6 +39,7 @@ export default function ProfessorNovoAluno() {
       {msg && <p className={`aviso ${msg.tipo === "ok" ? "ok" : ""}`} role="status">{msg.texto}</p>}
       <form className="cartao" onSubmit={enviar}>
         <label>Nome completo<input required value={dados.nome_completo} onChange={campo("nome_completo")} /></label>
+        <label>Como quer ser chamado(a) (opcional)<input value={dados.apelido ?? ""} onChange={campo("apelido")} placeholder="Se ficar vazio, usa o primeiro nome" /></label>
         <label>E-mail do aluno<input type="email" required inputMode="email" value={dados.email} onChange={campo("email")} /></label>
         <label>Data de nascimento<input type="date" required value={dados.data_nascimento} onChange={campo("data_nascimento")} /></label>
         <label>WhatsApp<input type="tel" required inputMode="tel" value={dados.telefone} onChange={campo("telefone")} /></label>

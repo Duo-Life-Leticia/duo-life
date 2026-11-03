@@ -1,9 +1,10 @@
 -- Duo Life · banco de dados completo, para colar de uma vez no SQL Editor do Supabase.
--- Gerado a partir de supabase/migrations/0001 a 0006. Antes de rodar, ligue a extensão pg_cron (Database → Extensions).
+-- Gerado a partir de supabase/migrations/0001 a 0007. Antes de rodar, ligue a extensão pg_cron (Database → Extensions).
 
 -- ============================================================
 -- 0001_inicial.sql
 -- ============================================================
+
 -- Duo Life · banco de dados inicial (Etapa 1 · Aplicativo básico)
 -- Como usar: no Supabase, abra "SQL Editor", cole este arquivo inteiro e clique em "Run".
 -- Fuso horário das aulas: America/Sao_Paulo.
@@ -322,6 +323,7 @@ grant execute on function public.meu_saldo, public.aulas_proximas, public.marcar
 -- ============================================================
 -- 0002_tela_professor.sql
 -- ============================================================
+
 -- Duo Life · tela do professor (Etapa 1, segunda parte)
 -- Como usar: depois do 0001_inicial.sql, cole este arquivo no "SQL Editor" do Supabase e clique em "Run".
 
@@ -413,6 +415,7 @@ grant execute on function public.alunos_resumo, public.aulas_periodo, public.reg
 -- ============================================================
 -- 0003_pagamento_e_avisos.sql
 -- ============================================================
+
 -- Duo Life · pagamento pelo app (Asaas) e avisos para os professores (Etapa 1, terceira parte)
 -- Como usar: depois do 0002, cole este arquivo no "SQL Editor" do Supabase e clique em "Run".
 
@@ -538,6 +541,7 @@ create trigger avisar_professores after insert or update of status on public.age
 -- ============================================================
 -- 0004_avisos_automaticos_e_guias.sql
 -- ============================================================
+
 -- Duo Life · Etapa 2: avisos automáticos, notificação no celular e Guia DUO LIFE em PDF
 -- Como usar: depois do 0003, cole este arquivo no "SQL Editor" do Supabase e clique em "Run".
 -- Antes, ligue a extensão pg_cron em Database → Extensions (para o aviso diário de aluno sumido).
@@ -752,6 +756,7 @@ end $$;
 -- ============================================================
 -- 0005_perfil_e_marcos.sql
 -- ============================================================
+
 -- Duo Life · Etapa 3: perfil do aluno com evolução e marcos de 30 e 50 aulas
 -- Como usar: depois do 0004, cole este arquivo no "SQL Editor" do Supabase e clique em "Run".
 
@@ -811,6 +816,7 @@ create trigger avisar_marcos after update of status on public.agendamentos
 -- ============================================================
 -- 0006_dono_e_permissoes.sql
 -- ============================================================
+
 -- Duo Life · nível "dono" (Alessandro) acima de professor e permissões mais fechadas
 -- Como usar: depois do 0005, cole este arquivo no "SQL Editor" do Supabase e clique em "Run".
 -- Depois, marque a sua conta como dono (troque o e-mail):
@@ -878,3 +884,42 @@ begin
 end $$;
 
 grant execute on function public.equipe, public.definir_professor to authenticated;
+
+-- ============================================================
+-- 0007_apelido.sql
+-- ============================================================
+
+-- Duo Life · "Como quer ser chamado" (apelido) para a saudação do app
+-- Como usar: depois do 0006, cole este arquivo no "SQL Editor" do Supabase e clique em "Run".
+-- Pode ser rodado mais de uma vez.
+
+alter table public.perfis add column if not exists apelido text;
+
+-- Quem já tem cadastro: usa o primeiro nome (quando o nome não é um e-mail).
+update public.perfis
+set apelido = split_part(trim(nome_completo), ' ', 1)
+where apelido is null and trim(nome_completo) <> '' and nome_completo not like '%@%';
+
+-- Cadastro novo: guarda o apelido junto com os outros dados.
+create or replace function public.criar_perfil() returns trigger
+language plpgsql security definer set search_path = public as $$
+begin
+  insert into public.perfis (id, nome_completo, apelido, email, data_nascimento, telefone, cpf, rg, sexo, endereco)
+  values (
+    new.id,
+    coalesce(new.raw_user_meta_data ->> 'nome_completo', ''),
+    coalesce(nullif(trim(new.raw_user_meta_data ->> 'apelido'), ''),
+             nullif(split_part(trim(coalesce(new.raw_user_meta_data ->> 'nome_completo', '')), ' ', 1), '')),
+    new.email,
+    nullif(new.raw_user_meta_data ->> 'data_nascimento', '')::date,
+    new.raw_user_meta_data ->> 'telefone',
+    new.raw_user_meta_data ->> 'cpf',
+    new.raw_user_meta_data ->> 'rg',
+    nullif(new.raw_user_meta_data ->> 'sexo', ''),
+    new.raw_user_meta_data ->> 'endereco'
+  );
+  return new;
+end $$;
+
+-- O próprio aluno pode mudar o apelido em "Meu perfil".
+grant update (apelido) on public.perfis to authenticated;

@@ -29,7 +29,7 @@ Deno.serve(async (req) => {
   const { error } = await admin.auth.admin.inviteUserByEmail(String(d.email).trim(), {
     redirectTo: d.redirectTo,
     data: {
-      nome_completo: d.nome_completo, data_nascimento: d.data_nascimento, telefone: d.telefone,
+      nome_completo: d.nome_completo, apelido: d.apelido, data_nascimento: d.data_nascimento, telefone: d.telefone,
       cpf: d.cpf, rg: d.rg, sexo: d.sexo, endereco: d.endereco,
     },
   });

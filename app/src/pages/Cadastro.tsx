@@ -4,7 +4,7 @@ import { api, type Cadastro as DadosCadastro } from "../api";
 import { erroTexto } from "../util";
 
 const vazio: DadosCadastro = {
-  nome_completo: "", email: "", senha: "", data_nascimento: "", telefone: "+55 ",
+  nome_completo: "", apelido: "", email: "", senha: "", data_nascimento: "", telefone: "+55 ",
   cpf: "", rg: "", sexo: "", endereco: "",
 };
 
@@ -31,7 +31,7 @@ export default function Cadastro() {
     if (dados.cpf.replace(/\D/g, "").length !== 11) return setErro("Confira o CPF: ele tem 11 números.");
     setEnviando(true);
     try {
-      const { precisaConfirmar } = await api.cadastrar({ ...dados, email: dados.email.trim() });
+      const { precisaConfirmar } = await api.cadastrar({ ...dados, apelido: dados.apelido.trim(), email: dados.email.trim() });
       if (precisaConfirmar) setConfirmeEmail(true);
     } catch (err) { setErro(erroTexto(err)); } finally { setEnviando(false); }
   }
@@ -59,6 +59,9 @@ export default function Cadastro() {
         </label>
         <label>E-mail (vai ser o seu login)
           <input type="email" required autoComplete="email" inputMode="email" value={dados.email} onChange={campo("email")} />
+        </label>
+        <label>Como você quer ser chamado(a)?
+          <input required autoComplete="nickname" value={dados.apelido} onChange={campo("apelido")} placeholder="Ex.: Fê, Carlos, Ju" />
         </label>
         <label>Data de nascimento
           <input type="date" required value={dados.data_nascimento} onChange={campo("data_nascimento")} />

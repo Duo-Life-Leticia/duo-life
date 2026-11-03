@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api, type AulaProfessor } from "../api";
 import { useSessao } from "../App";
-import { dataCurta, erroTexto, hora } from "../util";
+import { dataCurta, erroTexto, hora, nomeSaudacao } from "../util";
 import ProfessorTopo from "./ProfessorTopo";
 import AtivarCelular from "./AtivarCelular";
 import Equipe from "./Equipe";
@@ -31,7 +31,7 @@ export default function Professor() {
     <main className="pagina">
       <ProfessorTopo />
       <h1>Agenda</h1>
-      <p className="sub">Olá, {perfil?.nome_completo.split(" ")[0]}! Toque numa aula para ver os alunos, marcar presença, mudar o limite de vagas ou cancelar.</p>
+      <p className="sub">Olá{nomeSaudacao(perfil) ? `, ${nomeSaudacao(perfil)}` : ""}! Toque numa aula para ver os alunos, marcar presença, mudar o limite de vagas ou cancelar.</p>
       {msg && <p className={`aviso ${msg.tipo === "ok" ? "ok" : ""}`} role="status">{msg.texto}</p>}
       {aulas === null ? <p className="sub">Carregando…</p> : aulas.length === 0 ? (
         <p className="aviso info">Nenhuma aula aberta. Toque em "Abrir aulas" para criar a agenda.</p>
