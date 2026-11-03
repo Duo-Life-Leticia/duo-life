@@ -3,7 +3,8 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 export type Papel = "aluno" | "admin";
-export type Perfil = { id: string; nome_completo: string; email: string; papel: Papel };
+export type Perfil = { id: string; nome_completo: string; email: string; papel: Papel; dono?: boolean };
+export type MembroEquipe = { id: string; nome_completo: string; email: string; dono: boolean };
 export type Saldo = { aulas_total: number; usadas: number; restantes: number; valido_ate: string | null };
 export type Aula = {
   id: string; data: string; inicio: string; fim: string;
@@ -89,6 +90,9 @@ export interface Api {
   meuPerfil(): Promise<ResumoPerfil>;
   meusDados(): Promise<MeusDados & { email: string }>;
   atualizarDados(d: MeusDados): Promise<void>;
+  // Só o dono (Alessandro)
+  equipe(): Promise<MembroEquipe[]>;
+  definirProfessor(email: string, professor: boolean): Promise<string>;
 }
 
 const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
@@ -129,7 +133,7 @@ function criarSupabase(sb: SupabaseClient): Api {
     async perfil() {
       const { data: { user } } = await sb.auth.getUser();
       if (!user) return null;
-      const { data, error } = await sb.from("perfis").select("id, nome_completo, email, papel").eq("id", user.id).single();
+      const { data, error } = await sb.from("perfis").select("id, nome_completo, email, papel, dono").eq("id", user.id).single();
       falha(error);
       return data as Perfil;
     },
@@ -308,6 +312,8 @@ function criarSupabase(sb: SupabaseClient): Api {
       const { error } = await sb.from("perfis").update(d).eq("id", user!.id);
       falha(error);
     },
+    async equipe() { return (await rpc<MembroEquipe[]>("equipe")) ?? []; },
+    async definirProfessor(email, professor) { return rpc<string>("definir_professor", { p_email: email, p_professor: professor }); },
   };
 }
 
@@ -332,6 +338,7 @@ type EstadoDemo = {
   avisosAluno: Aviso[];
   guiasDemo: Record<string, boolean>;
   dadosAluno: MeusDados;
+  equipeDemo: MembroEquipe[];
 };
 
 const PLANOS_DEMO: Plano[] = [
@@ -369,12 +376,16 @@ function jaComecou(data: string): boolean {
 }
 
 function criarDemo(): Api {
-  const CHAVE = "duolife-demo-v6";
+  const CHAVE = "duolife-demo-v7";
   const inicial = (): EstadoDemo => ({
     logado: null, parq: null, compras: 5, validoAte: daquiA(30), agendamentos: [],
     extras: {}, presencas: {}, limites: {}, canceladas: {}, comprasDemo: {}, avisosAluno: [], guiasDemo: {},
     dadosAluno: { nome_completo: "Aluno de Demonstração", telefone: "+55 13 98888-0000", endereco: "Santos, SP" },
-    avisos: [{ id: "av1", titulo: "Aula marcada", texto: "Ana Paula marcou a aula de quinta, às 8h.", link: null, lido: false, criado_em: new Date().toISOString() }],
+    equipeDemo: [
+      { id: "demo-admin", nome_completo: "Dono (demonstração)", email: "professor@demo", dono: true },
+      { id: "demo-diogo", nome_completo: "Diogo", email: "diogo@exemplo.com", dono: false },
+    ],
+    avisos: [{ id: "av1", titulo: "Aula marcada", texto: "Ana Paula marcou a aula de quinta, às 8h.", link: "/professor", lido: false, criado_em: new Date().toISOString() }],
     alunos: [
       alunoExemplo("demo-ana", "Ana Paula Souza", 8, "ok", "1962-03-14"),
       alunoExemplo("demo-carlos", "Carlos Eduardo Lima", 0, "pendente", "1975-08-02"),
@@ -421,7 +432,7 @@ function criarDemo(): Api {
     async perfil() {
       if (!estado.logado) return null;
       return estado.logado === "admin"
-        ? { id: "demo-admin", nome_completo: "Diogo (demonstração)", email: "professor@demo", papel: "admin" }
+        ? { id: "demo-admin", nome_completo: "Diogo (demonstração)", email: "professor@demo", papel: "admin", dono: true }
         : { id: "demo-aluno", nome_completo: "Aluno de Demonstração", email: "aluno@demo", papel: "aluno" };
     },
     aoMudarSessao(cb) { ouvintes.add(cb); return () => ouvintes.delete(cb); },
@@ -611,6 +622,16 @@ function criarDemo(): Api {
     },
     async meusDados() { return { ...estado.dadosAluno, email: "aluno@demo" }; },
     async atualizarDados(d) { await espera(); estado.dadosAluno = d; avisar(); },
+    async equipe() { return estado.equipeDemo; },
+    async definirProfessor(email, professor) {
+      await espera();
+      const m = estado.equipeDemo.find((x) => x.email === email);
+      if (m?.dono) throw new Error("A conta do dono não pode ser mudada por aqui.");
+      if (professor && !m) estado.equipeDemo.push({ id: `demo-${Date.now()}`, nome_completo: email.split("@")[0], email, dono: false });
+      if (!professor) estado.equipeDemo = estado.equipeDemo.filter((x) => x.email !== email);
+      avisar();
+      return m?.nome_completo ?? email;
+    },
   };
 }
 

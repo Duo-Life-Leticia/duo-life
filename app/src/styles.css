@@ -135,3 +135,5 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--dourado); o
 .menu-extra { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .menu-extra a { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 64px; padding: 8px; border-radius: 14px;
   background: var(--cartao); border: 1px solid var(--linha); color: var(--texto); font-weight: 800; font-size: 14px; text-decoration: none; }
+.faixa-modo { background: var(--cartao); border-bottom: 2px solid var(--dourado); color: var(--dourado-claro); text-align: center; font-size: 14px; font-weight: 700; padding: 8px 12px; }
+.faixa-modo .link { font-size: 14px; padding: 0; }
