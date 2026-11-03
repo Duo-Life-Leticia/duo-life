@@ -6,7 +6,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 
 - Escreva sempre em português do Brasil, em linguagem simples.
 - O Duo Life não se mistura com nenhum outro cliente ou projeto: nem no Claude, nem no GitHub, nem no Drive, nem no painel.
-- Nada é programado sem a aprovação do Alessandro. A programação só começa depois que a Letícia e o Diogo aprovarem o escopo.
+- Nada é programado sem a aprovação do Alessandro. Programação aprovada em 03/11/2026: Etapa 1 em andamento.
 - Painéis e arquivos de outros projetos nunca são alterados a partir deste.
 - Não citar nomes de outros clientes ou projetos em nada do Duo Life (documentos, painel, GitHub, Drive).
 - Cadastro do aluno: nome completo, e-mail, data de nascimento, telefone (WhatsApp), CPF, RG, sexo e endereço (decisão do Alessandro, 31/10).
@@ -23,6 +23,8 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Tudo o que for feito usa as cores da logo (fundo azul-marinho `#021A4B`, botões e títulos dourados `#E8B04A`) até a aprovação da Letícia e do Diogo. Detalhes em `marca/identidade-visual.md`.
 
 ## Onde está cada coisa
+
+- App (Etapa 1): código em `app/` (React + Vite, PWA, modo demonstração sem chaves); banco em `supabase/migrations/0001_inicial.sql` (regras de saldo, agenda, PAR-Q e segurança dentro do banco); passo a passo para ligar e publicar em `docs/app-como-colocar-no-ar.md`. Teste do banco: PostgreSQL local com um `auth` simulado.
 
 - Transcrição da reunião de 30/10/2026: `docs/transcricao-reuniao-2026-10-30.txt`
 - Resumo das conversas anteriores: `docs/historico-inicio.md`

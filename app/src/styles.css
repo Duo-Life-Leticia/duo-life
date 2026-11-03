@@ -1,0 +1,81 @@
+/* Cores da logo Duo Life (marca/identidade-visual.md). Um tema só, azul-marinho e dourado. */
+:root {
+  --fundo: #021a4b;
+  --cartao: #0a2560;
+  --linha: #1f3d7a;
+  --dourado: #e8b04a;
+  --dourado-claro: #f7e082;
+  --dourado-escuro: #c98e22;
+  --texto: #f4ecd8;
+  --texto-2: #b8c2dc;
+  --sobre-dourado: #021a4b;
+  --erro: #ff9a8a;
+  --ok: #7fd6a2;
+  --titulo: "Cinzel", Georgia, "Times New Roman", serif;
+  --corpo: "Nunito Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--fundo); color: var(--texto); font-family: var(--corpo);
+  font-size: 17px; line-height: 1.5; -webkit-text-size-adjust: 100%;
+}
+.pagina {
+  max-width: 520px; margin: 0 auto; min-height: 100dvh;
+  padding: max(20px, env(safe-area-inset-top)) 16px max(32px, env(safe-area-inset-bottom));
+  display: flex; flex-direction: column; gap: 18px;
+}
+.logo { display: block; width: min(300px, 82%); margin: 8px auto 0; }
+.logo.pequena { width: 150px; margin: 0; }
+.topo { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+h1, h2 { font-family: var(--titulo); color: var(--dourado); font-weight: 700; margin: 0; line-height: 1.15; }
+h1 { font-size: 26px; }
+h2 { font-size: 20px; }
+p { margin: 0; }
+.slogan { text-align: center; color: var(--dourado-claro); font-family: var(--titulo); font-size: 15px; letter-spacing: .04em; }
+.sub { color: var(--texto-2); font-size: 15px; }
+.cartao { background: var(--cartao); border: 1px solid var(--linha); border-radius: 16px; padding: 18px; display: grid; gap: 12px; }
+form { display: grid; gap: 14px; }
+label { display: grid; gap: 6px; font-weight: 700; font-size: 15px; }
+input, select, textarea {
+  font: inherit; font-size: 17px; color: var(--texto); background: var(--fundo);
+  border: 1.5px solid var(--linha); border-radius: 12px; padding: 13px 14px; width: 100%;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--dourado); outline-offset: 1px; border-color: var(--dourado); }
+.botao {
+  display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%;
+  font: inherit; font-weight: 800; font-size: 18px; text-decoration: none; cursor: pointer;
+  background: var(--dourado); color: var(--sobre-dourado); border: none; border-radius: 14px; padding: 15px 18px; min-height: 54px;
+}
+.botao:active { background: var(--dourado-escuro); }
+.botao:disabled { opacity: .55; cursor: default; }
+.botao.grande { min-height: 76px; font-size: 21px; border-radius: 18px; }
+.botao.contorno { background: transparent; color: var(--dourado); border: 2px solid var(--dourado); }
+.botao.pequeno { width: auto; min-height: 44px; font-size: 16px; padding: 10px 16px; }
+.link { color: var(--dourado); font-weight: 700; background: none; border: none; font: inherit; cursor: pointer; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; }
+.centro { text-align: center; }
+.aviso { border-radius: 12px; padding: 12px 14px; font-size: 15px; background: #3a1f2a; color: var(--erro); border: 1px solid #6b3040; }
+.aviso.ok { background: #13392b; color: var(--ok); border-color: #22603f; }
+.aviso.info { background: var(--cartao); color: var(--dourado-claro); border-color: var(--dourado-escuro); }
+.demo { background: var(--dourado-claro); color: var(--sobre-dourado); text-align: center; font-size: 14px; font-weight: 700; padding: 8px 12px; }
+/* Balão de saldo */
+.balao { background: linear-gradient(160deg, #123579, var(--cartao)); border: 2px solid var(--dourado); border-radius: 22px; padding: 20px; text-align: center; display: grid; gap: 4px; }
+.balao .numero { font-family: var(--titulo); font-size: 56px; line-height: 1; color: var(--dourado); }
+.balao .rotulo { font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: 14px; color: var(--dourado-claro); }
+/* Listas de aulas e planos */
+.lista { display: grid; gap: 10px; }
+.item { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: 14px 16px; }
+.item .dia { font-weight: 800; font-size: 18px; }
+.item .detalhe { color: var(--texto-2); font-size: 15px; }
+.item .detalhe.alerta { color: var(--dourado-claro); font-weight: 700; }
+.selo { display: inline-block; font-size: 13px; font-weight: 800; padding: 3px 10px; border-radius: 999px; background: var(--dourado); color: var(--sobre-dourado); }
+.plano { display: grid; gap: 8px; background: var(--cartao); border: 1px solid var(--linha); border-radius: 18px; padding: 18px; }
+.plano.destaque { border: 2px solid var(--dourado); }
+.plano .preco { font-family: var(--titulo); font-size: 30px; color: var(--dourado); }
+.parq-pergunta { display: grid; gap: 10px; padding: 14px 0; border-top: 1px solid var(--linha); }
+.parq-pergunta:first-of-type { border-top: none; }
+.sim-nao { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sim-nao button { font: inherit; font-weight: 800; font-size: 18px; min-height: 52px; border-radius: 12px; cursor: pointer; background: transparent; color: var(--texto); border: 2px solid var(--linha); }
+.sim-nao button[aria-pressed="true"] { background: var(--dourado); color: var(--sobre-dourado); border-color: var(--dourado); }
+.voltar { align-self: flex-start; }

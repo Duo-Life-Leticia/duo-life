@@ -73,3 +73,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - 03/11: conta da Vercel criada (Duo life, Hobby). Contas do app prontas: GitHub, Supabase e Vercel (tarefa 0.15 concluída).
 - 03/11: tarefa 0.8 concluída; as fotos de referência já foram enviadas ao Alessandro.
 - 03/11: tarefa 0.12 concluída com o contrato versão 2; ajustes da Letícia e do Diogo podem vir depois.
+- 03/11: Etapa 1 começou. Primeira parte pronta: banco de dados com as regras (testado), entrada, cadastro, esqueci a senha, PAR-Q, tela do aluno com saldo, agenda, planos e tela do professor separada. Falta ligar ao Supabase e publicar na Vercel.
