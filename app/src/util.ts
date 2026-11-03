@@ -46,3 +46,9 @@ export function linkWhats(tel: string | null): string | null {
 export const FORMAS: Record<string, string> = {
   pix: "Pix", credito: "Cartão de crédito", debito: "Cartão de débito", presencial: "Na praia (celular ou maquininha)",
 };
+
+// Nome da saudação ("Olá, Fulana!"): o apelido; se não tiver, o primeiro nome. Nunca mostra e-mail.
+export function nomeSaudacao(p: { apelido?: string | null; nome_completo?: string } | null | undefined) {
+  const n = (p?.apelido?.trim() || p?.nome_completo?.trim().split(/\s+/)[0] || "");
+  return n.includes("@") ? "" : n;
+}

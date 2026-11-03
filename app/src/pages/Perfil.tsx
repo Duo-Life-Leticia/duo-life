@@ -23,7 +23,7 @@ export default function Perfil() {
     if (!dados) return;
     setMsg(null);
     try {
-      await api.atualizarDados({ nome_completo: dados.nome_completo, telefone: dados.telefone, endereco: dados.endereco });
+      await api.atualizarDados({ nome_completo: dados.nome_completo, apelido: dados.apelido?.trim() ?? "", telefone: dados.telefone, endereco: dados.endereco });
       await recarregar();
       setMsg({ tipo: "ok", texto: "Dados atualizados." });
     } catch (err) { setMsg({ tipo: "erro", texto: erroTexto(err) }); }
@@ -77,6 +77,7 @@ export default function Perfil() {
         <form className="cartao" onSubmit={salvar}>
           <h2>Meus dados</h2>
           <label>Nome completo<input required value={dados.nome_completo} onChange={(e) => setDados({ ...dados, nome_completo: e.target.value })} /></label>
+          <label>Como quer ser chamado(a)<input value={dados.apelido ?? ""} onChange={(e) => setDados({ ...dados, apelido: e.target.value })} placeholder="Aparece no “Olá” da tela inicial" /></label>
           <label>WhatsApp<input type="tel" value={dados.telefone ?? ""} onChange={(e) => setDados({ ...dados, telefone: e.target.value })} /></label>
           <label>Endereço<textarea rows={2} value={dados.endereco ?? ""} onChange={(e) => setDados({ ...dados, endereco: e.target.value })} /></label>
           <p className="sub">E-mail (login): {dados.email}. Para mudar o e-mail, o CPF ou o RG, fale com o professor.</p>

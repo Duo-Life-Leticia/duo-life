@@ -71,6 +71,14 @@ where email in ('email-da-leticia@exemplo.com', 'email-do-diogo@exemplo.com');
 
 Ao entrar de novo, eles veem a **tela do professor**, e não a do aluno.
 
+### Apelido ("Como quer ser chamado")
+
+Rode `supabase/migrations/0007_apelido.sql` no SQL Editor (pode rodar mais de uma vez).
+Ele cria o campo do apelido, que aparece no "Olá, ..." da tela inicial. Quem já tinha cadastro fica com o primeiro nome,
+e cada um pode mudar em **Meu perfil**. Para o apelido também valer no "Novo aluno" do professor,
+publique de novo a função `cadastrar-aluno` (Edge Functions → cadastrar-aluno → Code → colar o arquivo novo → Deploy);
+sem isso, o app usa o primeiro nome.
+
 ## 6. Primeiros passos no app
 
 1. O professor entra e toca em **"Abrir aulas dos próximos 60 dias"** (cria terças e quintas, 8h às 9h).

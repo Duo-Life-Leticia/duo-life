@@ -3,7 +3,7 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 export type Papel = "aluno" | "admin";
-export type Perfil = { id: string; nome_completo: string; email: string; papel: Papel; dono?: boolean };
+export type Perfil = { id: string; nome_completo: string; apelido?: string | null; email: string; papel: Papel; dono?: boolean };
 export type MembroEquipe = { id: string; nome_completo: string; email: string; dono: boolean };
 export type Saldo = { aulas_total: number; usadas: number; restantes: number; valido_ate: string | null };
 export type Aula = {
@@ -13,10 +13,10 @@ export type Aula = {
 export type Plano = { id: string; nome: string; aulas: number; valor_centavos: number; validade_dias: number; parcelas_max: number };
 export type SituacaoParq = { valido: boolean; temSim: boolean; atestado: boolean };
 export type Cadastro = {
-  nome_completo: string; email: string; senha: string; data_nascimento: string;
+  nome_completo: string; apelido: string; email: string; senha: string; data_nascimento: string;
   telefone: string; cpf: string; rg: string; sexo: string; endereco: string;
 };
-export type NovoAluno = Omit<Cadastro, "senha">;
+export type NovoAluno = Omit<Cadastro, "senha" | "apelido"> & { apelido?: string };
 
 // Tela do professor
 export type SituacaoParqAluno = "ok" | "pendente" | "atestado";
@@ -42,7 +42,7 @@ export type SituacaoCompra = { status: string; plano_id: string; aulas_total: nu
   link_pagamento: string | null; pix_copia_cola: string | null; pix_qrcode: string | null; valido_ate: string | null };
 export type Aviso = { id: string; titulo: string; texto: string; link: string | null; lido: boolean; criado_em: string };
 export type ResumoPerfil = { inicio: string | null; aulas_feitas: number; faltas: number; por_mes: { mes: string; aulas: number }[]; proximo_marco: number | null };
-export type MeusDados = Pick<NovoAluno, "nome_completo" | "telefone" | "endereco">;
+export type MeusDados = Pick<NovoAluno, "nome_completo" | "apelido" | "telefone" | "endereco">;
 export type ArquivoGuia = "guia-duo-life.pdf" | "nutricao-tubarao.pdf";
 // Erro especial: o pagamento pelo app ainda não foi ligado ao Asaas.
 export const PAGAMENTO_NAO_LIGADO = "nao_configurado";
@@ -133,7 +133,7 @@ function criarSupabase(sb: SupabaseClient): Api {
     async perfil() {
       const { data: { user } } = await sb.auth.getUser();
       if (!user) return null;
-      const { data, error } = await sb.from("perfis").select("id, nome_completo, email, papel, dono").eq("id", user.id).single();
+      const { data, error } = await sb.from("perfis").select("id, nome_completo, apelido, email, papel, dono").eq("id", user.id).single();
       falha(error);
       return data as Perfil;
     },
@@ -303,7 +303,7 @@ function criarSupabase(sb: SupabaseClient): Api {
     },
     async meusDados() {
       const { data: { user } } = await sb.auth.getUser();
-      const { data, error } = await sb.from("perfis").select("nome_completo, telefone, endereco, email").eq("id", user!.id).single();
+      const { data, error } = await sb.from("perfis").select("nome_completo, apelido, telefone, endereco, email").eq("id", user!.id).single();
       falha(error);
       return data as MeusDados & { email: string };
     },
@@ -380,7 +380,7 @@ function criarDemo(): Api {
   const inicial = (): EstadoDemo => ({
     logado: null, parq: null, compras: 5, validoAte: daquiA(30), agendamentos: [],
     extras: {}, presencas: {}, limites: {}, canceladas: {}, comprasDemo: {}, avisosAluno: [], guiasDemo: {},
-    dadosAluno: { nome_completo: "Aluno de Demonstração", telefone: "+55 13 98888-0000", endereco: "Santos, SP" },
+    dadosAluno: { nome_completo: "Aluno de Demonstração", apelido: "Aluno", telefone: "+55 13 98888-0000", endereco: "Santos, SP" },
     equipeDemo: [
       { id: "demo-admin", nome_completo: "Dono (demonstração)", email: "professor@demo", dono: true },
       { id: "demo-diogo", nome_completo: "Diogo", email: "diogo@exemplo.com", dono: false },
@@ -432,8 +432,8 @@ function criarDemo(): Api {
     async perfil() {
       if (!estado.logado) return null;
       return estado.logado === "admin"
-        ? { id: "demo-admin", nome_completo: "Diogo (demonstração)", email: "professor@demo", papel: "admin", dono: true }
-        : { id: "demo-aluno", nome_completo: "Aluno de Demonstração", email: "aluno@demo", papel: "aluno" };
+        ? { id: "demo-admin", nome_completo: "Diogo (demonstração)", apelido: "Diogo", email: "professor@demo", papel: "admin", dono: true }
+        : { id: "demo-aluno", nome_completo: estado.dadosAluno.nome_completo, apelido: estado.dadosAluno.apelido, email: "aluno@demo", papel: "aluno" };
     },
     aoMudarSessao(cb) { ouvintes.add(cb); return () => ouvintes.delete(cb); },
     async entrar(email) {

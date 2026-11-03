@@ -9,7 +9,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Nada é programado sem a aprovação do Alessandro. Programação aprovada em 03/11/2026: Etapa 1 em andamento.
 - Painéis e arquivos de outros projetos nunca são alterados a partir deste.
 - Não citar nomes de outros clientes ou projetos em nada do Duo Life (documentos, painel, GitHub, Drive).
-- Cadastro do aluno: nome completo, e-mail, data de nascimento, telefone (WhatsApp), CPF, RG, sexo e endereço (decisão do Alessandro, 31/10).
+- Cadastro do aluno: nome completo, "como quer ser chamado" (apelido, usado no "Olá"; `0007_apelido.sql`, pedido do Alessandro em 03/11), e-mail, data de nascimento, telefone (WhatsApp), CPF, RG, sexo e endereço (decisão do Alessandro, 31/10).
 - O Diogo (professor) também cadastra aluno pela tela do professor, para quem não conseguir pelo app. Sem campo "gênero" (só "sexo").
 - Níveis (decisão de 03/11): o Alessandro é o DONO (acesso total: código, Supabase, Vercel, preços e quem é professor, pela área Equipe do app). Professores (Letícia e Diogo) fazem só as ações das telas, pelas funções do banco, sem mexer direto nas tabelas nem nos preços (`0006_dono_e_permissoes.sql`).
 - Acessos: a Letícia e o Diogo são administradores (professores) no dia a dia. Conta de professor tem o botão "Ver como aluno" (mesmo login; o Alessandro também pode ter uma conta de professor para ver os dois lados). O aluno vê só o que é dele (plano, saldo, validade, aulas, contrato), marca e cancela a própria aula, compra e renova.
