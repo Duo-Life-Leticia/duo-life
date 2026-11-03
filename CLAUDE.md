@@ -13,6 +13,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - O Diogo (professor) também cadastra aluno pela tela do professor, para quem não conseguir pelo app. Sem campo "gênero" (só "sexo").
 - Acessos: a Letícia e o Diogo são administradores, com acesso total. O aluno vê só o que é dele (plano, saldo, validade, aulas, contrato), marca e cancela a própria aula, compra e renova.
 - O aluno sempre vê quantas aulas faltam. Pós-venda automático: quando faltarem 2 aulas e quando faltar 1, o app manda notificação no celular (mais para frente, também no grupo de WhatsApp da comunidade) com o novo contrato e o pagamento pelo app (respostas de 02/11).
+- Aviso aos professores a cada aula marcada ou cancelada: notificação pelo app, sem custo (decisão de 03/11), em vez de WhatsApp automático.
 - Vagas: sem limite nos 3 primeiros meses de funcionamento (03/11); quando o limite for ligado, cada aula tem limite definido pela Letícia e pelo Diogo; agenda única e em tempo real para todos os alunos, sem superlotação nem marcação repetida. Mensagem automática para os alunos que ainda não marcaram em três momentos: com 3 vagas, com 1 vaga e quando lotar ("marque para o próximo dia").
 - Agendar: só terças e quintas, das 8h às 9h (03/11), até um mês para frente; cada aluno pode ter no máximo 2 aulas marcadas ao mesmo tempo (decisão da Letícia e do Diogo, 02/11). Cancelamento até 6h antes; feriado sem aula; chuva não tira crédito.
 - Aluno sumido: depois de 10 dias sem marcar aula ou de 2 faltas seguidas, o app manda notificação incentivando a voltar, com os textos do escopo (03/11); o professor marca presença para contar as faltas.
@@ -24,7 +25,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 
 ## Onde está cada coisa
 
-- App (Etapa 1): código em `app/` (React + Vite, PWA, modo demonstração sem chaves); banco em `supabase/migrations/0001_inicial.sql` e `0002_tela_professor.sql`, função `supabase/functions/cadastrar-aluno` (convite por e-mail) (regras de saldo, agenda, PAR-Q e segurança dentro do banco); passo a passo para ligar e publicar em `docs/app-como-colocar-no-ar.md`. Teste do banco: PostgreSQL local com um `auth` simulado.
+- App (Etapa 1): código em `app/` (React + Vite, PWA, modo demonstração sem chaves); banco em `supabase/migrations/0001_inicial.sql` e `0002_tela_professor.sql`, `0003_pagamento_e_avisos.sql`, funções `supabase/functions/cadastrar-aluno` (convite por e-mail), `asaas-cobranca` e `asaas-webhook` (pagamento, prontas mas sem a chave do Asaas; ver `docs/asaas-como-ligar.md`) (regras de saldo, agenda, PAR-Q e segurança dentro do banco); passo a passo para ligar e publicar em `docs/app-como-colocar-no-ar.md`. Teste do banco: PostgreSQL local com um `auth` simulado.
 
 - Transcrição da reunião de 30/10/2026: `docs/transcricao-reuniao-2026-10-30.txt`
 - Resumo das conversas anteriores: `docs/historico-inicio.md`

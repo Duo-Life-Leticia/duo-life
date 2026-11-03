@@ -10,7 +10,9 @@ Sem as chaves do Supabase, o app abre em **modo demonstração**, com dados de e
 2. Menu da esquerda: **SQL Editor** → **New query**.
 3. Copie todo o conteúdo de `supabase/migrations/0001_inicial.sql`, cole e clique em **Run**.
 4. Deve aparecer "Success. No rows returned".
-5. Faça o mesmo com `supabase/migrations/0002_tela_professor.sql` (funções da tela do professor).
+5. Faça o mesmo com `supabase/migrations/0002_tela_professor.sql` (funções da tela do professor)
+   e com `supabase/migrations/0003_pagamento_e_avisos.sql` (pagamento pelo app e avisos para os professores).
+6. O pagamento pelo Asaas tem o passo a passo próprio em `docs/asaas-como-ligar.md`.
 
 ## 1b. Função "Cadastrar aluno" (o professor cadastra quem não conseguiu pelo app)
 
@@ -82,7 +84,10 @@ Ao entrar de novo, eles veem a **tela do professor**, e não a do aluno.
   registrar pagamento feito na praia, marcar aula para o aluno, histórico de aulas e compras.
 - Novo aluno: o professor cadastra e o aluno recebe um e-mail para criar a senha.
 
-## O que vem na próxima parte
+## Pagamento e avisos (Etapa 1, terceira parte)
 
-- Pagamento pelo app com o Asaas (Pix, crédito e débito).
-- Mensagem no WhatsApp dos professores a cada aula marcada.
+- Compra pelo app: escolha de Pix, crédito (2x no Tubarão) ou débito, aceite do contrato e Pix dentro do app.
+  Pronto, só falta ligar ao Asaas (`docs/asaas-como-ligar.md`).
+- Contrato completo dentro do app (tela "Contrato").
+- Aba "Avisos" do professor, com contador: cada aula marcada ou cancelada pelos alunos.
+  A notificação no celular (fora do app) entra na Etapa 2, junto com os avisos dos alunos.

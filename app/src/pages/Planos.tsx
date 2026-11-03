@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { api, type Plano } from "../api";
 import { useSessao } from "../App";
 import { erroTexto, reais } from "../util";
@@ -8,7 +8,7 @@ export default function Planos() {
   const { perfil } = useSessao();
   const [planos, setPlanos] = useState<Plano[]>([]);
   const [erro, setErro] = useState("");
-  const [escolhido, setEscolhido] = useState<Plano | null>(null);
+  const navegar = useNavigate();
   useEffect(() => { api.planos().then(setPlanos).catch((e) => setErro(erroTexto(e))); }, []);
 
   return (
@@ -29,16 +29,11 @@ export default function Planos() {
               {p.parcelas_max > 1 ? ` · em até ${p.parcelas_max}x no cartão` : " · à vista"}
             </p>
             <p className="sub">Bônus: Guia DUO LIFE{p.id === "tubarao" ? " + PDF extra de nutrição" : ""}</p>
-            <button className="botao" onClick={() => setEscolhido(p)}>Quero este plano</button>
+            <button className="botao" onClick={() => navegar(perfil ? `/comprar/${p.id}` : "/entrar")}>Quero este plano</button>
           </section>
         ))}
       </div>
-      {escolhido && (
-        <p className="aviso info" role="status">
-          Ótima escolha: Plano {escolhido.nome}! O pagamento pelo app (Pix, crédito e débito) entra na próxima parte.
-          Por enquanto, fale com o professor para pagar pelo celular, pela maquininha ou por Pix.
-        </p>
-      )}
+      <p className="sub centro">Pague pelo app com Pix, cartão de crédito ou débito. <Link className="link" to="/contrato">Ler o contrato</Link></p>
     </main>
   );
 }

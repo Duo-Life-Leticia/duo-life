@@ -36,6 +36,12 @@ export type AulaProfessor = {
 };
 export type AlunoNaAula = { agendamento_id: string; aluno_id: string; nome_completo: string; telefone: string | null; status: string };
 export type FormaPagamento = "pix" | "credito" | "debito" | "presencial";
+export type Cobranca = { compraId: string; link: string | null; pixCopiaCola: string | null; pixQrCode: string | null };
+export type SituacaoCompra = { status: string; plano_id: string; aulas_total: number; valor_centavos: number; forma_pagamento: string | null;
+  link_pagamento: string | null; pix_copia_cola: string | null; pix_qrcode: string | null; valido_ate: string | null };
+export type AvisoProfessor = { id: string; titulo: string; texto: string; link: string | null; lido: boolean; criado_em: string };
+// Erro especial: o pagamento pelo app ainda não foi ligado ao Asaas.
+export const PAGAMENTO_NAO_LIGADO = "nao_configurado";
 
 export interface Api {
   demo: boolean;
@@ -53,6 +59,9 @@ export interface Api {
   marcar(aulaId: string): Promise<void>;
   cancelar(agendamentoId: string): Promise<void>;
   planos(): Promise<Plano[]>;
+  comprar(planoId: string, forma: "pix" | "credito" | "debito", parcelas: number, contratoVersao: string): Promise<Cobranca>;
+  situacaoCompra(compraId: string): Promise<SituacaoCompra>;
+  simularPagamento?(compraId: string): Promise<void>; // só no modo demonstração
   // Professor (Letícia e Diogo)
   gerarAulas(): Promise<number>;
   agendaProfessor(): Promise<AulaProfessor[]>;
@@ -66,6 +75,8 @@ export interface Api {
   registrarPagamento(alunoId: string, planoId: string, forma: FormaPagamento): Promise<void>;
   marcarPara(alunoId: string, aulaId: string): Promise<void>;
   cadastrarAluno(dados: NovoAluno): Promise<void>;
+  avisos(): Promise<AvisoProfessor[]>;
+  marcarAvisosLidos(): Promise<void>;
 }
 
 const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
@@ -162,6 +173,23 @@ function criarSupabase(sb: SupabaseClient): Api {
       falha(error);
       return (data ?? []) as Plano[];
     },
+    async comprar(plano, forma, parcelas, contratoVersao) {
+      const { data, error } = await sb.functions.invoke("asaas-cobranca", { body: { plano, forma, parcelas, contratoVersao } });
+      if (error) {
+        const corpo = await (error as { context?: Response }).context?.json?.().catch(() => null);
+        // Função ainda não publicada no Supabase também conta como "não ligado".
+        throw new Error(corpo?.erro ?? PAGAMENTO_NAO_LIGADO);
+      }
+      if (data?.erro) throw new Error(data.erro);
+      return data as Cobranca;
+    },
+    async situacaoCompra(id) {
+      const { data, error } = await sb.from("compras")
+        .select("status, plano_id, aulas_total, valor_centavos, forma_pagamento, link_pagamento, pix_copia_cola, pix_qrcode, valido_ate")
+        .eq("id", id).single();
+      falha(error);
+      return data as SituacaoCompra;
+    },
     async gerarAulas() { return rpc<number>("gerar_aulas", { p_dias: 60 }); },
     async agendaProfessor() { return (await rpc<AulaProfessor[]>("aulas_periodo", { p_dias_antes: 7, p_dias_depois: 30 })) ?? []; },
     async alunosDaAula(aulaId) {
@@ -216,6 +244,16 @@ function criarSupabase(sb: SupabaseClient): Api {
       }
       if (data?.erro) throw new Error(data.erro);
     },
+    async avisos() {
+      const { data, error } = await sb.from("avisos").select("id, titulo, texto, link, lido, criado_em")
+        .order("criado_em", { ascending: false }).limit(50);
+      falha(error);
+      return (data ?? []) as AvisoProfessor[];
+    },
+    async marcarAvisosLidos() {
+      const { error } = await sb.from("avisos").update({ lido: true }).eq("lido", false);
+      falha(error);
+    },
   };
 }
 
@@ -235,6 +273,8 @@ type EstadoDemo = {
   limites: Record<string, number>;
   canceladas: Record<string, string>; // aula -> motivo
   alunos: AlunoDemo[];
+  comprasDemo: Record<string, { plano: string; forma: string; status: string }>;
+  avisos: AvisoProfessor[];
 };
 
 const PLANOS_DEMO: Plano[] = [
@@ -272,10 +312,11 @@ function jaComecou(data: string): boolean {
 }
 
 function criarDemo(): Api {
-  const CHAVE = "duolife-demo-v3";
+  const CHAVE = "duolife-demo-v4";
   const inicial = (): EstadoDemo => ({
     logado: null, parq: null, compras: 5, validoAte: daquiA(30), agendamentos: [],
-    extras: {}, presencas: {}, limites: {}, canceladas: {},
+    extras: {}, presencas: {}, limites: {}, canceladas: {}, comprasDemo: {},
+    avisos: [{ id: "av1", titulo: "Aula marcada", texto: "Ana Paula marcou a aula de quinta, às 8h.", link: null, lido: false, criado_em: new Date().toISOString() }],
     alunos: [
       alunoExemplo("demo-ana", "Ana Paula Souza", 8, "ok", "1962-03-14"),
       alunoExemplo("demo-carlos", "Carlos Eduardo Lima", 0, "pendente", "1975-08-02"),
@@ -309,6 +350,7 @@ function criarDemo(): Api {
     if (limite && marcadosNa(aulaId) >= limite) throw new Error("Aula cheia. Marque sua aula para o próximo dia.");
     if (estado.compras - estado.agendamentos.length <= 0) throw new Error("Você não tem aulas no saldo. Compre um plano para marcar.");
     estado.agendamentos.push({ id: `ag-${Date.now()}`, aulaId });
+    estado.avisos.unshift({ id: `av-${Date.now()}`, titulo: "Aula marcada", texto: `Aluno de Demonstração marcou a aula de ${aulaId.slice(5).split("-").reverse().slice(0, 2).join("/")}, às 8h.`, link: `/professor/aula/${aulaId}`, lido: false, criado_em: new Date().toISOString() });
   }
 
   return {
@@ -349,6 +391,34 @@ function criarDemo(): Api {
     async marcar(aulaId) { await espera(); marcarDemo(aulaId); avisar(); },
     async cancelar(id) { await espera(); estado.agendamentos = estado.agendamentos.filter((g) => g.id !== id); avisar(); },
     async planos() { return PLANOS_DEMO; },
+    async comprar(plano, forma) {
+      await espera();
+      const id = `compra-${Date.now()}`;
+      estado.comprasDemo[id] = { plano, forma, status: "pendente" };
+      avisar();
+      return forma === "pix"
+        ? { compraId: id, link: null, pixCopiaCola: "00020126580014BR.GOV.BCB.PIX-DEMONSTRACAO-DUO-LIFE", pixQrCode: null }
+        : { compraId: id, link: null, pixCopiaCola: null, pixQrCode: null };
+    },
+    async situacaoCompra(id) {
+      const c = estado.comprasDemo[id];
+      const p = PLANOS_DEMO.find((x) => x.id === c?.plano) ?? PLANOS_DEMO[0];
+      return {
+        status: c?.status ?? "pendente", plano_id: p.id, aulas_total: p.aulas, valor_centavos: p.valor_centavos, forma_pagamento: c?.forma ?? null,
+        link_pagamento: null, pix_copia_cola: c?.forma === "pix" ? "00020126580014BR.GOV.BCB.PIX-DEMONSTRACAO-DUO-LIFE" : null, pix_qrcode: null,
+        valido_ate: c?.status === "pago" ? daquiA(p.validade_dias) : null,
+      };
+    },
+    async simularPagamento(id) {
+      await espera();
+      const c = estado.comprasDemo[id];
+      if (!c || c.status === "pago") return;
+      const p = PLANOS_DEMO.find((x) => x.id === c.plano)!;
+      c.status = "pago";
+      estado.compras += p.aulas;
+      estado.validoAte = daquiA(p.validade_dias);
+      avisar();
+    },
     async gerarAulas() { await espera(); return 0; },
     async agendaProfessor() {
       return datasDemo().map((d) => {
@@ -455,6 +525,8 @@ function criarDemo(): Api {
       estado.alunos.push({ ...alunoExemplo(`demo-${Date.now()}`, d.nome_completo, 0, "pendente", d.data_nascimento), email: d.email, dados: d });
       avisar();
     },
+    async avisos() { return estado.avisos; },
+    async marcarAvisosLidos() { estado.avisos = estado.avisos.map((a) => ({ ...a, lido: true })); avisar(); },
   };
 }
 

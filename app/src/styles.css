@@ -96,8 +96,8 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--dourado); o
 .voltar { align-self: flex-start; }
 
 /* Tela do professor */
-.abas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: 5px; }
-.abas a { text-align: center; padding: 10px 4px; border-radius: 10px; color: var(--texto-2); font-weight: 800; font-size: 15px; text-decoration: none; }
+.abas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: 5px; }
+.abas a { text-align: center; padding: 10px 2px; border-radius: 10px; color: var(--texto-2); font-weight: 800; font-size: 14px; text-decoration: none; }
 .abas a.ativa { background: var(--ouro); color: var(--sobre-dourado); }
 .item.clicavel { text-decoration: none; color: inherit; }
 .item.apagada { opacity: .6; }
@@ -116,3 +116,10 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--dourado); o
 .linha-acoes > * { flex: 1 1 140px; }
 .resp-sim { color: var(--dourado-claro); font-weight: 800; }
 @media (max-width: 420px) { .item.vertical { flex-direction: column; align-items: stretch; } .presenca { min-width: 0; } }
+.contador { display: inline-block; min-width: 20px; padding: 0 6px; margin-left: 4px; border-radius: 999px; background: #c0392b; color: #fff; font-size: 12px; font-weight: 800; line-height: 20px; text-align: center; vertical-align: 1px; }
+/* Compra */
+.item.opcao { width: 100%; font: inherit; color: inherit; cursor: pointer; border-width: 2px; }
+.item.opcao.escolhida { border-color: var(--dourado); }
+.marcador { font-size: 22px; color: var(--dourado); }
+.aceite { display: flex; gap: 12px; align-items: flex-start; font-weight: 600; font-size: 16px; background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: 14px 16px; }
+.aceite input { width: 24px; height: 24px; flex: none; margin: 1px 0 0; accent-color: var(--dourado); }
