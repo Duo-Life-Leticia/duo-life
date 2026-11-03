@@ -1,0 +1,315 @@
+<title>Painel Duo Life Plataforma</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<style>
+/* Layout: logo e faixa de mar no topo, prazo do escopo em destaque, "onde estamos", trilha das 4 etapas, tarefas por etapa, regras + pastas + histórico. */
+:root {
+  /* Cores da marca Duo Life (logo): azul-marinho de fundo e dourado. Um tema só, claro ou escuro, até a aprovação da Letícia e do Diogo. */
+  --bg: #021a4b; --panel: #0a2560; --ink: #f4ecd8; --muted: #b8c2dc; --line: #1f3d7a;
+  --deep: #e8b04a; --sea: #f2c45a; --sea-soft: #12306b; --sereia: #f7e082; --siri: #e8b04a; --siri-soft: #1a2f5e;
+  --st-nao: #8a96b5; --st-and: #f2c45a; --st-agu: #e58a3a; --st-ok: #63c48d;
+  --display: "Cinzel", Georgia, "Times New Roman", serif;
+  --body: "Nunito Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 18px 48px; }
+.wrap { max-width: 1100px; margin: 0 auto; display: grid; gap: 22px; }
+header { display: grid; gap: 10px; }
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 16px; }
+.brand { font-family: var(--display); font-weight: 700; font-size: clamp(30px, 6vw, 46px); line-height: 1; margin: 0; color: var(--deep); letter-spacing: .02em; text-wrap: balance; }
+.brand small { display: block; font-family: var(--body); font-weight: 700; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--sea); margin-bottom: 6px; }
+.logo { display: block; width: min(340px, 80vw); height: auto; margin: 0 0 6px -6px; }
+.sub { color: var(--muted); font-size: 14px; margin: 0; }
+.duo { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px; border: 1.5px solid currentColor; }
+.tag.sereia { color: var(--sereia); } .tag.siri { color: var(--siri); }
+.wave { display: block; width: 100%; height: 18px; color: var(--sea); }
+h2 { font-family: var(--display); font-weight: 700; font-size: 23px; margin: 0 0 10px; color: var(--deep); text-wrap: balance; }
+.prazo { background: var(--siri-soft); border: 2px solid var(--siri); border-radius: 14px; padding: 16px 18px; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: center; }
+.prazo .cnt { grid-row: span 2; text-align: center; min-width: 88px; }
+.prazo .cnt b { display: block; font-family: var(--display); font-weight: 700; font-size: 44px; line-height: 1; color: var(--siri); font-variant-numeric: tabular-nums; }
+.prazo .cnt span { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--siri); }
+.prazo h2 { margin: 0; font-size: 21px; color: var(--ink); }
+.prazo p { margin: 0; font-size: 14px; color: var(--ink); min-width: 0; }
+.prazo.ok { background: var(--sea-soft); border-color: var(--st-ok); }
+.prazo.ok .cnt b, .prazo.ok .cnt span { color: var(--st-ok); }
+@media (max-width: 480px) { .prazo { grid-template-columns: 1fr; } .prazo .cnt { grid-row: auto; text-align: left; } }
+.now { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: grid; gap: 12px; }
+.now dl { margin: 0; display: grid; grid-template-columns: minmax(130px, 210px) 1fr; gap: 8px 16px; }
+.now dt { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.now dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.now dd.big { font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--sea); line-height: 1.15; }
+@media (max-width: 560px) { .now dl { grid-template-columns: 1fr; gap: 2px; } .now dd { margin-bottom: 8px; } }
+.track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.stage { padding: 12px 14px; border-left: 1px solid var(--line); display: grid; gap: 6px; min-width: 0; align-content: start; }
+.stage:first-child { border-left: none; }
+.stage .n { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.stage .t { font-family: var(--display); font-size: 19px; font-weight: 700; line-height: 1.1; }
+.bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--st-ok); width: 0; transition: width .4s; }
+.stage .c { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.stage.atual { background: var(--sea-soft); }
+.stage.atual .t { color: var(--sea); }
+@media (max-width: 700px) { .track { grid-template-columns: 1fr 1fr; } .stage:nth-child(3) { border-left: none; } .stage:nth-child(n+3) { border-top: 1px solid var(--line); } }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--muted); }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.etapa { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.etapa > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.etapa > summary::-webkit-details-marker { display: none; }
+.etapa > summary h3 { margin: 0; font-family: var(--display); font-size: 19px; font-weight: 700; }
+.etapa > summary span { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.etapa > summary:focus-visible { outline: 2px solid var(--sea); outline-offset: -2px; }
+.row { display: grid; grid-template-columns: 44px 1fr auto; gap: 10px; padding: 10px 16px; border-top: 1px solid var(--line); align-items: start; }
+.row .id { font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 1px; }
+.row .txt { min-width: 0; overflow-wrap: anywhere; }
+.row .obs { display: block; font-size: 13px; color: var(--muted); }
+.row.destaque { background: var(--siri-soft); }
+.pill { border: none; cursor: pointer; font: inherit; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; color: #021a4b; background: var(--st-nao); white-space: nowrap; }
+.pill[data-s="andamento"] { background: var(--st-and); } .pill[data-s="aguardando"] { background: var(--st-agu); } .pill[data-s="concluido"] { background: var(--st-ok); }
+.pill:disabled { cursor: default; }
+.pill:focus-visible { outline: 2px solid var(--sea); outline-offset: 2px; }
+.empty { padding: 12px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px; min-width: 0; }
+.box ol, .box ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 14px; }
+.box a { color: var(--sea); font-weight: 700; }
+.hist div { display: grid; grid-template-columns: 92px 1fr; gap: 10px; padding: 8px 0; border-top: 1px dashed var(--line); font-size: 14px; }
+.hist div:first-child { border-top: none; }
+.hist b { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; }
+.note { font-size: 13px; color: var(--muted); margin: 0; }
+.banner { background: var(--sea-soft); border-left: 4px solid var(--sea); padding: 10px 14px; font-size: 14px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
+/* Degradê dourado da logo (marca/identidade-visual.md). */
+:root { --ouro: linear-gradient(135deg, #b9801f 0%, #f7e082 28%, #e8b04a 50%, #fbe7a1 68%, #c98e22 100%);
+  --ouro-texto: linear-gradient(180deg, #fbe7a1 0%, #f2c75c 45%, #d89a2e 75%, #b9801f 100%); }
+.brand, .brand small, h2, .now dd.big, .stage.atual .t, .prazo .cnt b, .prazo .cnt span, .box a, .etapa > summary h3 {
+  background: var(--ouro-texto); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.prazo, .stage.atual { position: relative; }
+.prazo, .prazo.ok { border-color: transparent; }
+.prazo::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; background: var(--ouro); pointer-events: none;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
+.tag.sereia, .tag.siri { background: var(--ouro); color: #021a4b; border-color: transparent; }
+.pill[data-s="andamento"] { background: var(--ouro); }
+.legend .dot[style*="st-and"] { background: var(--ouro) !important; }
+.banner { border-left-color: #e8b04a; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="top">
+      <div>
+        <img class="logo" src="logo-duo-life-horizontal.jpg" alt="Duo Life">
+        <p class="brand"><small>Etapa 1 em andamento</small>Painel de Controle</p>
+        <p class="sub">Funcional na praia, em Santos · Sócios: Letícia e Diogo · Projeto conduzido por Alessandro</p>
+      </div>
+      <div style="display:grid;gap:6px;justify-items:end">
+        <div class="duo"><span class="tag sereia">Sereia · Nutrição · Letícia</span><span class="tag siri">Siri · Personal · Diogo</span></div>
+        <p class="sub" id="atualizado">Atualizado em —</p>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 600 18" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9 Q 25 0 50 9 T 100 9 T 150 9 T 200 9 T 250 9 T 300 9 T 350 9 T 400 9 T 450 9 T 500 9 T 550 9 T 600 9" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+  </header>
+
+  <section class="prazo" id="prazo" aria-labelledby="h-prazo">
+    <div class="cnt"><b id="prazoNum">—</b><span id="prazoUn">dias</span></div>
+    <h2 id="h-prazo">Escopo para a Letícia e o Diogo até domingo, 01/11/2026</h2>
+    <p id="prazoTxt">Prometido pelo Alessandro na reunião de 30/10. Eles leem, apontam o que mudar, e só depois começa a programação.</p>
+  </section>
+
+  <div class="banner" id="aviso" hidden></div>
+
+  <section class="now" aria-labelledby="h-now">
+    <h2 id="h-now">Onde estamos agora</h2>
+    <dl>
+      <dt>Etapa atual</dt><dd class="big" id="etapaAtual">Carregando…</dd>
+      <dt>Último passo concluído</dt><dd id="ultimo">—</dd>
+      <dt>Próximo passo</dt><dd id="proximo">—</dd>
+      <dt>Depende do Alessandro</dt><dd id="pendencias">—</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="h-rot">
+    <h2 id="h-rot">Roteiro</h2>
+    <div class="track" id="track"></div>
+  </section>
+
+  <section aria-labelledby="h-tar">
+    <h2 id="h-tar">Tarefas por etapa</h2>
+    <div class="legend" style="margin-bottom:10px">
+      <span><i class="dot" style="background:var(--st-nao)"></i>Não iniciado</span>
+      <span><i class="dot" style="background:var(--st-and)"></i>Em andamento</span>
+      <span><i class="dot" style="background:var(--st-agu)"></i>Aguardando</span>
+      <span><i class="dot" style="background:var(--st-ok)"></i>Concluído</span>
+    </div>
+    <p class="note" id="dica" style="margin-bottom:10px" hidden>Toque no status de uma tarefa para trocar.</p>
+    <div style="display:grid;gap:12px" id="etapas"></div>
+  </section>
+
+  <div class="two">
+    <section class="box" aria-labelledby="h-reg">
+      <h2 id="h-reg">Regras do projeto</h2>
+      <ol>
+        <li>O Duo Life não se mistura com nenhum outro cliente ou projeto: nem no Claude, nem no GitHub, nem no Drive, nem no painel.</li>
+        <li>Tudo do projeto fica na pasta <b>Duo Life</b> do Google Drive.</li>
+        <li>A pasta <b>Reunioes</b> guarda só as gravações das reuniões com a Letícia e o Diogo.</li>
+        <li>Nada é programado sem a aprovação do Alessandro.</li>
+        <li>A programação só começa depois que a Letícia e o Diogo aprovarem o escopo.</li>
+        <li>O app tem que ser muito simples: muitos alunos são mais velhos e têm pouca intimidade com o celular.</li>
+        <li>Valores no escopo são de exemplo até a Letícia e o Diogo mandarem os reais.</li>
+      </ol>
+    </section>
+    <section class="box" aria-labelledby="h-pas">
+      <h2 id="h-pas">Pastas e documentos</h2>
+      <ul>
+        <li><a href="https://drive.google.com/drive/folders/1RhNF1ive4pycA4-j-Rz74OuCDx0xVim0" target="_blank" rel="noopener">Duo Life</a> (pasta principal)</li>
+        <li><a href="https://drive.google.com/drive/folders/1VoXPo2ftmN59j_1mCjoYxCG67PFmvwgy" target="_blank" rel="noopener">00 - Painel de Controle</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1rQNsWckzYnu_vWSZd-1dih5bs8d7oxTr" target="_blank" rel="noopener">01 - Documentos do Projeto</a>: escopo, transcrições, resumos</li>
+        <li><a href="https://drive.google.com/drive/folders/1fGEtWWbHWgHoQEBWskn1HsotI08cA4ho" target="_blank" rel="noopener">02 - Arquivos da Empresa</a>: logo, prints, valores</li>
+        <li><a href="https://drive.google.com/drive/folders/1Y3XxDQOWKZzyF44GjTYtLCxNUop2zz2H" target="_blank" rel="noopener">Reunioes</a>: gravações</li>
+        <li><a href="https://docs.google.com/document/d/1-GWToSORRFPkXWvnjf5Vs_UazFg01SBf_rFNpR77270/edit" target="_blank" rel="noopener">Documento do Projeto - Plataforma Duo Life</a></li>
+        <li><a href="https://docs.google.com/document/d/1Poxdbl-DZ7Azv7Rpmzm54LUelkzEoXRc1yKtSlNHP7s/edit" target="_blank" rel="noopener">Histórico da conversa - início do projeto</a></li>
+        <li><a href="https://github.com/duo-life-leticia/duo-life" target="_blank" rel="noopener">GitHub duo-life-leticia/duo-life</a>: transcrição e, depois, o código</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="box" aria-labelledby="h-his">
+    <h2 id="h-his">Histórico</h2>
+    <div class="hist" id="hist"><p class="note">O histórico aparece aqui assim que carregar.</p></div>
+  </section>
+</div>
+
+<script id="copia" type="application/json">{"tarefas":[{"codigo":"0.1","etapa":"0","obs":"Whisper; texto no GitHub, em docs/.","ordem":1,"status":"concluido","titulo":"Transcrever a reunião de 30/10 (54 min)","id":"t0-01"},{"codigo":"0.2","etapa":"0","obs":"Pasta 01 - Documentos do Projeto.","ordem":2,"status":"concluido","titulo":"Documento do Projeto - Plataforma Duo Life no Drive","id":"t0-02"},{"codigo":"0.3","etapa":"0","obs":"","ordem":3,"status":"concluido","titulo":"Criar este painel de controle","id":"t0-03"},{"codigo":"0.4","destaque":true,"etapa":"0","obs":"Enviado pelo Alessandro dentro do prazo, em 01/11/2026.","ordem":4,"status":"concluido","titulo":"Mandar o escopo para a Letícia e o Diogo","id":"t0-04"},{"codigo":"0.5","etapa":"0","obs":"Respostas da Letícia recebidas em 02/11 (PDF) e passadas para o Documento do Projeto, versão 3.","ordem":5,"status":"concluido","titulo":"Letícia e Diogo revisam o escopo e apontam correções","id":"t0-05"},{"codigo":"0.6","etapa":"0","obs":"Recebida em 31/10. Cores: azul-marinho #021A4B e dourado #E8B04A. Logo no GitHub, em marca/.","ordem":6,"status":"concluido","titulo":"Receber a logo da Duo Life (sereia e siri)","id":"t0-06"},{"codigo":"0.7","etapa":"0","obs":"Recebidos em 31/10. Usados só como contexto (sem imagens): ideias em docs/referencia-mfit.md.","ordem":7,"status":"concluido","titulo":"Receber os prints do MFit (cadastro de aluno e PAR-Q)","id":"t0-07"},{"codigo":"0.8","etapa":"0","obs":"Fotos já enviadas pela Letícia e pelo Diogo ao Alessandro (03/11). Referência usada no projeto: prints do MFit (só como contexto) e o balão de saldo descrito no escopo.","ordem":8,"status":"concluido","titulo":"Receber os prints da Velocity (balão de aulas e perfil)","id":"t0-08"},{"codigo":"0.9","etapa":"0","obs":"Escolhido em 03/11: \"Dois pilares. Um resultado.\"","ordem":9,"status":"concluido","titulo":"Receber o slogan e a frase da empresa","id":"t0-09"},{"codigo":"0.10","etapa":"0","obs":"Sardinha R$ 230 (30 dias), Água-Viva R$ 420 (50 dias), Tubarão R$ 720 (80 dias). Pix e cartão à vista; 2x só no Tubarão.","ordem":10,"status":"concluido","titulo":"Definir valores e validade dos planos Sardinha, Água-Viva e Tubarão","id":"t0-10"},{"codigo":"0.11","etapa":"0","obs":"Terças e quintas, das 8h às 9h (03/11). Cancelamento até 6h antes. Sem limite de vagas nos 3 primeiros meses. Feriado sem aula; chuva: local coberto ou cancelamento, sem perder crédito.","ordem":11,"status":"concluido","titulo":"Definir cancelamento (12h ou 6h), limite de vagas e horários","id":"t0-11"},{"codigo":"0.12","etapa":"0","obs":"Concluído em 03/11 com a versão 2 do contrato (Drive, pasta 01). Ajustes que a Letícia e o Diogo pedirem podem ser feitos depois, sem afetar o app. Faltam só nome completo e CPF da Letícia e sobrenome do Diogo.","ordem":12,"status":"concluido","titulo":"Montar o contrato simples para eles revisarem","id":"t0-12"},{"codigo":"0.13","etapa":"0","obs":"Decidido em 02/11: começar pelo navegador do celular e levar para as lojas depois.","ordem":13,"status":"concluido","titulo":"Decidir: começar pelo navegador do celular ou pelas lojas de apps","id":"t0-13"},{"codigo":"0.14","etapa":"0","obs":"Asaas, na conta que a Letícia já tem (03/11). Na praia: celular (Asaas Tap), maquininha (Asaas Smart) e Pix.","ordem":14,"status":"concluido","titulo":"Serviço de pagamento: Asaas (Pix, crédito e débito)","id":"t0-14"},{"codigo":"0.15","etapa":"0","obs":"Pronto em 03/11, tudo separado dos outros projetos: GitHub (organização Duo-Life-Leticia), Supabase (projeto duo-life, São Paulo, gratuito) e Vercel (conta Duo life, Hobby, ainda sem projeto). Transferir para duolife.ltda@gmail.com depois.","ordem":15,"status":"concluido","titulo":"Criar as contas próprias da Duo Life (GitHub, banco de dados, hospedagem) · Alessandro","id":"t0-15"},{"codigo":"0.16","etapa":"0","obs":"Movido pelo Alessandro em 31/10.","ordem":16,"status":"concluido","titulo":"Mover o vídeo da reunião para a pasta Reunioes","id":"t0-16"},{"codigo":"0.17","etapa":"0","obs":"Aprovado pelo Alessandro em 03/11/2026. Etapa 1 começou.","ordem":17,"status":"concluido","titulo":"Aprovação do Alessandro para começar a programar","id":"t0-17"},{"codigo":"1.1","etapa":"1","obs":"Feita no app (03/11), com \"Esqueci minha senha\". Falta ligar ao Supabase e publicar.","ordem":1,"status":"andamento","titulo":"Tela de entrada com a logo, e-mail e senha","id":"t1-01"},{"codigo":"1.2","etapa":"1","obs":"Nome completo, e-mail (é o login), data de nascimento, WhatsApp, CPF, RG, sexo e endereço. O aluno cria a senha no primeiro acesso.","ordem":2,"status":"andamento","titulo":"Cadastro do aluno","id":"t1-02"},{"codigo":"1.3","etapa":"1","obs":"7 perguntas (Sim/Não), as mesmas do PAR-Q que o Diogo usa; texto no escopo. Também impresso. Vale 6 meses. Resposta Sim gera aviso na ficha para o professor.","ordem":3,"status":"andamento","titulo":"PAR-Q no cadastro, guardado na ficha do aluno com a data","id":"t1-03"},{"codigo":"1.4","etapa":"1","obs":"Feita no app (03/11): balão \"faltam X aulas\", Agendar aula, Comprar aulas e próximas aulas.","ordem":4,"status":"andamento","titulo":"Tela inicial do aluno: botões Comprar aulas e Agendar aula, e o balão com o saldo de aulas","id":"t1-04"},{"codigo":"1.5","etapa":"1","obs":"Visível também para quem ainda não comprou. O bônus aparece como \"Guia DUO LIFE\".","ordem":5,"status":"andamento","titulo":"Tela de planos com valor, validade e bônus","id":"t1-05"},{"codigo":"1.6","etapa":"1","obs":"Pronto no app (03/11): Pix com QR Code no app, crédito (2x no Tubarão) e débito na página segura do Asaas, aceite do contrato, confirmação automática. Aguardando a chave de API do Asaas da Letícia para ligar (docs/asaas-como-ligar.md).","ordem":6,"status":"aguardando","titulo":"Pagamento dentro do app por Pix, crédito e débito; 2x só no Tubarão","id":"t1-06"},{"codigo":"1.7","etapa":"1","obs":"Na tela Agendar, nada de calendário cheio: aparecem só os dias de aula, dá para marcar até um mês à frente e ter no máximo 2 aulas marcadas ao mesmo tempo (decisão de 02/11).","ordem":7,"status":"andamento","titulo":"Agenda só de terças e quintas, até um mês para frente, no máximo 2 aulas marcadas por aluno","id":"t1-07"},{"codigo":"1.8","etapa":"1","obs":"Avisos de vagas com 3, 1 e aula cheia feitos (03/11). Só disparam quando o limite estiver ligado.","ordem":8,"status":"andamento","titulo":"Vagas: sem limite nos 3 primeiros meses; depois, limite com agenda em tempo real e avisos com 3 vagas, 1 vaga e aula cheia","id":"t1-08"},{"codigo":"1.9","etapa":"1","obs":"Feriado não tem aula. Chuva: local coberto ou cancelamento, e o aluno não perde o crédito.","ordem":9,"status":"andamento","titulo":"Cancelamento até 6 horas antes: fora do prazo e sem ir, a aula conta como feita","id":"t1-09"},{"codigo":"1.10","etapa":"1","obs":"Sardinha 5 aulas (30 dias), Água-Viva 10 (50 dias), Tubarão 20 (80 dias). A validade conta a partir da compra.","ordem":10,"status":"andamento","titulo":"Controle de saldo e validade de cada plano","id":"t1-10"},{"codigo":"1.11","etapa":"1","obs":"Feita (03/11): agenda da última semana até um mês à frente, com número de alunos e de presentes. Falta ligar ao Supabase e publicar.","ordem":11,"status":"andamento","titulo":"Professor: agenda com o número de alunos em cada aula","id":"t1-11"},{"codigo":"1.12","etapa":"1","obs":"Feita (03/11): lista com busca, ficha com dados, PAR-Q e atestado, saldo, histórico, registrar pagamento na praia, marcar aula para o aluno e cadastrar aluno por convite. Falta ligar ao Supabase e publicar.","ordem":12,"status":"andamento","titulo":"Professor: ver a lista de alunos e a ficha de cada um, e marcar aulas no lugar do aluno","id":"t1-12"},{"codigo":"1.13","etapa":"1","obs":"Feita (03/11): abrir aulas de terça e quinta (8h às 9h), limite de vagas por aula, cancelar aula por chuva ou feriado e marcar presença. Falta ligar ao Supabase e publicar.","ordem":13,"status":"andamento","titulo":"Professor: abrir aulas e definir o horário e o limite de vagas","id":"t1-13"},{"codigo":"1.14","etapa":"1","obs":"Feito (03/11): aba Avisos do professor com contador e notificação no celular (web push). Para chegar no celular, falta gerar as chaves e ligar no Supabase (docs/avisos-celular-como-ligar.md).","ordem":14,"status":"andamento","titulo":"Aviso para os professores a cada aula marcada (notificação no celular, sem custo)","id":"t1-14"},{"codigo":"1.15","etapa":"1","obs":"","ordem":15,"status":"nao","titulo":"Testes com a Letícia e o Diogo antes de liberar para os alunos","id":"t1-15"},{"codigo":"2.1","etapa":"2","obs":"Feito (03/11): \"Restam apenas duas aulas!\" e \"Resta apenas 1 aula.\" aparecem no app e vão para o celular quando a notificação for ligada. Um aviso de cada por compra.","ordem":1,"status":"andamento","titulo":"Aviso de renovação quando faltarem 2 aulas e quando faltar 1","id":"t2-01"},{"codigo":"2.2","etapa":"2","obs":"Decisão de 02/11: os avisos sobre as aulas restantes já bastam.","ordem":2,"status":"nao","titulo":"Cancelado: aviso de validade perto do fim","id":"t2-02"},{"codigo":"2.3","etapa":"2","obs":"Feito (03/11): \"Ainda temos vaga, vamos treinar?\" quando a aula estava cheia e alguém cancelou. Só vale com limite de vagas ligado (depois dos 3 primeiros meses).","ordem":3,"status":"andamento","titulo":"Aviso de vaga liberada quando alguém cancela","id":"t2-03"},{"codigo":"2.4","etapa":"2","obs":"Feito (03/11): checagem diária às 9h (10 dias sem marcar ou 2 faltas seguidas), com os textos do escopo. Precisa ligar o pg_cron no Supabase.","ordem":4,"status":"andamento","titulo":"Mensagem para incentivar a volta de quem comprou e não marca aulas ou falta muito","id":"t2-04"},{"codigo":"2.5","etapa":"2","obs":"Feito (03/11): o professor envia os PDFs em Agenda → Guias em PDF; o aluno baixa na tela inicial (Tubarão recebe o extra). Falta a Letícia mandar os PDFs.","ordem":5,"status":"andamento","titulo":"Guia DUO LIFE em PDF no app, para todos os planos; PDF extra de nutrição no Tubarão","id":"t2-05"},{"codigo":"2.6","etapa":"2","obs":"Contrato completo dentro do app e aceite na compra já feitos (03/11), com data, hora e versão guardadas.","ordem":6,"status":"andamento","titulo":"Contrato só no app, com aceite na compra","id":"t2-06"},{"codigo":"3.1","etapa":"3","obs":"Feito (03/11): aulas feitas, desde quando treina, próxima meta (30 e 50), gráfico de aulas por mês e editar nome, WhatsApp e endereço.","ordem":1,"status":"andamento","titulo":"Perfil do aluno: início, aulas feitas e evolução","id":"t3-01"},{"codigo":"3.2","etapa":"3","obs":"Feito (03/11): ao completar 30 e 50 aulas (presença marcada), a Letícia e o Diogo recebem o aviso e o aluno recebe os parabéns.","ordem":2,"status":"andamento","titulo":"Aviso ao professor quando o aluno chegar a 30 e a 50 aulas, para fazer um agrado","id":"t3-02"},{"codigo":"3.3","etapa":"3","obs":"Decisão de 02/11: não vão ter comentários nem avaliações.","ordem":3,"status":"nao","titulo":"Cancelado: comentários sobre as aulas","id":"t3-03"},{"codigo":"3.4","etapa":"3","obs":"Feito (03/11): Sereia, Siri e Duplinha com \"Consultar opções\" (WhatsApp com mensagem pronta). Falta o WhatsApp da Letícia e do Diogo.","ordem":4,"status":"andamento","titulo":"Menu Nutrição e Personal com chamada e WhatsApp","id":"t3-04"},{"codigo":"3.5","etapa":"3","obs":"Feito (03/11): logo, slogan \"Dois pilares. Um resultado.\", duas linhas sobre a Duo Life (proposta para aprovar), Instagram e WhatsApp. Faltam o Instagram e os números.","ordem":5,"status":"andamento","titulo":"Quem somos, Instagram, WhatsApp e slogan","id":"t3-05"},{"codigo":"3.6","etapa":"3","obs":"","ordem":6,"status":"nao","titulo":"Aula experimental","id":"t3-06"},{"codigo":"3.7","etapa":"3","obs":"","ordem":7,"status":"nao","titulo":"Vídeos de apresentação da aula","id":"t3-07"}],"estado":{"atualizado":"03/11/2026","etapaAtual":"Etapa 1 · Aplicativo básico","etapaKey":"1","pendencias":"Publicar o app (docs/app-como-colocar-no-ar.md). Pedir à Letícia: chave do Asaas, PDFs dos guias, WhatsApp dela e do Diogo, Instagram e aprovação do texto Quem somos.","proximo":"Colocar o app no ar e fazer os testes com a Letícia e o Diogo (1.15).","ultimo":"Etapa 3 adiantada: perfil do aluno, marcos de 30 e 50 aulas, Nutrição e Personal e Quem somos (03/11).","id":"atual"},"historico":[{"data":"03/11/2026","ordem":36,"texto":"Etapa 3 adiantada: Meu perfil com evolução, marcos de 30 e 50 aulas, Nutrição e Personal (Sereia, Siri, Duplinha) e Quem somos. Faltam os contatos de WhatsApp e Instagram.","id":"h36"},{"data":"03/11/2026","ordem":35,"texto":"Etapa 2 adiantada: avisos automáticos (renovação, vagas, vaga liberada, aluno sumido), notificação no celular e Guia DUO LIFE em PDF. Falta ligar no Supabase e receber os PDFs.","id":"h35"},{"data":"03/11/2026","ordem":34,"texto":"Pagamento pelo app pronto (Pix no app, cartão na página do Asaas, aceite do contrato), só falta a chave do Asaas. Aviso para os professores a cada aula marcada, pelo app e sem custo.","id":"h34"},{"data":"03/11/2026","ordem":33,"texto":"Tela do professor completa: agenda, presença, limite de vagas, cancelar aula, lista e ficha dos alunos, atestado, pagamento na praia, marcar aula para o aluno e cadastro por convite. Degradê dourado aplicado no app e no painel.","id":"h33"},{"data":"03/11/2026","ordem":32,"texto":"Etapa 1, primeira parte: banco de dados com as regras (testado), entrada, cadastro, PAR-Q, tela do aluno com saldo, agenda, planos e tela do professor separada. Falta ligar ao Supabase e publicar.","id":"h32"},{"data":"03/11/2026","ordem":31,"texto":"Alessandro aprovou o início da programação. Etapa 0 concluída; começou a Etapa 1 · Aplicativo básico.","id":"h31"},{"data":"03/11/2026","ordem":30,"texto":"Tarefa 0.12 concluída: o contrato versão 2 vale para o app; ajustes podem ser feitos depois.","id":"h30"},{"data":"03/11/2026","ordem":29,"texto":"Tarefa 0.8 concluída: as fotos de referência já foram enviadas ao Alessandro.","id":"h29"},{"data":"03/11/2026","ordem":28,"texto":"Conta da Vercel criada (Duo life, plano Hobby). Contas do app prontas: GitHub, Supabase e Vercel.","id":"h28"},{"data":"03/11/2026","ordem":27,"texto":"Supabase criado: projeto duo-life, região São Paulo, plano gratuito, separado dos outros projetos. Próximo: Vercel.","id":"h27"},{"data":"03/11/2026","ordem":26,"texto":"GitHub definido: organização Duo-Life-Leticia, separada dos outros projetos. Próximo: Supabase e Vercel.","id":"h26"},{"data":"03/11/2026","ordem":25,"texto":"Contrato corrigido: desistência em até 7 dias com devolução de todo o valor, sem multa, como manda o Código de Defesa do Consumidor.","id":"h25"},{"data":"03/11/2026","ordem":24,"texto":"Contrato versão 2: CPF da Letícia, validade a partir da compra, multa de 50% na desistência com aulas feitas, uso de imagem e atestado obrigatório quando o PAR-Q tiver \"sim\".","id":"h24"},{"data":"03/11/2026","ordem":23,"texto":"Rascunho do contrato pronto no Drive, com planos, pagamento, agendamento, cancelamento de 6h, chuva e feriados, saúde (PAR-Q), desistência em 7 dias, dados pessoais e aceite no app.","id":"h23"},{"data":"03/11/2026","ordem":22,"texto":"Aulas das 8h às 9h. Pagamentos na conta do Asaas da Letícia. Aviso de aluno sumido depois de 10 dias sem marcar ou 2 faltas seguidas, com textos propostos. PAR-Q com as 7 perguntas do Diogo.","id":"h22"},{"data":"03/11/2026","ordem":21,"texto":"Pagamento na praia pelo celular (Asaas Tap), maquininha e Pix. Limite de vagas ligado depois de 3 meses de funcionamento.","id":"h21"},{"data":"03/11/2026","ordem":20,"texto":"Slogan escolhido: \"Dois pilares. Um resultado.\"","id":"h20"},{"data":"03/11/2026","ordem":19,"texto":"Recebido o e-mail da Duo Life para as contas do app: duolife.ltda@gmail.com. O Alessandro cria as contas.","id":"h19"},{"data":"02/11/2026","ordem":18,"texto":"Respostas da Letícia: valores e validade dos planos, cancelamento 6h, vagas abertas no começo, até 2 aulas marcadas, Asaas, avisos por notificação, sem comentários, sem aviso de validade, marcos de 30 e 50 aulas, Guia DUO LIFE e slogan.","id":"h18"},{"data":"01/11/2026","ordem":17,"texto":"Escopo enviado pelo Alessandro para a Letícia e o Diogo, dentro do prazo.","id":"h17"},{"data":"31/10/2026","ordem":16,"texto":"Escopo: limite de vagas por aula, agenda única em tempo real para todos (sem superlotação nem marcação repetida), contagem regressiva de vagas por mensagem e aviso de aula cheia.","id":"h16"},{"data":"31/10/2026","ordem":15,"texto":"Escopo: mensagem automática pelo app para o aluno que fechou o plano e não marca aulas ou falta muito, incentivando a voltar. Entrou também na pauta da reunião.","id":"h15"},{"data":"31/10/2026","ordem":14,"texto":"Documento do Projeto: acessos (Letícia e Diogo administradores), saldo sempre visível, pós-venda e renovação automáticos com novo contrato e pagamento no app, anamnese do Diogo, e a nova Pauta da próxima reunião.","id":"h14"},{"data":"31/10/2026","ordem":13,"texto":"Tirados os nomes de outros projetos do painel, do GitHub e dos documentos. Pedido no Documento do Projeto o e-mail da Duo Life para o Alessandro criar as contas do app.","id":"h13"},{"data":"31/10/2026","ordem":12,"texto":"Documento do Projeto: entrou a pergunta navegador do celular ou lojas de apps, com a recomendação de começar pelo navegador.","id":"h12"},{"data":"31/10/2026","ordem":11,"texto":"Vídeo da reunião de 30/10 movido para a pasta Reunioes pelo Alessandro.","id":"h11"},{"data":"31/10/2026","ordem":10,"texto":"Documento do Projeto atualizado (versão 2): logo e cores, cadastro, login, cadastro pelo Diogo, PAR-Q obrigatório, pagamento dentro do app e recomendação do Asaas.","id":"h10"},{"data":"31/10/2026","ordem":9,"texto":"Sem campo \"gênero\" do MFit (fica só \"sexo\"). Quem não conseguir se cadastrar pelo app liga para o Diogo, que faz o cadastro pela tela do professor.","id":"h09"},{"data":"31/10/2026","ordem":8,"texto":"Entrada no app: login com o e-mail do aluno; a senha é ele mesmo que cria no primeiro acesso, com opção \"Esqueci minha senha\".","id":"h08"},{"data":"31/10/2026","ordem":7,"texto":"Decisões do Alessandro: cadastro com RG, sexo e endereço; pagamento dentro do app por Pix, crédito ou débito, direto na conta da Duo Life. Serviços comparados: Asaas, Mercado Pago e PagBank.","id":"h07"},{"data":"31/10/2026","ordem":6,"texto":"Prints do MFit recebidos. Ideias anotadas: professor também cadastra aluno, WhatsApp com +55, PAR-Q com data, bloqueio de quem não tem saldo. A confirmar: e-mail no cadastro e gênero.","id":"h06"},{"data":"31/10/2026","ordem":5,"texto":"A Letícia confirmou planos (5, 10 e 20 aulas), horário das 7h às 8h, cadastro com nome, nascimento, telefone e CPF, endereço só no pagamento com cartão e PAR-Q obrigatório.","id":"h05"},{"data":"31/10/2026","ordem":4,"texto":"Logo da Duo Life recebida. Tudo passa a usar as cores da logo (azul-marinho e dourado) até a aprovação da Letícia e do Diogo; painel atualizado.","id":"h04"},{"data":"31/10/2026","ordem":3,"texto":"Documento do Projeto - Plataforma Duo Life e este painel criados.","id":"h03"},{"data":"31/10/2026","ordem":2,"texto":"Reunião transcrita com o Whisper; pastas do Duo Life criadas no Drive; histórico do início salvo.","id":"h02"},{"data":"30/10/2026","ordem":1,"texto":"Reunião de 54 min com a Letícia e o Diogo. O Alessandro promete o escopo até domingo, 01/11.","id":"h01"}]}</script>
+<script>
+const ETAPAS = [
+  { k: "0", nome: "Escopo e preparação" },
+  { k: "1", nome: "Aplicativo básico" },
+  { k: "2", nome: "Avisos e conteúdo" },
+  { k: "3", nome: "Perfil e divulgação" },
+];
+const PRAZO = new Date(2026, 10, 1); // domingo, 01/11/2026
+const TAREFA_PRAZO = "t0-04";
+const CICLO = ["nao", "andamento", "aguardando", "concluido"];
+const ROTULO = { nao: "Não iniciado", andamento: "Em andamento", aguardando: "Aguardando", concluido: "Concluído" };
+let tarefas = [], estado = null, db = null, podeEditar = true;
+// Cópia dos dados gravada na página: quem abre sem a conta Claude vê esta versão.
+let historicoCopia = [];
+try {
+  const c = JSON.parse(document.getElementById("copia").textContent);
+  tarefas = c.tarefas || []; estado = c.estado || null; historicoCopia = c.historico || [];
+} catch (e) {}
+const $ = (id) => document.getElementById(id);
+
+function renderPrazo() {
+  const t = tarefas.find(x => x.id === TAREFA_PRAZO);
+  const box = $("prazo");
+  if (t && t.status === "concluido") {
+    box.classList.add("ok");
+    $("prazoNum").textContent = "✓"; $("prazoUn").textContent = "enviado";
+    $("prazoTxt").textContent = "Escopo enviado. Agora a Letícia e o Diogo revisam e apontam o que mudar.";
+    return;
+  }
+  box.classList.remove("ok");
+  const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
+  const dias = Math.round((PRAZO - hoje) / 86400000);
+  if (dias > 1) { $("prazoNum").textContent = dias; $("prazoUn").textContent = "dias"; }
+  else if (dias === 1) { $("prazoNum").textContent = "1"; $("prazoUn").textContent = "dia"; }
+  else if (dias === 0) { $("prazoNum").textContent = "Hoje"; $("prazoUn").textContent = "é o prazo"; }
+  else { $("prazoNum").textContent = -dias; $("prazoUn").textContent = -dias === 1 ? "dia atrasado" : "dias atrasado"; }
+}
+
+function render() {
+  if (estado) {
+    $("etapaAtual").textContent = estado.etapaAtual || "—";
+    $("ultimo").textContent = estado.ultimo || "—";
+    $("proximo").textContent = estado.proximo || "—";
+    $("pendencias").textContent = estado.pendencias || "—";
+    $("atualizado").textContent = "Atualizado em " + (estado.atualizado || "—");
+  }
+  renderPrazo();
+  const atual = estado ? estado.etapaKey : "0";
+  const track = $("track"); track.replaceChildren();
+  const box = $("etapas"); box.replaceChildren();
+  for (const e of ETAPAS) {
+    const lista = tarefas.filter(t => t.etapa === e.k).sort((a, b) => (a.ordem || 0) - (b.ordem || 0));
+    const ok = lista.filter(t => t.status === "concluido").length;
+    const pct = lista.length ? Math.round(ok / lista.length * 100) : 0;
+
+    const st = document.createElement("div");
+    st.className = "stage" + (atual === e.k ? " atual" : "");
+    st.innerHTML = `<span class="n">Etapa ${e.k}</span><span class="t"></span><div class="bar"><i style="width:${pct}%"></i></div><span class="c"></span>`;
+    st.querySelector(".t").textContent = e.nome;
+    st.querySelector(".c").textContent = lista.length ? `${ok} de ${lista.length} concluídas` : "Tarefas aparecem ao carregar";
+    track.append(st);
+
+    const d = document.createElement("details");
+    d.className = "etapa"; d.open = atual === e.k;
+    const s = document.createElement("summary");
+    s.innerHTML = `<h3></h3><span></span>`;
+    s.querySelector("h3").textContent = `Etapa ${e.k} · ${e.nome}`;
+    s.querySelector("span").textContent = lista.length ? `${ok}/${lista.length} · ${pct}%` : "carregando";
+    d.append(s);
+    if (!lista.length) {
+      const p = document.createElement("div"); p.className = "empty";
+      p.textContent = db ? "Sem tarefas ainda." : "As tarefas aparecem aqui assim que os dados carregarem.";
+      d.append(p);
+    }
+    for (const t of lista) {
+      const r = document.createElement("div"); r.className = "row" + (t.destaque ? " destaque" : "");
+      const id = document.createElement("span"); id.className = "id"; id.textContent = t.codigo || "";
+      const tx = document.createElement("span"); tx.className = "txt"; tx.textContent = t.titulo || "";
+      if (t.obs) { const o = document.createElement("span"); o.className = "obs"; o.textContent = t.obs; tx.append(o); }
+      const b = document.createElement("button"); b.className = "pill"; b.type = "button";
+      b.dataset.s = t.status || "nao"; b.textContent = ROTULO[t.status] || ROTULO.nao;
+      b.disabled = !db || !podeEditar;
+      b.setAttribute("aria-label", `Status de ${t.titulo}: ${b.textContent}. Toque para trocar.`);
+      b.addEventListener("click", () => trocar(t, b));
+      r.append(id, tx, b); d.append(r);
+    }
+    box.append(d);
+  }
+}
+
+async function trocar(t, b) {
+  const prox = CICLO[(CICLO.indexOf(t.status || "nao") + 1) % CICLO.length];
+  b.disabled = true;
+  try { await db.doc("tarefas/" + t.id).update({ status: prox }); }
+  catch (e) {
+    b.disabled = false;
+    if (e && (e.code === "not_granted" || e.code === "permission_denied")) { podeEditar = false; aviso("Você pode ver o painel, mas não alterar o status."); render(); }
+    else aviso("Não deu para salvar o status agora. Tente de novo em instantes.");
+  }
+}
+function aviso(msg) { const a = $("aviso"); a.textContent = msg; a.hidden = false; }
+
+function renderHist(itens) {
+  const h = $("hist"); h.replaceChildren();
+  if (!itens.length) { const p = document.createElement("p"); p.className = "note"; p.textContent = "Nenhum registro ainda."; h.append(p); return; }
+  for (const it of itens) {
+    const r = document.createElement("div");
+    const d = document.createElement("b"); d.textContent = it.data || "";
+    const t = document.createElement("span"); t.textContent = it.texto || "";
+    r.append(d, t); h.append(r);
+  }
+}
+
+render();
+if (historicoCopia.length) renderHist(historicoCopia);
+(async () => {
+  db = window.claude && typeof claude.use === "function" ? await claude.use("db") : null;
+  if (!db) {
+    aviso("Painel para consulta, atualizado em " + ((estado && estado.atualizado) || "—") + ". Os status são trocados pelo Alessandro.");
+    render();
+    return;
+  }
+  $("dica").hidden = false;
+  db.doc("estado/atual").onSnapshot(s => { estado = s.data() || null; render(); }, () => aviso("Não foi possível carregar o resumo agora."));
+  db.collection("tarefas").onSnapshot(s => { tarefas = s.docs.map(d => ({ id: d.id, ...d.data() })); render(); }, () => aviso("Não foi possível carregar as tarefas agora."));
+  db.collection("historico").orderBy("ordem", "desc").onSnapshot(s => renderHist(s.docs.map(d => d.data())), () => {});
+})();
+</script>
