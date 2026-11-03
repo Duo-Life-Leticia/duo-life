@@ -34,6 +34,7 @@ drop policy if exists perfis_editar on public.perfis;
 create policy perfis_editar on public.perfis for update using (id = auth.uid());
 
 -- Planos e preços: só o dono.
+drop policy if exists planos_dono on public.planos;
 create policy planos_dono on public.planos for all using (public.eh_dono()) with check (public.eh_dono());
 
 -- ---------------------------------------------------------------------------
