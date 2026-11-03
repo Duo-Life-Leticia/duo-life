@@ -71,3 +71,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - 03/11: GitHub mantido na organização Duo-Life-Leticia (opção 1), no mesmo modelo dos outros projetos do Alessandro: separado por organização.
 - 03/11: Supabase criado (projeto duo-life, São Paulo, gratuito). A conta antiga já tinha usado os 2 projetos gratuitos, por isso o Supabase ficou separado.
 - 03/11: conta da Vercel criada (Duo life, Hobby). Contas do app prontas: GitHub, Supabase e Vercel (tarefa 0.15 concluída).
+- 03/11: tarefa 0.8 concluída; as fotos de referência já foram enviadas ao Alessandro.
