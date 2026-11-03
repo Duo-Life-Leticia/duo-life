@@ -66,3 +66,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - 03/11: horário das 8h às 9h; Asaas na conta da Letícia; aviso de aluno sumido com 10 dias ou 2 faltas, com textos propostos.
 - 03/11: rascunho do contrato criado no Drive (pasta 01) e em `docs/contrato-rascunho.html`, com 6 decisões em aberto no fim.
 - 03/11: contrato v2 com as decisões do Alessandro; faltam o nome completo e o CPF da Letícia e o sobrenome do Diogo (marcados em vermelho).
+- 03/11: o Alessandro decidiu respeitar o CDC: desistência em até 7 dias com devolução total, sem multa. Contrato corrigido.

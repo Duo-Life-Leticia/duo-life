@@ -30,7 +30,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Ideias tiradas dos prints do MFit (só contexto, sem imagens): `docs/referencia-mfit.md`
 - Pagamento (decisão e comparação de serviços): `docs/pagamento.md`
 - Perguntas do PAR-Q (só o texto): `docs/par-q.md`
-- Contrato (rascunho v1, 03/11): Google Docs https://docs.google.com/document/d/15aD4HmgssrDkB8G6LMA4d222vEw3cnFIgWcEesjPVYE/edit (pasta 01); cópia em `docs/contrato-rascunho.html`
+- Contrato (versão 2, 03/11): Google Docs https://docs.google.com/document/d/15aD4HmgssrDkB8G6LMA4d222vEw3cnFIgWcEesjPVYE/edit (pasta 01); cópia em `docs/contrato-rascunho.html`
 - Respostas da Letícia ao escopo (02/11): `docs/respostas-leticia-2026-11-02.md`
 - Logo e cores: `marca/` (`logo-duo-life.jpg`, `logo-duo-life-horizontal.jpg`, `identidade-visual.md`)
 - Documento do projeto (escopo): https://docs.google.com/document/d/1-GWToSORRFPkXWvnjf5Vs_UazFg01SBf_rFNpR77270/edit
@@ -48,4 +48,4 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Logo recebida em 31/10/2026 (está em `marca/`). Prints do MFit recebidos: usar só como contexto, sem guardar as imagens.
 - Respostas da Letícia recebidas em 02/11 e passadas para o escopo (versão 3) e para o painel.
 - E-mail da Duo Life para as contas do app (GitHub, banco de dados, hospedagem): duolife.ltda@gmail.com (recebido em 03/11). O Alessandro cria as contas.
-- Aguardando: prints da Velocity (o Alessandro acha que já mandou, mas só chegaram prints do MFit). Contrato v2 (03/11) com as decisões do Alessandro: CPF da Letícia, validade a partir da compra, multa de 50% na desistência com aulas feitas (confirmar com advogado), uso de imagem incluído, atestado obrigatório com "sim" no PAR-Q. Faltam nome completo e CPF da Letícia e sobrenome do Diogo (em vermelho).
+- Aguardando: prints da Velocity (o Alessandro acha que já mandou, mas só chegaram prints do MFit). Contrato v2 (03/11) com as decisões do Alessandro: CPF da Letícia, validade a partir da compra, desistência em até 7 dias com devolução total e sem multa, como manda o CDC art. 49, uso de imagem incluído, atestado obrigatório com "sim" no PAR-Q. Faltam nome completo e CPF da Letícia e sobrenome do Diogo (em vermelho).
