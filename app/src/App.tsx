@@ -68,9 +68,9 @@ export default function App() {
   if (carregando) return <div className="pagina"><img className="logo" src="/logo-horizontal.jpg" alt="Duo Life" /></div>;
 
   // Quem não entrou vê só as telas de entrada. Professor e aluno têm telas diferentes.
-  const verComoAluno = perfil?.papel === "admin" && modo === "aluno";
+  const verComoAluno = (perfil?.papel === "admin" || Boolean(perfil?.dono)) && modo === "aluno";
   const aluno = perfil?.papel === "aluno" || verComoAluno;
-  const admin = perfil?.papel === "admin";
+  const admin = perfil?.papel === "admin" || Boolean(perfil?.dono);
   const inicio = !perfil ? "/entrar" : admin && !verComoAluno ? "/professor" : parq?.valido ? "/inicio" : "/par-q";
 
   return (

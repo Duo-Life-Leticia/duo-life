@@ -49,7 +49,18 @@ A chave pública pode ficar no app. **Nunca** use nem mande a chave `service_rol
 Observação: no plano gratuito (Hobby), a Vercel pode não aceitar repositório privado de organização do GitHub.
 Se aparecer esse aviso, a saída é o plano Pro ou deixar o repositório público (não tem senha nem dado de aluno no código).
 
-## 5. Tornar a Letícia e o Diogo administradores
+## 5. Dono e professores
+
+Primeiro, rode `supabase/migrations/0006_dono_e_permissoes.sql` e marque a conta do Alessandro como **dono**:
+
+```sql
+update public.perfis set papel = 'admin', dono = true where email = 'email-do-alessandro@exemplo.com';
+```
+
+O dono escolhe os professores pelo próprio app, na área **Equipe** (tela do professor, no fim da Agenda), depois que a pessoa se cadastrar.
+O comando abaixo continua valendo, se preferir pelo Supabase.
+
+### Tornar a Letícia e o Diogo professores (pelo Supabase)
 
 Depois que os dois se cadastrarem no app, rode no **SQL Editor** (trocando pelos e-mails deles):
 
