@@ -29,6 +29,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Informações da Letícia para o app (planos, horário, cadastro, pagamento, PAR-Q): `docs/informacoes-leticia-2026-10-31.md`
 - Ideias tiradas dos prints do MFit (só contexto, sem imagens): `docs/referencia-mfit.md`
 - Pagamento (decisão e comparação de serviços): `docs/pagamento.md`
+- Perguntas do PAR-Q (só o texto): `docs/par-q.md`
 - Respostas da Letícia ao escopo (02/11): `docs/respostas-leticia-2026-11-02.md`
 - Logo e cores: `marca/` (`logo-duo-life.jpg`, `logo-duo-life-horizontal.jpg`, `identidade-visual.md`)
 - Documento do projeto (escopo): https://docs.google.com/document/d/1-GWToSORRFPkXWvnjf5Vs_UazFg01SBf_rFNpR77270/edit
