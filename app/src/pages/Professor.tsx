@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
-import { api, type Aula } from "../api";
+import { Link } from "react-router-dom";
+import { api, type AulaProfessor } from "../api";
 import { useSessao } from "../App";
 import { dataCurta, erroTexto, hora } from "../util";
+import ProfessorTopo from "./ProfessorTopo";
 
-// Tela do professor (Letícia e Diogo). Nesta primeira parte: agenda com o número de alunos e abrir aulas.
-// Lista e ficha dos alunos, presença e registro de pagamento presencial vêm na próxima parte.
+// Agenda do professor: aulas da última semana (para a presença) até um mês para frente.
 export default function Professor() {
   const { perfil } = useSessao();
-  const [aulas, setAulas] = useState<Aula[] | null>(null);
+  const [aulas, setAulas] = useState<AulaProfessor[] | null>(null);
   const [msg, setMsg] = useState<{ tipo: "ok" | "erro"; texto: string } | null>(null);
 
-  const carregar = () => api.aulasProximas().then(setAulas);
+  const carregar = () => api.agendaProfessor().then(setAulas);
   useEffect(() => { carregar().catch((e) => setMsg({ tipo: "erro", texto: erroTexto(e) })); }, []);
 
   async function abrir() {
@@ -22,35 +23,36 @@ export default function Professor() {
     } catch (e) { setMsg({ tipo: "erro", texto: erroTexto(e) }); }
   }
 
+  const hoje = new Date().toLocaleDateString("en-CA", { timeZone: "America/Sao_Paulo" });
+
   return (
     <main className="pagina">
-      <div className="topo">
-        <img className="logo pequena" src="/logo-horizontal.jpg" alt="Duo Life" />
-        <button className="link" onClick={() => api.sair()}>Sair</button>
-      </div>
-      <h1>Tela do professor</h1>
-      <p className="sub">Olá, {perfil?.nome_completo.split(" ")[0]}! Você tem acesso a tudo o que acontece no app.</p>
+      <ProfessorTopo />
+      <h1>Agenda</h1>
+      <p className="sub">Olá, {perfil?.nome_completo.split(" ")[0]}! Toque numa aula para ver os alunos, marcar presença, mudar o limite de vagas ou cancelar.</p>
       {msg && <p className={`aviso ${msg.tipo === "ok" ? "ok" : ""}`} role="status">{msg.texto}</p>}
-      <button className="botao" onClick={abrir}>Abrir aulas dos próximos 60 dias</button>
-      <section className="cartao">
-        <h2>Agenda</h2>
-        {aulas === null ? <p className="sub">Carregando…</p> : aulas.length === 0 ? (
-          <p className="sub">Nenhuma aula aberta. Toque em "Abrir aulas" para criar a agenda.</p>
-        ) : (
-          <div className="lista">
-            {aulas.map((a) => (
-              <div className="item" key={a.id}>
+      {aulas === null ? <p className="sub">Carregando…</p> : aulas.length === 0 ? (
+        <p className="aviso info">Nenhuma aula aberta. Toque em "Abrir aulas" para criar a agenda.</p>
+      ) : (
+        <div className="lista">
+          {aulas.map((a) => {
+            const passada = a.data < hoje;
+            return (
+              <Link className={`item clicavel ${a.cancelada ? "apagada" : ""}`} key={a.id} to={`/professor/aula/${a.id}`}>
                 <div>
-                  <div className="dia">{dataCurta(a.data)}</div>
-                  <div className="detalhe">{hora(a.inicio)} às {hora(a.fim)}{a.limite !== null ? ` · limite ${a.limite}` : " · sem limite"}</div>
+                  <div className="dia">{dataCurta(a.data)}{a.data === hoje ? " · hoje" : ""}</div>
+                  <div className="detalhe">
+                    {a.cancelada ? `Cancelada: ${a.motivo_cancelamento ?? ""}` :
+                      `${hora(a.inicio)} às ${hora(a.fim)} · ${a.limite !== null ? `limite ${a.limite}` : "sem limite"}${passada ? ` · ${a.presentes} ${a.presentes === 1 ? "presente" : "presentes"}` : ""}`}
+                  </div>
                 </div>
-                <span className="selo">{a.marcados} {a.marcados === 1 ? "aluno" : "alunos"}</span>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
-      <p className="sub">Em breve aqui: lista e ficha dos alunos, cadastro de aluno por telefone, presença, cancelar aula (feriado ou chuva) e registro de pagamento na praia.</p>
+                {!a.cancelada && <span className="selo">{a.marcados} {a.marcados === 1 ? "aluno" : "alunos"}</span>}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+      <button className="botao contorno" onClick={abrir}>Abrir aulas dos próximos 60 dias</button>
     </main>
   );
 }

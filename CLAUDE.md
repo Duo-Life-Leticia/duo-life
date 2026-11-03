@@ -24,7 +24,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 
 ## Onde está cada coisa
 
-- App (Etapa 1): código em `app/` (React + Vite, PWA, modo demonstração sem chaves); banco em `supabase/migrations/0001_inicial.sql` (regras de saldo, agenda, PAR-Q e segurança dentro do banco); passo a passo para ligar e publicar em `docs/app-como-colocar-no-ar.md`. Teste do banco: PostgreSQL local com um `auth` simulado.
+- App (Etapa 1): código em `app/` (React + Vite, PWA, modo demonstração sem chaves); banco em `supabase/migrations/0001_inicial.sql` e `0002_tela_professor.sql`, função `supabase/functions/cadastrar-aluno` (convite por e-mail) (regras de saldo, agenda, PAR-Q e segurança dentro do banco); passo a passo para ligar e publicar em `docs/app-como-colocar-no-ar.md`. Teste do banco: PostgreSQL local com um `auth` simulado.
 
 - Transcrição da reunião de 30/10/2026: `docs/transcricao-reuniao-2026-10-30.txt`
 - Resumo das conversas anteriores: `docs/historico-inicio.md`

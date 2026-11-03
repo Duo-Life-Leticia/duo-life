@@ -10,6 +10,10 @@ import Inicio from "./pages/Inicio";
 import Agendar from "./pages/Agendar";
 import Planos from "./pages/Planos";
 import Professor from "./pages/Professor";
+import ProfessorAula from "./pages/ProfessorAula";
+import ProfessorAlunos from "./pages/ProfessorAlunos";
+import ProfessorFicha from "./pages/ProfessorFicha";
+import ProfessorNovoAluno from "./pages/ProfessorNovoAluno";
 
 type Sessao = { perfil: Perfil | null; parq: SituacaoParq | null; recarregar: () => Promise<void> };
 const SessaoCtx = createContext<Sessao>({ perfil: null, parq: null, recarregar: async () => {} });
@@ -42,6 +46,7 @@ export default function App() {
   // Quem não entrou vê só as telas de entrada. Professor e aluno têm telas diferentes.
   const inicio = !perfil ? "/entrar" : perfil.papel === "admin" ? "/professor" : parq?.valido ? "/inicio" : "/par-q";
   const aluno = perfil?.papel === "aluno";
+  const admin = perfil?.papel === "admin";
 
   return (
     <SessaoCtx.Provider value={{ perfil, parq, recarregar }}>
@@ -55,7 +60,11 @@ export default function App() {
         <Route path="/par-q" element={aluno ? <Parq /> : <Navigate to={inicio} replace />} />
         <Route path="/inicio" element={aluno && parq?.valido ? <Inicio /> : <Navigate to={inicio} replace />} />
         <Route path="/agendar" element={aluno && parq?.valido ? <Agendar /> : <Navigate to={inicio} replace />} />
-        <Route path="/professor" element={perfil?.papel === "admin" ? <Professor /> : <Navigate to={inicio} replace />} />
+        <Route path="/professor" element={admin ? <Professor /> : <Navigate to={inicio} replace />} />
+        <Route path="/professor/aula/:id" element={admin ? <ProfessorAula /> : <Navigate to={inicio} replace />} />
+        <Route path="/professor/alunos" element={admin ? <ProfessorAlunos /> : <Navigate to={inicio} replace />} />
+        <Route path="/professor/aluno/:id" element={admin ? <ProfessorFicha /> : <Navigate to={inicio} replace />} />
+        <Route path="/professor/novo-aluno" element={admin ? <ProfessorNovoAluno /> : <Navigate to={inicio} replace />} />
         <Route path="*" element={<Navigate to={inicio} replace />} />
       </Routes>
     </SessaoCtx.Provider>

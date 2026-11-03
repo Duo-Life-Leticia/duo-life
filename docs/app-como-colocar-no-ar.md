@@ -10,6 +10,14 @@ Sem as chaves do Supabase, o app abre em **modo demonstração**, com dados de e
 2. Menu da esquerda: **SQL Editor** → **New query**.
 3. Copie todo o conteúdo de `supabase/migrations/0001_inicial.sql`, cole e clique em **Run**.
 4. Deve aparecer "Success. No rows returned".
+5. Faça o mesmo com `supabase/migrations/0002_tela_professor.sql` (funções da tela do professor).
+
+## 1b. Função "Cadastrar aluno" (o professor cadastra quem não conseguiu pelo app)
+
+1. No Supabase: **Edge Functions** → **Deploy a new function** → **Via Editor**.
+2. Nome da função: `cadastrar-aluno` (exatamente assim).
+3. Apague o exemplo, cole o conteúdo de `supabase/functions/cadastrar-aluno/index.ts` e clique em **Deploy function**.
+4. As chaves que a função usa já vêm prontas no Supabase; não precisa configurar nada.
 
 ## 2. Ajustes do login no Supabase
 
@@ -65,9 +73,16 @@ Ao entrar de novo, eles veem a **tela do professor**, e não a do aluno.
 - Tela do professor separada: agenda com o número de alunos por aula e abrir aulas.
 - Segurança: o aluno só vê os próprios dados; só a Letícia e o Diogo veem tudo.
 
+## Tela do professor (Etapa 1, segunda parte)
+
+- Agenda da última semana até um mês para frente, com o número de alunos e de presentes.
+- Em cada aula: lista de alunos com WhatsApp, presença (Presente / Faltou), limite de vagas e cancelar aula (chuva, feriado).
+- Alunos: lista com busca, saldo e situação do PAR-Q (ok, sem PAR-Q, falta atestado).
+- Ficha do aluno: dados e idade, respostas do PAR-Q, "Atestado entregue: liberar agendamento",
+  registrar pagamento feito na praia, marcar aula para o aluno, histórico de aulas e compras.
+- Novo aluno: o professor cadastra e o aluno recebe um e-mail para criar a senha.
+
 ## O que vem na próxima parte
 
-- Tela do professor: lista e ficha dos alunos, cadastrar aluno por telefone, marcar aula no lugar do aluno,
-  presença, cancelar aula (feriado ou chuva), registrar pagamento na praia, liberar atestado.
 - Pagamento pelo app com o Asaas (Pix, crédito e débito).
 - Mensagem no WhatsApp dos professores a cada aula marcada.
