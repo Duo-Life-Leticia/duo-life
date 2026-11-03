@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { api } from "../api";
+import { useSessao } from "../App";
 
 // Cabeçalho comum das telas do professor, com as abas. "Avisos" mostra quantos ainda não foram lidos.
 export default function ProfessorTopo() {
   const [novos, setNovos] = useState(0);
+  const { trocarModo } = useSessao();
   const { pathname } = useLocation();
   useEffect(() => {
     const ver = () => api.avisos().then((a) => setNovos(a.filter((x) => !x.lido).length)).catch(() => {});
@@ -18,7 +20,10 @@ export default function ProfessorTopo() {
     <>
       <div className="topo">
         <img className="logo pequena" src="/logo-horizontal.jpg" alt="Duo Life" />
-        <button className="link" onClick={() => api.sair()}>Sair</button>
+        <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
+          <button className="link" onClick={() => trocarModo("aluno")}>Ver como aluno</button>
+          <button className="link" onClick={() => api.sair()}>Sair</button>
+        </div>
       </div>
       <nav className="abas" aria-label="Tela do professor">
         <NavLink to="/professor" end className={aba}>Agenda</NavLink>

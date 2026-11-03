@@ -374,7 +374,7 @@ function criarDemo(): Api {
     logado: null, parq: null, compras: 5, validoAte: daquiA(30), agendamentos: [],
     extras: {}, presencas: {}, limites: {}, canceladas: {}, comprasDemo: {}, avisosAluno: [], guiasDemo: {},
     dadosAluno: { nome_completo: "Aluno de Demonstração", telefone: "+55 13 98888-0000", endereco: "Santos, SP" },
-    avisos: [{ id: "av1", titulo: "Aula marcada", texto: "Ana Paula marcou a aula de quinta, às 8h.", link: null, lido: false, criado_em: new Date().toISOString() }],
+    avisos: [{ id: "av1", titulo: "Aula marcada", texto: "Ana Paula marcou a aula de quinta, às 8h.", link: "/professor", lido: false, criado_em: new Date().toISOString() }],
     alunos: [
       alunoExemplo("demo-ana", "Ana Paula Souza", 8, "ok", "1962-03-14"),
       alunoExemplo("demo-carlos", "Carlos Eduardo Lima", 0, "pendente", "1975-08-02"),

@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { api, type Perfil, type SituacaoParq } from "./api";
 import Entrar from "./pages/Entrar";
 import Cadastro from "./pages/Cadastro";
@@ -23,20 +23,36 @@ import MeuPerfil from "./pages/Perfil";
 import NutricaoPersonal from "./pages/NutricaoPersonal";
 import QuemSomos from "./pages/QuemSomos";
 
-type Sessao = { perfil: Perfil | null; parq: SituacaoParq | null; recarregar: () => Promise<void> };
-const SessaoCtx = createContext<Sessao>({ perfil: null, parq: null, recarregar: async () => {} });
+// Professor pode ver o app como aluno (para conferir e ajudar), com a mesma conta.
+type Modo = "professor" | "aluno";
+type Sessao = {
+  perfil: Perfil | null; parq: SituacaoParq | null; recarregar: () => Promise<void>;
+  modo: Modo; trocarModo: (m: Modo) => void;
+};
+const SessaoCtx = createContext<Sessao>({ perfil: null, parq: null, recarregar: async () => {}, modo: "professor", trocarModo: () => {} });
+
+function modoSalvo(): Modo {
+  try { return localStorage.getItem("duolife-modo") === "aluno" ? "aluno" : "professor"; } catch { return "professor"; }
+}
 export const useSessao = () => useContext(SessaoCtx);
 
 export default function App() {
   const [carregando, setCarregando] = useState(true);
   const [perfil, setPerfil] = useState<Perfil | null>(null);
   const [parq, setParq] = useState<SituacaoParq | null>(null);
+  const [modo, setModo] = useState<Modo>(modoSalvo);
+  const navegar = useNavigate();
+  const trocarModo = useCallback((m: Modo) => {
+    setModo(m);
+    try { localStorage.setItem("duolife-modo", m); } catch { /* sem armazenamento */ }
+    navegar(m === "professor" ? "/professor" : "/", { replace: true });
+  }, [navegar]);
 
   const recarregar = useCallback(async () => {
     try {
       const p = await api.perfil();
       setPerfil(p);
-      setParq(p && p.papel === "aluno" ? await api.situacaoParq() : null);
+      setParq(p ? await api.situacaoParq() : null);
     } catch {
       setPerfil(null);
     } finally {
@@ -52,13 +68,20 @@ export default function App() {
   if (carregando) return <div className="pagina"><img className="logo" src="/logo-horizontal.jpg" alt="Duo Life" /></div>;
 
   // Quem não entrou vê só as telas de entrada. Professor e aluno têm telas diferentes.
-  const inicio = !perfil ? "/entrar" : perfil.papel === "admin" ? "/professor" : parq?.valido ? "/inicio" : "/par-q";
-  const aluno = perfil?.papel === "aluno";
+  const verComoAluno = perfil?.papel === "admin" && modo === "aluno";
+  const aluno = perfil?.papel === "aluno" || verComoAluno;
   const admin = perfil?.papel === "admin";
+  const inicio = !perfil ? "/entrar" : admin && !verComoAluno ? "/professor" : parq?.valido ? "/inicio" : "/par-q";
 
   return (
-    <SessaoCtx.Provider value={{ perfil, parq, recarregar }}>
+    <SessaoCtx.Provider value={{ perfil, parq, recarregar, modo, trocarModo }}>
       {api.demo && <div className="demo">Modo demonstração: os dados são de exemplo e ficam só neste aparelho.</div>}
+      {verComoAluno && (
+        <div className="faixa-modo">
+          Você está vendo o app como aluno.{" "}
+          <button className="link" onClick={() => trocarModo("professor")}>Voltar para a tela do professor</button>
+        </div>
+      )}
       <Routes>
         <Route path="/entrar" element={perfil ? <Navigate to={inicio} replace /> : <Entrar />} />
         <Route path="/cadastro" element={perfil ? <Navigate to={inicio} replace /> : <Cadastro />} />

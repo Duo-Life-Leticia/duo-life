@@ -17,7 +17,8 @@ export default function Inicio() {
     const [s, aulas, av, g] = await Promise.all([api.saldo(), api.aulasProximas(), api.avisos(), api.guias()]);
     setSaldo(s);
     setMinhas(aulas.filter((a) => a.minha_marcacao));
-    setAvisos(av.filter((a) => !a.lido).slice(0, 3));
+    // Avisos de professor (aula marcada por alunos) não aparecem quando o professor vê como aluno.
+    setAvisos(av.filter((a) => !a.lido && !a.link?.startsWith("/professor")).slice(0, 3));
     setGuias(g);
   }
 

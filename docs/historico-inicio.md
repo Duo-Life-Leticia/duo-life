@@ -80,3 +80,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - 03/11: Etapa 3 adiantada: Meu perfil (aulas feitas, meta, gráfico por mês, editar dados), marcos de 30 e 50 aulas (aviso ao professor e parabéns ao aluno), Nutrição e Personal com Consultar opções, Quem somos. Faltam os contatos (WhatsApp e Instagram).
 - 03/11: a Vercel gratuita não aceita repositório privado de organização. O Alessandro decidiu deixar o repositório público durante os testes; custos do lançamento (Vercel Pro e Supabase Pro) registrados no escopo e no painel.
 - 03/11: banco criado no Supabase (banco-completo.sql, com pg_cron), função cadastrar-aluno publicada (sem verificação de JWT legada) e app publicado na Vercel: https://duo-life-rouge.vercel.app.
+- 03/11: primeiro cadastro de teste feito no app publicado. Botão "Ver como aluno" para as contas de professor: o mesmo login vê os dois lados.
