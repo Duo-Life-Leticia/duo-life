@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { api, type AvisoProfessor } from "../api";
+import { api, type Aviso } from "../api";
 import { erroTexto } from "../util";
 import ProfessorTopo from "./ProfessorTopo";
 
@@ -11,7 +11,7 @@ function quando(iso: string): string {
 
 // Avisos do professor: aula marcada ou cancelada pelos alunos. Ao abrir, ficam como lidos.
 export default function ProfessorAvisos() {
-  const [avisos, setAvisos] = useState<AvisoProfessor[] | null>(null);
+  const [avisos, setAvisos] = useState<Aviso[] | null>(null);
   const [erro, setErro] = useState("");
   useEffect(() => {
     api.avisos().then((a) => { setAvisos(a); if (a.some((x) => !x.lido)) api.marcarAvisosLidos(); }).catch((e) => setErro(erroTexto(e)));

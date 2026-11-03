@@ -39,7 +39,8 @@ export type FormaPagamento = "pix" | "credito" | "debito" | "presencial";
 export type Cobranca = { compraId: string; link: string | null; pixCopiaCola: string | null; pixQrCode: string | null };
 export type SituacaoCompra = { status: string; plano_id: string; aulas_total: number; valor_centavos: number; forma_pagamento: string | null;
   link_pagamento: string | null; pix_copia_cola: string | null; pix_qrcode: string | null; valido_ate: string | null };
-export type AvisoProfessor = { id: string; titulo: string; texto: string; link: string | null; lido: boolean; criado_em: string };
+export type Aviso = { id: string; titulo: string; texto: string; link: string | null; lido: boolean; criado_em: string };
+export type ArquivoGuia = "guia-duo-life.pdf" | "nutricao-tubarao.pdf";
 // Erro especial: o pagamento pelo app ainda não foi ligado ao Asaas.
 export const PAGAMENTO_NAO_LIGADO = "nao_configurado";
 
@@ -75,8 +76,13 @@ export interface Api {
   registrarPagamento(alunoId: string, planoId: string, forma: FormaPagamento): Promise<void>;
   marcarPara(alunoId: string, aulaId: string): Promise<void>;
   cadastrarAluno(dados: NovoAluno): Promise<void>;
-  avisos(): Promise<AvisoProfessor[]>;
+  // Avisos (aluno e professor), celular e guias
+  avisos(): Promise<Aviso[]>;
   marcarAvisosLidos(): Promise<void>;
+  salvarInscricaoCelular(inscricao: PushSubscriptionJSON): Promise<void>;
+  guias(): Promise<{ guia: boolean; tubarao: boolean }>;
+  abrirGuia(arquivo: ArquivoGuia): Promise<string | null>;
+  enviarGuia(arquivo: ArquivoGuia, pdf: File): Promise<void>;
 }
 
 const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
@@ -248,10 +254,37 @@ function criarSupabase(sb: SupabaseClient): Api {
       const { data, error } = await sb.from("avisos").select("id, titulo, texto, link, lido, criado_em")
         .order("criado_em", { ascending: false }).limit(50);
       falha(error);
-      return (data ?? []) as AvisoProfessor[];
+      return (data ?? []) as Aviso[];
     },
     async marcarAvisosLidos() {
       const { error } = await sb.from("avisos").update({ lido: true }).eq("lido", false);
+      falha(error);
+    },
+    async salvarInscricaoCelular(i) {
+      const { data: { user } } = await sb.auth.getUser();
+      const { error } = await sb.from("inscricoes_celular").upsert(
+        { usuario: user!.id, endpoint: i.endpoint, p256dh: i.keys?.p256dh, auth: i.keys?.auth },
+        { onConflict: "endpoint" },
+      );
+      falha(error);
+    },
+    async guias() {
+      const [g, t] = await Promise.all([
+        rpc<boolean>("pode_baixar_guia", { p_arquivo: "guia-duo-life.pdf" }),
+        rpc<boolean>("pode_baixar_guia", { p_arquivo: "nutricao-tubarao.pdf" }),
+      ]);
+      return { guia: Boolean(g), tubarao: Boolean(t) };
+    },
+    async abrirGuia(arquivo) {
+      const { data, error } = await sb.storage.from("guias").createSignedUrl(arquivo, 300);
+      if (error) {
+        if (error.message.toLowerCase().includes("not found")) return null;
+        throw new Error(error.message);
+      }
+      return data.signedUrl;
+    },
+    async enviarGuia(arquivo, pdf) {
+      const { error } = await sb.storage.from("guias").upload(arquivo, pdf, { upsert: true, contentType: "application/pdf" });
       falha(error);
     },
   };
@@ -274,7 +307,9 @@ type EstadoDemo = {
   canceladas: Record<string, string>; // aula -> motivo
   alunos: AlunoDemo[];
   comprasDemo: Record<string, { plano: string; forma: string; status: string }>;
-  avisos: AvisoProfessor[];
+  avisos: Aviso[];
+  avisosAluno: Aviso[];
+  guiasDemo: Record<string, boolean>;
 };
 
 const PLANOS_DEMO: Plano[] = [
@@ -312,10 +347,10 @@ function jaComecou(data: string): boolean {
 }
 
 function criarDemo(): Api {
-  const CHAVE = "duolife-demo-v4";
+  const CHAVE = "duolife-demo-v5";
   const inicial = (): EstadoDemo => ({
     logado: null, parq: null, compras: 5, validoAte: daquiA(30), agendamentos: [],
-    extras: {}, presencas: {}, limites: {}, canceladas: {}, comprasDemo: {},
+    extras: {}, presencas: {}, limites: {}, canceladas: {}, comprasDemo: {}, avisosAluno: [], guiasDemo: {},
     avisos: [{ id: "av1", titulo: "Aula marcada", texto: "Ana Paula marcou a aula de quinta, às 8h.", link: null, lido: false, criado_em: new Date().toISOString() }],
     alunos: [
       alunoExemplo("demo-ana", "Ana Paula Souza", 8, "ok", "1962-03-14"),
@@ -350,6 +385,11 @@ function criarDemo(): Api {
     if (limite && marcadosNa(aulaId) >= limite) throw new Error("Aula cheia. Marque sua aula para o próximo dia.");
     if (estado.compras - estado.agendamentos.length <= 0) throw new Error("Você não tem aulas no saldo. Compre um plano para marcar.");
     estado.agendamentos.push({ id: `ag-${Date.now()}`, aulaId });
+    const restantes = estado.compras - estado.agendamentos.length;
+    if (restantes === 2 || restantes === 1) {
+      estado.avisosAluno.unshift({ id: `avr-${Date.now()}`, titulo: restantes === 2 ? "Restam apenas duas aulas!" : "Resta apenas 1 aula.",
+        texto: "Renove o seu plano pelo app para continuar treinando com a gente.", link: "/planos", lido: false, criado_em: new Date().toISOString() });
+    }
     estado.avisos.unshift({ id: `av-${Date.now()}`, titulo: "Aula marcada", texto: `Aluno de Demonstração marcou a aula de ${aulaId.slice(5).split("-").reverse().slice(0, 2).join("/")}, às 8h.`, link: `/professor/aula/${aulaId}`, lido: false, criado_em: new Date().toISOString() });
   }
 
@@ -525,8 +565,19 @@ function criarDemo(): Api {
       estado.alunos.push({ ...alunoExemplo(`demo-${Date.now()}`, d.nome_completo, 0, "pendente", d.data_nascimento), email: d.email, dados: d });
       avisar();
     },
-    async avisos() { return estado.avisos; },
-    async marcarAvisosLidos() { estado.avisos = estado.avisos.map((a) => ({ ...a, lido: true })); avisar(); },
+    async avisos() { return estado.logado === "admin" ? estado.avisos : estado.avisosAluno; },
+    async marcarAvisosLidos() {
+      if (estado.logado === "admin") estado.avisos = estado.avisos.map((a) => ({ ...a, lido: true }));
+      else estado.avisosAluno = estado.avisosAluno.map((a) => ({ ...a, lido: true }));
+      avisar();
+    },
+    async salvarInscricaoCelular() { await espera(); },
+    async guias() {
+      const comprou = Object.values(estado.comprasDemo).filter((c) => c.status === "pago");
+      return { guia: comprou.length > 0 || estado.compras > 0, tubarao: comprou.some((c) => c.plano === "tubarao") };
+    },
+    async abrirGuia() { return null; },
+    async enviarGuia(arquivo) { await espera(); estado.guiasDemo[arquivo] = true; avisar(); },
   };
 }
 

@@ -15,6 +15,7 @@ import ProfessorAlunos from "./pages/ProfessorAlunos";
 import ProfessorFicha from "./pages/ProfessorFicha";
 import ProfessorNovoAluno from "./pages/ProfessorNovoAluno";
 import ProfessorAvisos from "./pages/ProfessorAvisos";
+import ProfessorGuias from "./pages/ProfessorGuias";
 import Comprar from "./pages/Comprar";
 import Pagamento from "./pages/Pagamento";
 import Contrato from "./pages/Contrato";
@@ -69,6 +70,7 @@ export default function App() {
         <Route path="/professor/alunos" element={admin ? <ProfessorAlunos /> : <Navigate to={inicio} replace />} />
         <Route path="/professor/aluno/:id" element={admin ? <ProfessorFicha /> : <Navigate to={inicio} replace />} />
         <Route path="/professor/novo-aluno" element={admin ? <ProfessorNovoAluno /> : <Navigate to={inicio} replace />} />
+        <Route path="/professor/guias" element={admin ? <ProfessorGuias /> : <Navigate to={inicio} replace />} />
         <Route path="/professor/avisos" element={admin ? <ProfessorAvisos /> : <Navigate to={inicio} replace />} />
         <Route path="/comprar/:plano" element={aluno && parq?.valido ? <Comprar /> : <Navigate to={inicio} replace />} />
         <Route path="/pagamento/:id" element={aluno ? <Pagamento /> : <Navigate to={inicio} replace />} />

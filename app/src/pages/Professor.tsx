@@ -4,6 +4,7 @@ import { api, type AulaProfessor } from "../api";
 import { useSessao } from "../App";
 import { dataCurta, erroTexto, hora } from "../util";
 import ProfessorTopo from "./ProfessorTopo";
+import AtivarCelular from "./AtivarCelular";
 
 // Agenda do professor: aulas da última semana (para a presença) até um mês para frente.
 export default function Professor() {
@@ -53,6 +54,8 @@ export default function Professor() {
         </div>
       )}
       <button className="botao contorno" onClick={abrir}>Abrir aulas dos próximos 60 dias</button>
+      <Link className="botao contorno" to="/professor/guias">Guias em PDF (enviar ou trocar)</Link>
+      <AtivarCelular para="professor" />
     </main>
   );
 }

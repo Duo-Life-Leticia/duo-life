@@ -12,7 +12,9 @@ Sem as chaves do Supabase, o app abre em **modo demonstração**, com dados de e
 4. Deve aparecer "Success. No rows returned".
 5. Faça o mesmo com `supabase/migrations/0002_tela_professor.sql` (funções da tela do professor)
    e com `supabase/migrations/0003_pagamento_e_avisos.sql` (pagamento pelo app e avisos para os professores).
-6. O pagamento pelo Asaas tem o passo a passo próprio em `docs/asaas-como-ligar.md`.
+6. Depois, `supabase/migrations/0004_avisos_automaticos_e_guias.sql` (Etapa 2: avisos automáticos e guias).
+7. O pagamento pelo Asaas tem o passo a passo próprio em `docs/asaas-como-ligar.md`.
+8. A notificação no celular e os guias têm o passo a passo em `docs/avisos-celular-como-ligar.md`.
 
 ## 1b. Função "Cadastrar aluno" (o professor cadastra quem não conseguiu pelo app)
 
