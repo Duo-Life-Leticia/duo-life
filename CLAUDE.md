@@ -25,6 +25,7 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 
 ## Onde está cada coisa
 
+- App publicado para testes (03/11): https://duo-life-rouge.vercel.app (Vercel, projeto duo-life, publica a branch main; Supabase lujyvoitrotxmvnazluk).
 - App (Etapa 1): código em `app/` (React + Vite, PWA, modo demonstração sem chaves); banco em `supabase/migrations/0001_inicial.sql` e `0002_tela_professor.sql`, `0003_pagamento_e_avisos.sql`, funções `supabase/functions/cadastrar-aluno` (convite por e-mail), `asaas-cobranca` e `asaas-webhook` (pagamento, prontas mas sem a chave do Asaas; ver `docs/asaas-como-ligar.md`); Etapa 2 em `0004_avisos_automaticos_e_guias.sql` e `supabase/functions/enviar-celular` (avisos automáticos, notificação no celular, guias em PDF; ver `docs/avisos-celular-como-ligar.md`); Etapa 3 em `0005_perfil_e_marcos.sql` (perfil e marcos de 30 e 50 aulas); contatos (WhatsApp da Letícia e do Diogo, Instagram) em `app/src/config.ts`, ainda vazios (regras de saldo, agenda, PAR-Q e segurança dentro do banco); passo a passo para ligar e publicar em `docs/app-como-colocar-no-ar.md`. Teste do banco: PostgreSQL local com um `auth` simulado.
 
 - Transcrição da reunião de 30/10/2026: `docs/transcricao-reuniao-2026-10-30.txt`
