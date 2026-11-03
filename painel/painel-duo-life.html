@@ -83,6 +83,20 @@ h2 { font-family: var(--display); font-weight: 700; font-size: 23px; margin: 0 0
 .note { font-size: 13px; color: var(--muted); margin: 0; }
 .banner { background: var(--sea-soft); border-left: 4px solid var(--sea); padding: 10px 14px; font-size: 14px; border-radius: 6px; }
 @media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
+/* Degradê dourado da logo (marca/identidade-visual.md). */
+:root { --ouro: linear-gradient(135deg, #b9801f 0%, #f7e082 28%, #e8b04a 50%, #fbe7a1 68%, #c98e22 100%);
+  --ouro-texto: linear-gradient(180deg, #fbe7a1 0%, #f2c75c 45%, #d89a2e 75%, #b9801f 100%); }
+.brand, .brand small, h2, .now dd.big, .stage.atual .t, .prazo .cnt b, .prazo .cnt span, .box a, .etapa > summary h3 {
+  background: var(--ouro-texto); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.prazo, .stage.atual { position: relative; }
+.prazo, .prazo.ok { border-color: transparent; }
+.prazo::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; background: var(--ouro); pointer-events: none;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
+.tag.sereia, .tag.siri { background: var(--ouro); color: #021a4b; border-color: transparent; }
+.pill[data-s="andamento"] { background: var(--ouro); }
+.legend .dot[style*="st-and"] { background: var(--ouro) !important; }
+.banner { border-left-color: #e8b04a; }
 </style>
 
 <div class="wrap">
