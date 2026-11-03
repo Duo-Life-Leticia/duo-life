@@ -47,5 +47,5 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - O vídeo da reunião (`2026-10-30 19-20-36.mp4`) já está na pasta Reunioes (movido pelo Alessandro em 31/10).
 - Logo recebida em 31/10/2026 (está em `marca/`). Prints do MFit recebidos: usar só como contexto, sem guardar as imagens.
 - Respostas da Letícia recebidas em 02/11 e passadas para o escopo (versão 3) e para o painel.
-- E-mail da Duo Life para as contas do app (GitHub, banco de dados, hospedagem): duolife.ltda@gmail.com (recebido em 03/11). O Alessandro cria as contas.
+- Contas do app (GitHub, Supabase, Vercel): o Alessandro cria contas NOVAS, separadas de qualquer outra conta ou projeto dele, no e-mail dele por enquanto; depois transfere para a Duo Life (duolife.ltda@gmail.com). Hoje o repositório Duo-Life-Leticia/duo-life ainda é acessado pela conta antiga do Alessandro; o código vai para a conta nova quando ela existir.
 - Aguardando: prints da Velocity (o Alessandro acha que já mandou, mas só chegaram prints do MFit). Contrato v2 (03/11) com as decisões do Alessandro: CPF da Letícia, validade a partir da compra, desistência em até 7 dias com devolução total e sem multa, como manda o CDC art. 49, uso de imagem incluído, atestado obrigatório com "sim" no PAR-Q. Faltam nome completo e CPF da Letícia e sobrenome do Diogo (em vermelho).
