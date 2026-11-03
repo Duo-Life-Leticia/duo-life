@@ -13,13 +13,13 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - O Diogo (professor) também cadastra aluno pela tela do professor, para quem não conseguir pelo app. Sem campo "gênero" (só "sexo").
 - Acessos: a Letícia e o Diogo são administradores, com acesso total. O aluno vê só o que é dele (plano, saldo, validade, aulas, contrato), marca e cancela a própria aula, compra e renova.
 - O aluno sempre vê quantas aulas faltam. Pós-venda automático: quando faltarem 2 aulas e quando faltar 1, o app manda notificação no celular (mais para frente, também no grupo de WhatsApp da comunidade) com o novo contrato e o pagamento pelo app (respostas de 02/11).
-- Vagas: no começo as aulas ficam sem limite (02/11); quando o limite for ligado, cada aula tem limite definido pela Letícia e pelo Diogo; agenda única e em tempo real para todos os alunos, sem superlotação nem marcação repetida. Mensagem automática para os alunos que ainda não marcaram em três momentos: com 3 vagas, com 1 vaga e quando lotar ("marque para o próximo dia").
+- Vagas: sem limite nos 3 primeiros meses de funcionamento (03/11); quando o limite for ligado, cada aula tem limite definido pela Letícia e pelo Diogo; agenda única e em tempo real para todos os alunos, sem superlotação nem marcação repetida. Mensagem automática para os alunos que ainda não marcaram em três momentos: com 3 vagas, com 1 vaga e quando lotar ("marque para o próximo dia").
 - Agendar: só terças e quintas, até um mês para frente; cada aluno pode ter no máximo 2 aulas marcadas ao mesmo tempo (decisão da Letícia e do Diogo, 02/11). Cancelamento até 6h antes; feriado sem aula; chuva não tira crédito.
 - Aluno sumido: quem fechou o plano e não marca aulas ou falta muito recebe mensagem automática pelo app incentivando a voltar (o professor marca presença para contar as faltas).
 - Anamnese (PAR-Q) obrigatória no primeiro acesso, pedido do Diogo na reunião (transcrição, 26:14 a 29:35); fica na ficha com a data, vale 6 meses e também existe impresso.
 - Entrada no app: login é o e-mail do aluno; a senha é o próprio aluno que cria, no primeiro acesso (decisão do Alessandro, 31/10).
-- Pagamento dentro do app, por Pix, crédito ou débito, direto na conta da Duo Life (decisão do Alessandro, 31/10). Serviço: Asaas (02/11).
-- Planos: Sardinha 5 aulas R$ 230 (30 dias), Água-Viva 10 aulas R$ 420 (50 dias), Tubarão 20 aulas R$ 720 (80 dias). Sem comentários/avaliações e sem aviso de validade.
+- Pagamento dentro do app, por Pix, crédito ou débito, direto na conta da Duo Life (decisão do Alessandro, 31/10). Serviço: Asaas (02/11). Na praia: celular (Asaas Tap), maquininha (Asaas Smart) e Pix (03/11).
+- Planos: Sardinha 5 aulas R$ 230 (30 dias), Água-Viva 10 aulas R$ 420 (50 dias), Tubarão 20 aulas R$ 720 (80 dias). Sem comentários/avaliações e sem aviso de validade. Slogan: "Dois pilares. Um resultado." (03/11).
 - Tudo o que for feito usa as cores da logo (fundo azul-marinho `#021A4B`, botões e títulos dourados `#E8B04A`) até a aprovação da Letícia e do Diogo. Detalhes em `marca/identidade-visual.md`.
 
 ## Onde está cada coisa
@@ -46,4 +46,5 @@ Projeto do Alessandro para a Duo Life (Letícia, nutricionista, e Diogo, persona
 - Logo recebida em 31/10/2026 (está em `marca/`). Prints do MFit recebidos: usar só como contexto, sem guardar as imagens.
 - Respostas da Letícia recebidas em 02/11 e passadas para o escopo (versão 3) e para o painel.
 - A confirmar com a Letícia: horário das aulas (escreveu 8h às 9h; antes era 7h às 8h).
-- Aguardando da Letícia e do Diogo: prints da Velocity, escolha do slogan, conta do Asaas (dela ou da Duo Life), e o e-mail da Duo Life para o Alessandro criar as contas do app (GitHub, banco de dados, hospedagem).
+- E-mail da Duo Life para as contas do app (GitHub, banco de dados, hospedagem): duolife.ltda@gmail.com (recebido em 03/11). O Alessandro cria as contas.
+- Aguardando da Letícia e do Diogo: prints da Velocity e conta do Asaas (dela ou da Duo Life).

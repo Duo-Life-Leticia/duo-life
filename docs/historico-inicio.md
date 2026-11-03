@@ -59,3 +59,6 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - 01/11: o painel passou a abrir em qualquer aparelho (iPhone, Mac, Android, Windows) mesmo sem conta Claude, com uma cópia dos dados gravada na página (`painel/atualizar-copia.py`).
 - 01/11: o Alessandro mandou o escopo para a Letícia e o Diogo, dentro do prazo. Tarefa 0.4 concluída no painel.
 - 02/11: chegaram as respostas da Letícia (PDF). Tudo passado para o Documento do Projeto (versão 3), para o painel e para `docs/respostas-leticia-2026-11-02.md`. A confirmar: horário das aulas.
+- 03/11: recebido o e-mail da Duo Life para criar as contas do app: duolife.ltda@gmail.com (tarefa 0.15, com o Alessandro).
+- 03/11: slogan escolhido: "Dois pilares. Um resultado."
+- 03/11: pagamento na praia pelo celular, maquininha e Pix; limite de vagas depois de 3 meses de funcionamento.

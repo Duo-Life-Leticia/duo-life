@@ -19,7 +19,7 @@ O PDF original não fica no repositório.
 - Siri (personal): "Faça seu treino individualizado".
 - Duplinha (treino + nutrição), mensal: personal 2x por semana, plano alimentar completo, avaliação física, bônus de 5 aulas do funcional. "Transformação completa!"
 
-## Slogan (duas opções, falta escolher)
+## Slogan (escolhido em 03/11: "Dois pilares. Um resultado.")
 
 - "Dois pilares. Um resultado."
 - "Seu objetivo. Nossa estratégia. Sua evolução."
@@ -27,7 +27,7 @@ O PDF original não fica no repositório.
 ## Aulas
 
 - Horário: **a confirmar**. A Letícia escreveu "somente das 8h às 9h, inicialmente, terças e quintas"; em 31/10 tinha confirmado das 7h às 8h.
-- Vagas: abertas no começo, sem limite.
+- Vagas: abertas, sem limite, nos 3 primeiros meses de funcionamento; depois o limite é ligado (03/11).
 - Máximo de **2 aulas marcadas** ao mesmo tempo por aluno (o Alessandro tinha proposto 4).
 - Cancelamento até **6 horas** antes; sem cancelar e sem ir, a aula conta.
 - Feriado: sem aula. Chuva: local coberto ou cancelamento, sem perder o crédito.
@@ -53,3 +53,10 @@ O PDF original não fica no repositório.
 - Asaas (a Letícia já trabalha com ele e costuma mandar link de pagamento).
 - Ela perguntou sobre pagamento presencial: o Asaas tem QR Code Pix pelo app (Cobrar Agora), o celular como maquininha (Asaas Tap) e a maquininha Asaas Smart. Conferir as taxas.
 - Falta: usar a conta dela ou abrir uma da Duo Life (CNPJ), e para qual banco vai o dinheiro.
+
+## Decisões do Alessandro em 03/11
+
+- E-mail das contas do app: duolife.ltda@gmail.com.
+- Slogan: "Dois pilares. Um resultado."
+- Pagamento na praia: celular (Asaas Tap), maquininha (Asaas Smart) e Pix.
+- Limite de vagas ligado depois de 3 meses de funcionamento.
