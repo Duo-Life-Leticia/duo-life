@@ -62,4 +62,4 @@ O Alessandro disse que manda o escopo para a Letícia e o Diogo até domingo (01
 - 03/11: recebido o e-mail da Duo Life para criar as contas do app: duolife.ltda@gmail.com (tarefa 0.15, com o Alessandro).
 - 03/11: slogan escolhido: "Dois pilares. Um resultado."
 - 03/11: pagamento na praia pelo celular, maquininha e Pix; limite de vagas depois de 3 meses de funcionamento.
-- 03/11: o Alessandro mandou os prints do PAR-Q do Diogo. As perguntas (só o texto) estão em `docs/par-q.md` e no escopo; as perguntas 6 e 7 vêm do PAR-Q padrão e precisam ser confirmadas.
+- 03/11: o Alessandro mandou os prints do PAR-Q do Diogo. As perguntas (só o texto) estão em `docs/par-q.md` e no escopo; as 7 perguntas foram confirmadas pelo último print.

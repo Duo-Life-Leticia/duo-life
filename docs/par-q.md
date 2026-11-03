@@ -9,8 +9,8 @@ Resposta de cada pergunta: Sim ou Não.
 3. No último mês, você sentiu dores no peito quando praticou atividade física?
 4. Você apresenta desequilíbrio devido à tontura e/ou perda de consciência?
 5. Você possui algum problema ósseo ou articular que poderia ser piorado pela atividade física?
-6. Você toma atualmente algum medicamento para pressão arterial e/ou problema de coração? *(no print aparece cortada; texto do PAR-Q padrão, a confirmar)*
-7. Sabe de alguma outra razão pela qual você não deve realizar atividade física? *(não aparece no print; texto do PAR-Q padrão, a confirmar)*
+6. Você toma atualmente algum medicamento para pressão arterial e/ou problema de coração?
+7. Sabe de alguma outra razão pela qual você não deve praticar atividade física?
 
 ## Regras no app
 
