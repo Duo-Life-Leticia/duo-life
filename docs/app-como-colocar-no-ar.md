@@ -108,3 +108,17 @@ Ao entrar de novo, eles veem a **tela do professor**, e não a do aluno.
 Para os botões de WhatsApp e Instagram funcionarem, preencha `app/src/config.ts` com o WhatsApp da Letícia,
 o do Diogo e o Instagram da Duo Life. Enquanto estiverem vazios, os botões aparecem como "(em breve)".
 O texto do "Quem somos" é uma proposta para a Letícia e o Diogo aprovarem.
+
+## Para que serve cada serviço e quanto custa no lançamento
+
+Durante os testes, tudo fica nos planos gratuitos, com o código em repositório público no GitHub.
+Depois que a Letícia e o Diogo aprovarem e o app começar a funcionar com os alunos, a Duo Life passa a pagar:
+
+| Serviço | Para que serve | Custo aproximado |
+|---|---|---|
+| **Vercel** (Pro) | É onde o app "mora" na internet: guarda as telas e entrega para o celular de cada aluno quando ele abre o link ou o ícone da Duo Life. Sem ela, o app não abre. O plano gratuito não permite uso comercial nem código privado. | cerca de US$ 20 por mês |
+| **Supabase** (Pro) | É onde ficam os dados: cadastros, logins e senhas, PAR-Q, planos comprados, saldo, agenda, presenças e guias em PDF. Também manda os e-mails de senha e roda os avisos automáticos. O plano gratuito pausa o projeto quando fica alguns dias sem uso. | cerca de US$ 25 por mês |
+| **Asaas** | Recebe os pagamentos (Pix, crédito, débito) e manda o dinheiro para a conta da Letícia. | sem mensalidade; taxa por pagamento |
+| **GitHub** | Guarda o código do app. | gratuito |
+
+Conferir os valores nos sites antes de contratar. No lançamento, o repositório volta a ser privado.
