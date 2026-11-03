@@ -1,1 +1,0 @@
-{"root":["./src/App.tsx","./src/api.ts","./src/main.tsx","./src/util.ts","./src/pages/Agendar.tsx","./src/pages/Cadastro.tsx","./src/pages/Entrar.tsx","./src/pages/EsqueciSenha.tsx","./src/pages/Inicio.tsx","./src/pages/NovaSenha.tsx","./src/pages/Parq.tsx","./src/pages/Planos.tsx","./src/pages/Professor.tsx","./vite.config.ts"],"version":"5.8.3"}
