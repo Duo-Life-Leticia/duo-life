@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { api, type Perfil, type SituacaoParq } from "./api";
+import { SEM_CONEXAO, ehErroDeConexao } from "./util";
 import Entrar from "./pages/Entrar";
 import Cadastro from "./pages/Cadastro";
 import EsqueciSenha from "./pages/EsqueciSenha";
@@ -36,11 +37,27 @@ function modoSalvo(): Modo {
 }
 export const useSessao = () => useContext(SessaoCtx);
 
+// Tela simples para quando o app não consegue abrir: nunca deixa a tela azul vazia.
+export function TelaDeFalha({ texto, aoTentar }: { texto: string; aoTentar: () => void }) {
+  return (
+    <main className="pagina">
+      <img className="logo" src="/logo-horizontal.jpg" alt="Duo Life" />
+      <section className="cartao">
+        <h1>Ops!</h1>
+        <p className="aviso" role="alert">{texto}</p>
+        <button className="botao" onClick={aoTentar}>Tentar de novo</button>
+      </section>
+    </main>
+  );
+}
+
 export default function App() {
   const [carregando, setCarregando] = useState(true);
   const [perfil, setPerfil] = useState<Perfil | null>(null);
   const [parq, setParq] = useState<SituacaoParq | null>(null);
   const [modo, setModo] = useState<Modo>(modoSalvo);
+  const [falha, setFalha] = useState<string | null>(null);
+  const [demorou, setDemorou] = useState(false);
   const navegar = useNavigate();
   const trocarModo = useCallback((m: Modo) => {
     setModo(m);
@@ -53,8 +70,11 @@ export default function App() {
       const p = await api.perfil();
       setPerfil(p);
       setParq(p ? await api.situacaoParq() : null);
-    } catch {
-      setPerfil(null);
+      setFalha(null);
+    } catch (e) {
+      // Problema de conexão: mantém a pessoa onde está e mostra o aviso. Outro erro: volta para a entrada.
+      if (e instanceof Error && ehErroDeConexao(e.message)) setFalha(SEM_CONEXAO);
+      else setPerfil(null);
     } finally {
       setCarregando(false);
     }
@@ -65,7 +85,20 @@ export default function App() {
     return api.aoMudarSessao(() => { recarregar(); });
   }, [recarregar]);
 
-  if (carregando) return <div className="pagina"><img className="logo" src="/logo-horizontal.jpg" alt="Duo Life" /></div>;
+  // Se a abertura passar de 12 segundos, mostra o aviso em vez de deixar a tela parada.
+  useEffect(() => {
+    if (!carregando) return;
+    const t = setTimeout(() => setDemorou(true), 12000);
+    return () => clearTimeout(t);
+  }, [carregando]);
+
+  if (falha || (carregando && demorou)) {
+    return (
+      <TelaDeFalha texto={falha ?? "O app está demorando para abrir. Confira a internet e tente de novo."}
+        aoTentar={() => { setDemorou(false); setFalha(null); setCarregando(true); recarregar(); }} />
+    );
+  }
+  if (carregando) return <div className="pagina"><img className="logo" src="/logo-horizontal.jpg" alt="Duo Life" /><p className="sub centro">Abrindo…</p></div>;
 
   // Quem não entrou vê só as telas de entrada. Professor e aluno têm telas diferentes.
   const verComoAluno = (perfil?.papel === "admin" || Boolean(perfil?.dono)) && modo === "aluno";

@@ -1,6 +1,7 @@
 // Acesso aos dados do app. Com as chaves do Supabase configuradas, usa o banco de verdade.
 // Sem as chaves, entra no "modo demonstração", com dados de exemplo guardados só neste aparelho.
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { SEM_CONEXAO, ehErroDeConexao } from "./util";
 
 export type Papel = "aluno" | "admin";
 export type Perfil = { id: string; nome_completo: string; apelido?: string | null; email: string; papel: Papel; dono?: boolean };
@@ -101,6 +102,7 @@ const chave = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 // Mensagens do Supabase em inglês viram português simples.
 function traduzir(msg: string): string {
   const m = msg.toLowerCase();
+  if (ehErroDeConexao(msg)) return SEM_CONEXAO;
   if (m.includes("invalid login")) return "E-mail ou senha incorretos.";
   if (m.includes("email not confirmed")) return "Confirme o seu e-mail pelo link que enviamos antes de entrar.";
   if (m.includes("already registered")) return "Este e-mail já tem cadastro. Use \"Entrar\" ou \"Esqueci minha senha\".";
@@ -131,7 +133,9 @@ function criarSupabase(sb: SupabaseClient): Api {
   return {
     demo: false,
     async perfil() {
-      const { data: { user } } = await sb.auth.getUser();
+      const { data: { user }, error: erroSessao } = await sb.auth.getUser();
+      // Sem internet (ou com o servidor fora do ar), avisa em vez de mandar para a tela de entrar.
+      if (!user && erroSessao && ehErroDeConexao(erroSessao.message)) throw new Error(SEM_CONEXAO);
       if (!user) return null;
       const { data, error } = await sb.from("perfis").select("id, nome_completo, apelido, email, papel, dono").eq("id", user.id).single();
       falha(error);
