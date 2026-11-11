@@ -24,8 +24,17 @@ export function reais(centavos: number): string {
   return (centavos / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
+export const SEM_CONEXAO = "Não consegui conectar. Confira a internet e tente de novo.";
+
+// "Failed to fetch" e parecidos: o aparelho não conseguiu falar com o servidor.
+export function ehErroDeConexao(msg: string): boolean {
+  const m = msg.toLowerCase();
+  return m.includes("failed to fetch") || m.includes("networkerror") || m.includes("load failed") || m.includes("network request failed") || m === SEM_CONEXAO.toLowerCase();
+}
+
 export function erroTexto(e: unknown): string {
-  return e instanceof Error ? e.message : "Algo deu errado. Tente de novo.";
+  if (!(e instanceof Error)) return "Algo deu errado. Tente de novo.";
+  return ehErroDeConexao(e.message) ? SEM_CONEXAO : e.message;
 }
 
 export function idade(nascimento: string | null): string {
