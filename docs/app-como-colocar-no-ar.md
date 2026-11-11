@@ -141,3 +141,10 @@ Depois que a Letícia e o Diogo aprovarem e o app começar a funcionar com os al
 | **GitHub** | Guarda o código do app. | gratuito |
 
 Conferir os valores nos sites antes de contratar. No lançamento, o repositório volta a ser privado.
+
+## Se o app abrir em branco ou mostrar "Failed to fetch"
+
+No plano gratuito, o Supabase pausa o projeto depois de cerca de uma semana sem uso. Os dados não se perdem.
+Entre no Supabase (na conta que tem o projeto **duo-life**), abra o projeto e clique em **Restore project**.
+Em alguns minutos o app volta. Link direto: https://supabase.com/dashboard/project/lujyvoitrotxmvnazluk
+Durante os testes, basta alguém abrir o app uma vez por semana. No Supabase Pro, o projeto não pausa.
